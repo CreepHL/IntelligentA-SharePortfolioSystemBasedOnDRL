@@ -5,6 +5,23 @@ from pydantic import Field
 from pydantic_settings import BaseSettings
 
 
+# 股票筛选参数
+STOCK_FILTER_CONFIG = {
+
+    'max_pe_ratio': 50,
+
+    'min_turnover_rate': 1.0,  # 最小换手率：1.0%
+
+    'momentum_days': 20,
+
+    'min_price': 1.0,
+
+    'max_stocks': 15,  # 从5只增加到10只
+
+    'min_strength_score': 40   # 从50降低到40
+
+}
+
 class Settings(BaseSettings):
     """
     Application settings.

@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 from pydantic import json
 from sklearn.preprocessing import MinMaxScaler
+from typing import Tuple
 
 class DataProcess:
 
@@ -53,7 +54,7 @@ class DataProcess:
         return data
 
     @staticmethod
-    def calculate_bollinger_bands(prices_df: pd.DataFrame, window: int = 20) -> tuple[pd.Series, pd.Series]:
+    def calculate_bollinger_bands(prices_df: pd.DataFrame, window: int = 20) -> Tuple[pd.Series, pd.Series]:
         sma = prices_df['close'].rolling(window).mean()
         std_dev = prices_df['close'].rolling(window).std()
         upper_band = sma + (std_dev * 2)

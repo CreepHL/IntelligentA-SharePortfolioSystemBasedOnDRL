@@ -1,12 +1,17 @@
+import asyncio
+import json
+import os
 from datetime import datetime, timedelta
-from typing import Dict, Any
+from typing import Dict, Any, List
 
-import yfinance as yf
 import pandas as pd
 import numpy as np
 import akshare as ak
 import requests
 
+from core.config import STOCK_FILTER_CONFIG
+from services.asyncDataService import batch_get_stock_data_sync
+from services.lstmProcess import async_lstm_all_stock
 from tools.logConfig import log_config
 
 logger = log_config('api')
@@ -14,309 +19,59 @@ logger = log_config('api')
 
 class StockDataService:
 
-    def stock_data(self, symbol, period='10y'):
-        stock = yf.Ticker(symbol)
-        stock.info
-        data = stock.history(period=period)
-        if symbol.startswith('^'):
-            info = stock.info
-            period = '1h'
-        else:
-            info = stock.info
-            period = period
-
-        print(f"Company Name: {info.get('longName', 'N/A')}")
-        print(f"Stock Price: {info.get('currentPrice', 'N/A')}")
-        print(f"Market Cap: {info.get('marketCap', 'N/A')}")
-        print(f"P/E Ratio: {info.get('trailingPE', 'N/A')}")
-        print(f"Sector: {info.get('sector', 'N/A')}")
-        print(f"Industry: {info.get('industry', 'N/A')}")
-        return data, info
-
-    def fetch_live_data(self, symbol, api_key):
-        api_key = "771O3VPDZ5UH78E3"
-        """Fetches live stock data using Alpha Vantage API."""
-        try:
-            url = 'https://www.alphavantage.co/query'
-            params = {
-                "function": "TIME_SERIES_DAILY",
-                "symbol": symbol,
-                "apikey": api_key,
-                "outputsize": "compact"  #
-            }
-            response = requests.get(url, params=params)
-            response.raise_for_status()
-            data = response.json()
-
-            if "Time Series (Daily)" in data:
-                # Convert the data to a pandas DataFrame
-                df = pd.DataFrame.from_dict(data["Time Series (Daily)"], orient='index')
-                df.index = pd.to_datetime(df.index)
-                df.sort_index(inplace=True)  # Sort by date
-                df.columns = ['Open', 'High', 'Low', 'Close', 'Volume']
-                df = df.astype(float)  # Convert columns to numeric
-
-                return df
-            else:
-                print(
-                    f"Error fetching live data for {symbol}: {data.get('Error Message', 'No error message provided')}")
-                return pd.DataFrame()
-        except requests.exceptions.RequestException as e:
-            print(f"Request failed for {symbol}: {e}")
-            return pd.DataFrame()
-        except (ValueError, KeyError) as e:
-            print(f"Error parsing live data for {symbol}: {e}")
-            return pd.DataFrame()
-
-    def history_price(self, symbol, start_date: str = None, end_date: str = None, adjust: str = 'qfq') -> pd.DataFrame:
-        """获取股票历史价格数据
-
-    Args:
-        symbol: 股票代码
-        start_date: 开始日期，格式：YYYY-MM-DD，如果为None则默认获取过去一年的数据
-        end_date: 结束日期，格式：YYYY-MM-DD，如果为None则使用昨天作为结束日期
-        adjust: 复权类型，可选值：
-               - "": 不复权
-               - "qfq": 前复权（默认）
-               - "hfq": 后复权
-
-    Returns:
-        包含以下列的DataFrame：
-        - date: 日期
-        - open: 开盘价
-        - high: 最高价
-        - low: 最低价
-        - close: 收盘价
-        - volume: 成交量（手）
-        - amount: 成交额（元）
-        - amplitude: 振幅（%）
-        - pct_change: 涨跌幅（%）
-        - change_amount: 涨跌额（元）
-        - turnover: 换手率（%）
-
-        技术指标：
-        - momentum_1m: 1个月动量
-        - momentum_3m: 3个月动量
-        - momentum_6m: 6个月动量
-        - volume_momentum: 成交量动量
-        - historical_volatility: 历史波动率
-        - volatility_regime: 波动率区间
-        - volatility_z_score: 波动率Z分数
-        - atr_ratio: 真实波动幅度比率
-        - hurst_exponent: 赫斯特指数
-        - skewness: 偏度
-        - kurtosis: 峰度
-        """
-        try:
-            # 获取当前日期和昨天的日期
-            current_date = datetime.now()
-            yesterday = current_date - timedelta(days=1)
-
-            # 如果没有提供日期，默认使用昨天作为结束日期
-            if not end_date:
-                end_date = yesterday  # 使用昨天作为结束日期
-            else:
-                end_date = datetime.strptime(end_date, "%Y-%m-%d")
-                # 确保end_date不会超过昨天
-                if end_date > yesterday:
-                    end_date = yesterday
-
-            if not start_date:
-                start_date = end_date - timedelta(days=365)  # 默认获取一年的数据
-            else:
-                start_date = datetime.strptime(start_date, "%Y-%m-%d")
-
-            logger.info(f"\nGetting price history for {symbol}...")
-            logger.info(f"Start date: {start_date.strftime('%Y-%m-%d')}")
-            logger.info(f"End date: {end_date.strftime('%Y-%m-%d')}")
-
-            def get_and_process_data(start_date, end_date):
-                """获取并处理数据，包括重命名列等操作"""
-                df = ak.stock_zh_a_hist(
-                    symbol=symbol,
-                    period="daily",
-                    start_date=start_date.strftime("%Y%m%d"),
-                    end_date=end_date.strftime("%Y%m%d"),
-                    adjust=adjust
-                )
-
-                if df is None or df.empty:
-                    return pd.DataFrame()
-
-                # 重命名列以匹配技术分析代理的需求
-                df = df.rename(columns={
-                    "日期": "date",
-                    "开盘": "open",
-                    "最高": "high",
-                    "最低": "low",
-                    "收盘": "close",
-                    "成交量": "volume",
-                    "成交额": "amount",
-                    "振幅": "amplitude",
-                    "涨跌幅": "pct_change",
-                    "涨跌额": "change_amount",
-                    "换手率": "turnover"
-                })
-
-                # 确保日期列为datetime类型
-                df["date"] = pd.to_datetime(df["date"])
-                return df
-
-            # 获取历史行情数据
-            df = get_and_process_data(start_date, end_date)
-
-            if df is None or df.empty:
-                logger.warning(
-                    f"Warning: No price history data found for {symbol}")
-                return pd.DataFrame()
-
-            # 检查数据量是否足够
-            min_required_days = 120  # 至少需要120个交易日的数据
-            if len(df) < min_required_days:
-                logger.warning(
-                    f"Warning: Insufficient data ({len(df)} days) for all technical indicators")
-                logger.info("Attempting to fetch more data...")
-
-                # 扩大时间范围到2年
-                start_date = end_date - timedelta(days=730)
-                df = get_and_process_data(start_date, end_date)
-
-                if len(df) < min_required_days:
-                    logger.warning(
-                        f"Warning: Even with extended time range, insufficient data ({len(df)} days)")
-
-            # 计算动量指标
-            df["momentum_1m"] = df["close"].pct_change(periods=20)  # 20个交易日约等于1个月
-            df["momentum_3m"] = df["close"].pct_change(periods=60)  # 60个交易日约等于3个月
-            df["momentum_6m"] = df["close"].pct_change(
-                periods=120)  # 120个交易日约等于6个月
-
-            # 计算成交量动量（相对于20日平均成交量的变化）
-            df["volume_ma20"] = df["volume"].rolling(window=20).mean()
-            df["volume_momentum"] = df["volume"] / df["volume_ma20"]
-
-            # 计算波动率指标
-            # 1. 历史波动率 (20日)
-            returns = df["close"].pct_change()
-            df["historical_volatility"] = returns.rolling(
-                window=20).std() * np.sqrt(252)  # 年化
-
-            # 2. 波动率区间 (相对于过去120天的波动率的位置)
-            volatility_120d = returns.rolling(window=120).std() * np.sqrt(252)
-            vol_min = volatility_120d.rolling(window=120).min()
-            vol_max = volatility_120d.rolling(window=120).max()
-            vol_range = vol_max - vol_min
-            df["volatility_regime"] = np.where(
-                vol_range > 0,
-                (df["historical_volatility"] - vol_min) / vol_range,
-                0  # 当范围为0时返回0
-            )
-
-            # 3. 波动率Z分数
-            vol_mean = df["historical_volatility"].rolling(window=120).mean()
-            vol_std = df["historical_volatility"].rolling(window=120).std()
-            df["volatility_z_score"] = (
-                                               df["historical_volatility"] - vol_mean) / vol_std
-
-            # 4. ATR比率
-            tr = pd.DataFrame()
-            tr["h-l"] = df["high"] - df["low"]
-            tr["h-pc"] = abs(df["high"] - df["close"].shift(1))
-            tr["l-pc"] = abs(df["low"] - df["close"].shift(1))
-            tr["tr"] = tr[["h-l", "h-pc", "l-pc"]].max(axis=1)
-            df["atr"] = tr["tr"].rolling(window=14).mean()
-            df["atr_ratio"] = df["atr"] / df["close"]
-
-            # 计算统计套利指标
-            # 1. 赫斯特指数 (使用过去120天的数据)
-            def calculate_hurst(series):
-                """
-                计算Hurst指数。
-
-                Args:
-                    series: 价格序列
-
-                Returns:
-                    float: Hurst指数，或在计算失败时返回np.nan
-                """
-                try:
-                    series = series.dropna()
-                    if len(series) < 30:  # 降低最小数据点要求
-                        return np.nan
-
-                    # 使用对数收益率
-                    log_returns = np.log(series / series.shift(1)).dropna()
-                    if len(log_returns) < 30:  # 降低最小数据点要求
-                        return np.nan
-
-                    # 使用更小的lag范围
-                    # 减少lag范围到2-10天
-                    lags = range(2, min(11, len(log_returns) // 4))
-
-                    # 计算每个lag的标准差
-                    tau = []
-                    for lag in lags:
-                        # 计算滚动标准差
-                        std = log_returns.rolling(window=lag).std().dropna()
-                        if len(std) > 0:
-                            tau.append(np.mean(std))
-
-                    # 基本的数值检查
-                    if len(tau) < 3:  # 进一步降低最小要求
-                        return np.nan
-
-                    # 使用对数回归
-                    lags_log = np.log(list(lags))
-                    tau_log = np.log(tau)
-
-                    # 计算回归系数
-                    reg = np.polyfit(lags_log, tau_log, 1)
-                    hurst = reg[0] / 2.0
-
-                    # 只保留基本的数值检查
-                    if np.isnan(hurst) or np.isinf(hurst):
-                        return np.nan
-
-                    return hurst
-
-                except Exception as e:
-                    return np.nan
-
-            # 使用对数收益率计算Hurst指数
-            log_returns = np.log(df["close"] / df["close"].shift(1))
-            df["hurst_exponent"] = log_returns.rolling(
-                window=120,
-                min_periods=60  # 要求至少60个数据点
-            ).apply(calculate_hurst)
-
-            # 2. 偏度 (20日)
-            df["skewness"] = returns.rolling(window=20).skew()
-
-            # 3. 峰度 (20日)
-            df["kurtosis"] = returns.rolling(window=20).kurt()
-
-            # 按日期升序排序
-            df = df.sort_values("date")
-
-            # 重置索引
-            df = df.reset_index(drop=True)
-
-            logger.info(
-                f"Successfully fetched price history data ({len(df)} records)")
-
-            # 检查并报告NaN值
-            nan_columns = df.isna().sum()
-            if nan_columns.any():
-                logger.warning(
-                    "\nWarning: The following indicators contain NaN values:")
-                for col, nan_count in nan_columns[nan_columns > 0].items():
-                    logger.warning(f"- {col}: {nan_count} records")
-
-            return df
-
-        except Exception as e:
-            logger.error(f"Error getting price history: {e}")
-            return pd.DataFrame()
+    # def stock_data(self, symbol, period='10y'):
+    #     stock = yf.Ticker(symbol)
+    #     stock.info
+    #     data = stock.history(period=period)
+    #     if symbol.startswith('^'):
+    #         info = stock.info
+    #         period = '1h'
+    #     else:
+    #         info = stock.info
+    #         period = period
+    #
+    #     print(f"Company Name: {info.get('longName', 'N/A')}")
+    #     print(f"Stock Price: {info.get('currentPrice', 'N/A')}")
+    #     print(f"Market Cap: {info.get('marketCap', 'N/A')}")
+    #     print(f"P/E Ratio: {info.get('trailingPE', 'N/A')}")
+    #     print(f"Sector: {info.get('sector', 'N/A')}")
+    #     print(f"Industry: {info.get('industry', 'N/A')}")
+    #     return data, info
+    #
+    # def fetch_live_data(self, symbol, api_key):
+    #     api_key = "771O3VPDZ5UH78E3"
+    #     """Fetches live stock data using Alpha Vantage API."""
+    #     try:
+    #         url = 'https://www.alphavantage.co/query'
+    #         params = {
+    #             "function": "TIME_SERIES_DAILY",
+    #             "symbol": symbol,
+    #             "apikey": api_key,
+    #             "outputsize": "compact"  #
+    #         }
+    #         response = requests.get(url, params=params)
+    #         response.raise_for_status()
+    #         data = response.json()
+    #
+    #         if "Time Series (Daily)" in data:
+    #             # Convert the data to a pandas DataFrame
+    #             df = pd.DataFrame.from_dict(data["Time Series (Daily)"], orient='index')
+    #             df.index = pd.to_datetime(df.index)
+    #             df.sort_index(inplace=True)  # Sort by date
+    #             df.columns = ['Open', 'High', 'Low', 'Close', 'Volume']
+    #             df = df.astype(float)  # Convert columns to numeric
+    #
+    #             return df
+    #         else:
+    #             print(
+    #                 f"Error fetching live data for {symbol}: {data.get('Error Message', 'No error message provided')}")
+    #             return pd.DataFrame()
+    #     except requests.exceptions.RequestException as e:
+    #         print(f"Request failed for {symbol}: {e}")
+    #         return pd.DataFrame()
+    #     except (ValueError, KeyError) as e:
+    #         print(f"Error parsing live data for {symbol}: {e}")
+    #         return pd.DataFrame()
 
     def financial_metrics(self, symbol):
         """获取财务指标数据"""
@@ -457,7 +212,7 @@ class StockDataService:
             logger.error(f"Error getting financial indicators: {e}")
             return [{}]
 
-    def financial_statements(symbol: str) -> Dict[str, Any]:
+    def financial_statements(self, symbol: str) -> Dict[str, Any]:
         """获取财务报表数据"""
         logger.info(f"Getting financial statements for {symbol}...")
         try:
@@ -595,7 +350,7 @@ class StockDataService:
             return [default_item, default_item]
 
 
-    def macro_data(symbol: str) -> Dict[str, Any]:
+    def macro_data(self, symbol: str) -> Dict[str, Any]:
         """获取市场数据"""
         try:
             # 获取实时行情
@@ -615,10 +370,421 @@ class StockDataService:
             logger.error(f"Error getting market data: {e}")
             return {}
 
+    def calculate_strength_score(self, stock_data: Dict) -> Dict:
+        """计算股票强势分数 - 增强版,包含基本面评分"""
+        score_breakdown = {
+            'technical': 0,    # 技术面 (30分)
+            'valuation': 0,    # 估值 (25分)
+            'profitability': 0,  # 盈利质量 (30分)
+            'safety': 0,       # 安全性 (10分)
+            'dividend': 0      # 分红 (5分)
+        }
+        try:
+            # ===== 1. 技术面得分 (30分) =====
+            # 1.1 涨跌幅 (10分)
+            change_pct = stock_data.get('change_pct', 0)
+            if change_pct > 5:
+                score_breakdown['technical'] += 10
+            elif change_pct > 2:
+                score_breakdown['technical'] += 7
+            elif change_pct > 0:
+                score_breakdown['technical'] += 4
+            elif change_pct > -2:
+                score_breakdown['technical'] += 2
+            # 1.2 动量 (15分)
+            momentum = stock_data.get('momentum_20d', 0)
+            if momentum > 15:
+                score_breakdown['technical'] += 15
+            elif momentum > 10:
+                score_breakdown['technical'] += 12
+            elif momentum > 5:
+                score_breakdown['technical'] += 8
+            elif momentum > 0:
+                score_breakdown['technical'] += 4
+            # 1.3 流动性 (5分) - 基于换手率
+            # 使用换手率而非成交额，更公平地评估流动性（消除市值影响）
+            turnover_rate = stock_data.get('turnover_rate', 0)
+            if turnover_rate and 1 <= turnover_rate < 3:  # 最佳流动性：适中活跃
+                score_breakdown['technical'] += 5
+            elif turnover_rate and 3 <= turnover_rate < 5:  # 良好流动性
+                score_breakdown['technical'] += 4
+            elif turnover_rate and 5 <= turnover_rate < 8:  # 流动性充足但略偏高
+                score_breakdown['technical'] += 3
+            elif turnover_rate and 0.5 <= turnover_rate < 1:  # 流动性偏低但可接受
+                score_breakdown['technical'] += 2
+            elif turnover_rate and turnover_rate >= 8:  # 换手过高，投机性强
+                score_breakdown['technical'] += 1
+            # 换手率 < 0.5% 流动性不足，不得分
+            # ===== 2. 估值得分 (25分) =====
+            # 2.1 PE估值 (10分) - 按10,20,30区分
+            pe = stock_data.get('pe_ratio', 0)
+            if pe and 0 < pe < 10:
+                score_breakdown['valuation'] += 10
+            elif pe and 10 <= pe < 20:
+                score_breakdown['valuation'] += 7
+            elif pe and 20 <= pe < 30:
+                score_breakdown['valuation'] += 4
+            # PE >= 30 不得分
+            # 2.2 PB估值 (10分) - 从"便宜"角度评分,范围宽松
+            pb = stock_data.get('pb_ratio', 0)
+            if pb and 0 < pb < 2:      # 低估
+                score_breakdown['valuation'] += 10
+            elif pb and 2 <= pb < 4:   # 合理
+                score_breakdown['valuation'] += 8
+            elif pb and 4 <= pb < 7:   # 适中
+                score_breakdown['valuation'] += 5
+            elif pb and 7 <= pb < 10:  # 偏高
+                score_breakdown['valuation'] += 2
+            # PB >= 10 不得分
+            # 2.3 PEG (5分) - 降低权重,因为是估算值
+            peg = stock_data.get('peg', 0)
+            if peg and 0 < peg < 1:
+                score_breakdown['valuation'] += 5
+            elif peg and 1 <= peg < 1.5:
+                score_breakdown['valuation'] += 3
+            elif peg and 1.5 <= peg < 2:
+                score_breakdown['valuation'] += 1
+            # PEG >= 2 不得分
+            # ===== 3. 盈利质量得分 (30分) - 核心 =====
+            # 3.1 ROE (15分)
+            roe = stock_data.get('roe', 0)
+            if roe and roe > 20:
+                score_breakdown['profitability'] += 15
+            elif roe and roe > 15:
+                score_breakdown['profitability'] += 12
+            elif roe and roe > 10:
+                score_breakdown['profitability'] += 8
+            elif roe and roe > 5:
+                score_breakdown['profitability'] += 4
+            # 3.2 净利润增长率 (15分)
+            profit_growth = stock_data.get('profit_growth', 0)
+            if profit_growth and profit_growth > 30:
+                score_breakdown['profitability'] += 15
+            elif profit_growth and profit_growth > 20:
+                score_breakdown['profitability'] += 12
+            elif profit_growth and profit_growth > 10:
+                score_breakdown['profitability'] += 8
+            elif profit_growth and profit_growth > 0:
+                score_breakdown['profitability'] += 4
+            # ===== 4. 安全性得分 (10分) - 基于现有数据的简化评分 =====
+            # 由于资产负债率等财务数据无法获取,使用现有指标构建安全性评分
+            # 4.1 基于PB的安全边际 (3分) - 从"安全"角度评分,范围严格
+            pb = stock_data.get('pb_ratio', 0)
+            if pb and 0 < pb < 1.0:  # 破净,极度安全
+                score_breakdown['safety'] += 3
+            elif pb and 1.0 <= pb < 1.5:  # 接近破净,很安全
+                score_breakdown['safety'] += 2
+            elif pb and 1.5 <= pb < 2.5:  # 低估值区,有安全边际
+                score_breakdown['safety'] += 1
+            # PB >= 2.5 安全性不加分
+            # 4.2 基于股息率的稳定性 (3分)
+            div_yield = stock_data.get('dividend_yield', 0)
+            if div_yield and div_yield > 5:  # 高分红,经营稳定
+                score_breakdown['safety'] += 3
+            elif div_yield and div_yield > 3:
+                score_breakdown['safety'] += 2
+            elif div_yield and div_yield > 1:
+                score_breakdown['safety'] += 1
+            # 股息率 <= 1% 不得分
+            # 4.3 基于换手率的波动性 (4分) - 增加权重
+            turnover_rate = stock_data.get('turnover_rate', 0)
+            if turnover_rate and 0 < turnover_rate < 2:  # 低换手,筹码稳定
+                score_breakdown['safety'] += 4
+            elif turnover_rate and 2 <= turnover_rate < 5:  # 换手适中
+                score_breakdown['safety'] += 3
+            elif turnover_rate and 5 <= turnover_rate < 10:  # 换手偏高
+                score_breakdown['safety'] += 1
+            # 换手率 >= 10% 说明投机性强,不得分
+            # ===== 5. 分红得分 (5分) =====
+            dividend_yield = stock_data.get('dividend_yield', 0)
+            if dividend_yield and dividend_yield > 5:
+                score_breakdown['dividend'] += 5
+            elif dividend_yield and dividend_yield > 3:
+                score_breakdown['dividend'] += 4
+            elif dividend_yield and dividend_yield > 2:
+                score_breakdown['dividend'] += 3
+            elif dividend_yield and dividend_yield > 1:
+                score_breakdown['dividend'] += 2
+            elif dividend_yield and dividend_yield > 0.5:
+                score_breakdown['dividend'] += 1
+            # 股息率 <= 0.5% 不得分
+
+        except Exception as e:
+            logger.error(f"计算强势分数失败: {e}")
+            return {'total': 0, 'breakdown': score_breakdown, 'grade': 'D'}
+
+        total_score = sum(score_breakdown.values())
+        grade = self._get_grade(total_score)
+
+        return {
+            'total': total_score,
+            'breakdown': score_breakdown,
+            'grade': grade
+        }
+
+    def _get_grade(self, score: float) -> str:
+
+        """根据分数获取评级"""
+
+        if score >= 85:
+
+            return 'A+'
+
+        elif score >= 75:
+
+            return 'A'
+
+        elif score >= 65:
+
+            return 'B+'
+
+        elif score >= 55:
+
+            return 'B'
+
+        elif score >= 45:
+
+            return 'C'
+
+        else:
+
+            return 'D'
+
+    def filter_by_pe_ratio(self, stocks_data: List[Dict]) -> List[Dict]:
+        """按市盈率筛选股票"""
+        filtered_stocks = []
+
+        for stock in stocks_data:
+            try:
+                pe_ratio = stock.get('pe_ratio', 0)
+                # 修复PE筛选问题：确保PE值是数字类型，如果是None则设为0
+                if pe_ratio is None:
+                    pe_ratio = 0
+
+                # 过滤掉PE为0或负数的股票（可能是亏损股）
+                if 0 < pe_ratio <= STOCK_FILTER_CONFIG['max_pe_ratio']:
+                    filtered_stocks.append(stock)
+            except Exception as e:
+                logger.error(f"PE筛选失败 {stock.get('code', 'unknown')}: {e}")
+                continue
+
+        logger.info(f"PE筛选后剩余 {len(filtered_stocks)} 只股票")
+        return filtered_stocks
+
+    def filter_by_strength(self, stocks_data: List[Dict]) -> List[Dict]:
+        """按强势指标筛选股票"""
+        try:
+            # 计算每只股票的强势分数
+            for stock in stocks_data:
+                score_result = self.calculate_strength_score(stock)
+                stock['strength_score_detail'] = score_result  # 保存详细评分
+                stock['strength_score'] = score_result['total']  # 保存总分
+                stock['strength_grade'] = score_result['grade']  # 保存评级
+
+            # 按强势分数排序，选择前N只
+            sorted_stocks = sorted(stocks_data,
+                                   key=lambda x: x['strength_score'],
+                                   reverse=True)
+
+            # 根据配置的最小强势分数筛选
+            min_score = STOCK_FILTER_CONFIG.get('min_strength_score', 45)  # 降低到45分
+            strong_stocks = [stock for stock in sorted_stocks if stock['strength_score'] >= min_score]
+
+            logger.info(f"强势筛选后剩余 {len(strong_stocks)} 只股票")
+            return strong_stocks
+
+        except Exception as e:
+            logger.error(f"强势筛选失败: {e}")
+            return []
+
+    def apply_additional_filters(self, stocks_data: List[Dict]) -> List[Dict]:
+        """应用额外的筛选条件"""
+        filtered_stocks = []
+
+        for stock in stocks_data:
+            try:
+                # 过滤条件
+                price = stock.get('price', 0)
+                turnover_rate = stock.get('turnover_rate', 0)
+                change_pct = stock.get('change_pct', 0)
+
+                # 排除停牌股票（涨跌幅为0且换手率很小）
+                if change_pct == 0 and (turnover_rate is None or turnover_rate < 0.1):  # 0.1%换手率
+                    continue
+
+                # 排除价格过低的股票
+                if price < STOCK_FILTER_CONFIG['min_price']:
+                    continue
+
+                # 排除换手率过小的股票
+                min_turnover_rate = STOCK_FILTER_CONFIG.get('min_turnover_rate', 0.5)  # 默认0.5%
+                if turnover_rate is None or turnover_rate < min_turnover_rate:
+                    continue
+
+                # 排除跌停股票
+                if change_pct <= -9.8:
+                    continue
+
+                filtered_stocks.append(stock)
+
+            except Exception as e:
+                logger.error(f"附加筛选失败 {stock.get('code', 'unknown')}: {e}")
+                continue
+
+        logger.info(f"附加筛选后剩余 {len(filtered_stocks)} 只股票")
+        return filtered_stocks
+
+
+    def _generate_selection_reason(self, stock: Dict) -> str:
+
+        """生成选择理由 - 包含基本面指标"""
+        reasons = []
+        # 基本信息
+        pe_ratio = stock.get('pe_ratio', 0)
+        pb_ratio = stock.get('pb_ratio', 0)
+        change_pct = stock.get('change_pct', 0)
+        momentum = stock.get('momentum_20d', 0)
+        strength_score = stock.get('strength_score', 0)
+        strength_grade = stock.get('strength_grade', '')
+        # 基本面指标
+        roe = stock.get('roe', 0)
+        profit_growth = stock.get('profit_growth', 0)
+        dividend_yield = stock.get('dividend_yield', 0)
+        turnover_rate = stock.get('turnover_rate', 0)
+        # 估值
+        if pe_ratio:
+            reasons.append(f"PE={pe_ratio:.2f}")
+        if pb_ratio:
+            reasons.append(f"PB={pb_ratio:.2f}")
+        # 技术面
+        if change_pct > 3:
+            reasons.append("当日强势上涨")
+        elif change_pct > 0:
+            reasons.append("当日上涨")
+        if momentum > 10:
+            reasons.append("20日动量强劲")
+        elif momentum > 0:
+            reasons.append("20日动量向上")
+        # 基本面
+        if roe and roe > 15:
+            reasons.append(f"ROE优秀({roe:.1f}%)")
+        elif roe and roe > 10:
+            reasons.append(f"ROE良好({roe:.1f}%)")
+        if profit_growth and profit_growth > 20:
+            reasons.append(f"高成长({profit_growth:.1f}%)")
+        elif profit_growth and profit_growth > 10:
+            reasons.append(f"成长性好({profit_growth:.1f}%)")
+        # 安全性 - 基于新的评分逻辑
+        safety_score = stock.get('strength_score_detail', {}).get('breakdown', {}).get('safety', 0)
+        if safety_score >= 8:
+            reasons.append("安全性高")
+        elif safety_score >= 6:
+            reasons.append("安全性良好")
+        # 综合评分
+        reasons.append(f"综合{strength_grade}级({strength_score:.1f}分)")
+        return "；".join(reasons)
+
+    def select_top_stocks(self, stocks_data: List[Dict]) -> List[Dict]:
+        """选择最终的推荐股票 - 直接按分数排序选择，不限制行业"""
+        try:
+            # 0. 去重（防止输入数据中有重复）
+            unique_stocks = {}
+            for stock in stocks_data:
+                code = stock.get('code')
+                if code and code not in unique_stocks:
+                    unique_stocks[code] = stock
+
+            stocks_data = list(unique_stocks.values())
+            logger.info(f"去重后股票数量: {len(stocks_data)}")
+
+            # 1. 首先按PE筛选
+            pe_filtered = self.filter_by_pe_ratio(stocks_data)
+
+            # 2. 应用额外筛选条件
+            additional_filtered = self.apply_additional_filters(pe_filtered)
+
+            # 3. 按强势筛选并排序
+            strength_filtered = self.filter_by_strength(additional_filtered)
+
+            # 4. 直接按分数排序，不限制行业
+            strength_filtered.sort(key=lambda x: x['strength_score'], reverse=True)
+
+            # 5. 选择前N只股票
+            final_selection = strength_filtered[:STOCK_FILTER_CONFIG['max_stocks']]
+
+            # 6. 添加选择理由和排名
+            for i, stock in enumerate(final_selection):
+                stock['rank'] = i + 1
+                stock['selection_reason'] = self._generate_selection_reason(stock)
+
+            logger.info(f"最终选择 {len(final_selection)} 只股票 (不限制行业)")
+            return final_selection
+
+        except Exception as e:
+            logger.error(f"股票选择失败: {e}")
+            return []
+
+    def csi300_data(self):
+        """加载沪深300成分股列表 - 优先使用本地缓存"""
+        try:
+            # 方法1: 从本地JSON文件加载(快速)
+            local_file = './data/csi300_stocks.json'
+            if os.path.exists(local_file):
+                logger.info("从本地文件加载沪深300成分股列表...")
+                with open(local_file, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                    stocks = data['stocks']
+                    logger.info(f"成功从本地加载 {len(stocks)} 只沪深300成分股 (更新日期: {data.get('update_date', '未知')})")
+                    return pd.DataFrame(stocks)
+
+            # 方法2: 使用akshare在线获取(慢速,作为备用)
+            logger.warning("本地文件不存在,尝试在线获取沪深300成分股列表(可能较慢)...")
+            csi300_stocks = ak.index_stock_cons(symbol="000300")
+            if not csi300_stocks.empty:
+                logger.info(f"在线获取成功: {len(csi300_stocks)} 只")
+                # 保存到本地以便下次使用
+                result = pd.DataFrame({
+                    'code': csi300_stocks['品种代码'].tolist(),
+                    'name': csi300_stocks['品种名称'].tolist()
+                })
+                # 保存到本地
+                os.makedirs('./data', exist_ok=True)
+                save_data = {
+                    'update_date': datetime.now().strftime('%Y-%m-%d'),
+                    'note': '沪深300成分股列表 - 自动生成',
+                    'stocks': result.to_dict('records')
+                }
+                with open(local_file, 'w', encoding='utf-8') as f:
+                    json.dump(save_data, f, ensure_ascii=False, indent=2)
+                logger.info(f"已保存到本地文件: {local_file}")
+                return result
+
+            logger.error("无法获取沪深300成分股列表")
+            return pd.DataFrame()
+
+        except Exception as e:
+            logger.error(f"加载沪深300成分股列表失败: {e}")
+            return pd.DataFrame()
+
     def market_all_data(self, symbols, data):
+        # 获取沪深300成分股列表（优先使用本地缓存）
+        a_share_list = self.csi300_data()
+        stock_codes = a_share_list['code'].tolist()
+        # performance utility
+        all_stock_data = batch_get_stock_data_sync(
+                    stock_codes,
+                    calculate_momentum=True,
+                    include_fundamental=True,
+                    max_concurrent=20  # 可以调整并发数
+                )
+        # 初步筛选出的股票列表
+        selected_stocks = self.select_top_stocks(all_stock_data)
+        code_list = [stock['code'] for stock in selected_stocks if 'code' in stock]
+        # LSTM收益率预测
+        asyncio.run(async_lstm_all_stock(code_list))
         current_date = datetime.now()
         yesterday = current_date - timedelta(days=1)
-        end_date = data["end_date"] or yesterday.strftime('%Y-%m-%d')
+        end_date = data.get("end_date", yesterday.strftime('%Y-%m-%d'))
 
         # Ensure end_date is not in the future
         end_date_obj = datetime.strptime(end_date, '%Y-%m-%d')
@@ -626,12 +792,8 @@ class StockDataService:
             end_date = yesterday.strftime('%Y-%m-%d')
             end_date_obj = yesterday
 
-        if not data["start_date"]:
-            # Calculate 1 year before end_date
-            start_date = end_date_obj - timedelta(days=365)  # 默认获取一年的数据
-            start_date = start_date.strftime('%Y-%m-%d')
-        else:
-            start_date = data["start_date"]
+        start_date = data.get("start_date", (end_date_obj - timedelta(days=365)).strftime('%Y-%m-%d'))
+
         # stock price data
         prices_df = self.history_price(symbols, start_date, end_date)
         financial_metrics = self.financial_metrics(symbols)

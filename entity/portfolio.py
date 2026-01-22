@@ -5,7 +5,6 @@ from sqlalchemy import (
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from database.base import Base
-from entity.holding import Holding
 from entity.user import User
 
 

@@ -11,7 +11,7 @@ from tools.dataprocess import DataProcess
 router = (APIRouter(prefix="/recommend", tags=["recommend"]))
 
 @router.post("")
-def simple_equal_weight(db: Session, portfolio_id: int) -> Recommendation:
+def simple_equal_weight(db, portfolio_id: int):
     pf = db.get(Portfolio, portfolio_id)
     if not pf: raise ValueError("portfolio not found")
     #  LLM 情绪 + DRL调仓
@@ -30,6 +30,6 @@ def simple_equal_weight(db: Session, portfolio_id: int) -> Recommendation:
     target = {}
     reco = Recommendation(portfolio_id=portfolio_id, target_weights=target,
                           rationale={"method": "equal_weight", "note": "stub"}, model_tag="baseline")
-    db.add(reco); db.commit(); db.refresh(reco)
+    # db.add(reco); db.commit(); db.refresh(reco)
     return reco
 

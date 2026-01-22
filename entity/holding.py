@@ -5,7 +5,7 @@ from sqlalchemy import (
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from database.base import Base
-from entity.portfolio import Portfolio
+
 
 
 class Holding(Base):
@@ -17,5 +17,5 @@ class Holding(Base):
     avg_cost: Mapped[float] = mapped_column(Float, default=0.0)
     industry: Mapped[str] = mapped_column(String(64), nullable=True)
 
-    portfolio: Mapped[Portfolio] = relationship(back_populates="holdings")
+    portfolio: Mapped['Portfolio'] = relationship(back_populates="holdings")
     __table_args__ = (UniqueConstraint("portfolio_id", "symbol", name="uix_portfolio_symbol"),)
