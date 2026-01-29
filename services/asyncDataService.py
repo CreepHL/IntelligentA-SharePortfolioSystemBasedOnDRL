@@ -1,9 +1,13 @@
 import asyncio
+import functools
 import random
+from concurrent.futures import ThreadPoolExecutor
+from datetime import datetime, timedelta
 from typing import List, Dict, Optional
 
 import aiohttp
 
+from services.technicalService import get_history_data
 from tools.logConfig import log_config
 
 logger = log_config('api')
@@ -262,8 +266,6 @@ class AsyncDataService:
                         if len(data_parts) > 53 and data_parts[53]:
                             try:
                                 dividend_data = float(data_parts[53])
-                                if dividend_data < 0:
-                                    dividend_data = None
                             except ValueError:
                                 pass
 
@@ -271,8 +273,6 @@ class AsyncDataService:
                             per_share_dividend = dividend_data / 10
                             dividend_yield = (per_share_dividend / current_price) * 100
 
-                            if not (0 < dividend_yield <= 20):
-                                dividend_yield = None
 
                     # 解析换手率
                     turnover_rate = None
@@ -310,8 +310,6 @@ class AsyncDataService:
                     if pb_ratio and pe_ratio and pe_ratio > 0:
                         try:
                             roe = (pb_ratio / pe_ratio) * 100
-                            if roe < -50 or roe > 50:
-                                roe = None
                         except:
                             roe = None
 
@@ -401,6 +399,29 @@ class AsyncDataService:
                 fundamental_results = await asyncio.gather(*fundamental_tasks)
                 for stock, fundamental in zip(realtime_data, fundamental_results):
                     stock.update(fundamental)
+            if calculate_momentum:
+                logger.info("开始批量计算股票动量数据")
+                current_date = datetime.now()
+                yesterday = current_date - timedelta(days=1)
+                end_date = yesterday.strftime('%Y-%m-%d')
+                start_date = (current_date - timedelta(days=60)).strftime('%Y-%m-%d')
+                # 创建线程池执行器
+                loop = asyncio.get_running_loop()
+                with ThreadPoolExecutor(max_workers=10) as pool:
+                    history_tasks = [
+                        loop.run_in_executor(pool, functools.partial(get_history_data, code, start_date, end_date))
+                        for code in stock_code
+                    ]
+                    history_results = await asyncio.gather(*history_tasks, return_exceptions=True)
+                for stock, history in zip(realtime_data, history_results):
+                    if isinstance(history, Exception):
+                        logger.error(f"获取股票 {stock.get('code', 'Unknown')} 历史数据失败: {history}")
+                        stock['momentum'] = None
+                        stock['ma20_mean'] = None
+                    else:
+                        stock['momentum'] = history['Close'].rolling(20).std()
+                        stock['ma20_mean'] = history['MA20'].rolling(20).mean()
+
         return realtime_data
 
 

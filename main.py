@@ -1,6 +1,10 @@
 import asyncio
 
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
+from starlette.responses import HTMLResponse
+from starlette.staticfiles import StaticFiles
+from starlette.templating import Jinja2Templates
+
 from database.session import engine
 from database.base import Base
 from routers import auth, portfolio, prefer, recommend
@@ -8,9 +12,13 @@ import uvicorn
 
 from services.lstmProcess import lstm_stock_predict
 from services.stockDataService import StockDataService
-from tools.dataprocess import DataProcess
 
 app = FastAPI(title="A-Share Reco Backend (FastAPI)")
+# 挂载静态文件
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
+# 配置模板
+templates = Jinja2Templates(directory="templates")
 
 # 自动建表（生产建议用 Alembic）
 Base.metadata.create_all(bind=engine)
@@ -20,9 +28,11 @@ app.include_router(portfolio.router)
 app.include_router(prefer.router)
 app.include_router(recommend.router)
 
-@app.get("/health")
-def health():
-    return {"status": "ok"}
+
+# 添加路由
+@app.get("/", response_class=HTMLResponse)
+async def portfolio_dashboard(request: Request):
+    return templates.TemplateResponse("portfolio.html", {"request": request})
 
 
 

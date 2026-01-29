@@ -370,6 +370,101 @@ class StockDataService:
             logger.error(f"Error getting market data: {e}")
             return {}
 
+    def calculate_risk_score(self, stock_data: Dict) -> float:
+        """
+        计算股票风险评分（0-10分），分数越高风险越高。
+        使用连续变量 + 分位数标准化，确保个股差异明显。
+        """
+        risk_factors = {}
+
+        # 1. 波动性风险（基于换手率 + 收盘价标准差）
+        turnover = stock_data.get('turnover_rate', 0)
+        price_std = stock_data.get('price_std_20d', 1.4)  # 需要提前计算20日收盘价标准差
+
+        # 换手率：过高（>8%）或过低（<0.5%）都危险
+        if turnover <= 0:
+            turnover_risk = 1.0
+        elif turnover < 0.5:
+            turnover_risk = 0.8 + (0.5 - turnover) * 2  # 越低越危险
+        elif turnover > 8:
+            turnover_risk = min(1.0, (turnover - 8) * 0.15)
+        else:
+            turnover_risk = 0.0  # 0.5～8% 安全区
+
+        # 价格波动：标准差越大越危险
+        volatility_risk = min(1.0, price_std / 0.1) if price_std else 0.5  # 假设0.1为高波动阈值
+
+        risk_factors['liquidity_volatility'] = (turnover_risk + volatility_risk) / 2
+
+        # 2. 估值风险
+        pe = stock_data.get('pe_ratio', None)
+        pb = stock_data.get('pb_ratio', None)
+
+        valuation_risk = 0.0
+        if pe is not None and pe > 0:
+            if pe > 50:
+                valuation_risk += 1.0
+            elif pe > 30:
+                valuation_risk += 0.6
+            elif pe > 20:
+                valuation_risk += 0.3
+            # else: 低估值，不加风险
+        elif pe is not None and pe <= 0:  # 亏损
+            valuation_risk += 1.0
+
+        if pb is not None and pb > 10:
+            valuation_risk += 0.5
+        elif pb is not None and pb > 7:
+            valuation_risk += 0.3
+
+        risk_factors['valuation'] = min(1.0, valuation_risk)
+
+        # 3. 基本面恶化风险
+        roe = stock_data.get('roe', 0)
+        profit_growth = stock_data.get('profit_growth', 0)
+
+        fundamental_risk = 0.0
+        if roe < 5:
+            fundamental_risk += 0.7
+        elif roe < 10:
+            fundamental_risk += 0.3
+
+        if profit_growth < -10:
+            fundamental_risk += 0.8
+        elif profit_growth < 0:
+            fundamental_risk += 0.4
+
+        risk_factors['fundamental'] = min(1.0, fundamental_risk)
+
+        # 4. 技术面破位风险（可选）
+        close = stock_data.get('close', 0)
+        ma60 = stock_data.get('ma60', 0)
+        if close > 0 and ma60 > 0:
+            below_ma60 = (ma60 - close) / ma60 if close < ma60 else 0
+            technical_risk = min(1.0, below_ma60 * 5)  # 跌破60日线越多风险越高
+        else:
+            technical_risk = 0.3
+        risk_factors['technical'] = technical_risk
+
+        # ===== 加权合成总风险（0-1）=====
+        weights = {
+            'liquidity_volatility': 0.3,
+            'valuation': 0.25,
+            'fundamental': 0.3,
+            'technical': 0.15
+        }
+
+        total_risk_raw = sum(
+            risk_factors[k] * w for k, w in weights.items()
+        )
+
+        # 映射到 0-10 分（分数越高风险越高）
+        risk_score_0_10 = min(10.0, max(0.0, total_risk_raw * 10))
+
+        return round(risk_score_0_10, 2)
+
+
+
     def calculate_strength_score(self, stock_data: Dict) -> Dict:
         """计算股票强势分数 - 增强版,包含基本面评分"""
         score_breakdown = {
@@ -519,7 +614,7 @@ class StockDataService:
         return {
             'total': total_score,
             'breakdown': score_breakdown,
-            'grade': grade
+            'grade': grade,
         }
 
     def _get_grade(self, score: float) -> str:
@@ -580,6 +675,8 @@ class StockDataService:
                 stock['strength_score_detail'] = score_result  # 保存详细评分
                 stock['strength_score'] = score_result['total']  # 保存总分
                 stock['strength_grade'] = score_result['grade']  # 保存评级
+                risk_score = self.calculate_risk_score(stock)
+                stock['strength_risk'] = risk_score['risk']
 
             # 按强势分数排序，选择前N只
             sorted_stocks = sorted(stocks_data,
@@ -767,7 +864,7 @@ class StockDataService:
             return pd.DataFrame()
 
     def market_all_data(self, symbols, data):
-        # 获取沪深300成分股列表（优先使用本地缓存）
+        # 获取中证300成分股列表（优先使用本地缓存）
         a_share_list = self.csi300_data()
         stock_codes = a_share_list['code'].tolist()
         # performance utility
@@ -781,6 +878,10 @@ class StockDataService:
         selected_stocks = self.select_top_stocks(all_stock_data)
         code_list = [stock['code'] for stock in selected_stocks if 'code' in stock]
         # LSTM收益率预测
+        pre_list = ['000776', '002001', '002415']
+        for ticker in pre_list:
+            df = pd.read_pickle(f'./output/predictions/{ticker}_predictions.pkl')
+            close = df.Prediction.values.tolist()
         asyncio.run(async_lstm_all_stock(code_list))
         current_date = datetime.now()
         yesterday = current_date - timedelta(days=1)
@@ -793,18 +894,14 @@ class StockDataService:
             end_date_obj = yesterday
 
         start_date = data.get("start_date", (end_date_obj - timedelta(days=365)).strftime('%Y-%m-%d'))
-
-        # stock price data
-        prices_df = self.history_price(symbols, start_date, end_date)
         financial_metrics = self.financial_metrics(symbols)
         financial_line_items = self.financial_statements(symbols)
         macro_data = self.macro_data(symbols)
-        prices_dict = prices_df.to_dict('records')
+
         # 保存推理信息到metadata供API使用
         market_data = {
             "data": {
                 "ticker": symbols,
-                "prices": prices_dict,
                 "start_date": start_date,
                 "end_date": end_date,
                 "financial_metrics": financial_metrics,

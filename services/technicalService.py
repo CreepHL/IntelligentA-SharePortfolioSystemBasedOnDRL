@@ -84,7 +84,7 @@ def calculate_technical_indicators(data, start_date=None, end_date=None):
     return data
 
 
-def get_stock_data(ticker, start_date, end_date):
+def get_history_data(ticker, start_date, end_date):
     """
     获取并处理单个股票的数据
 

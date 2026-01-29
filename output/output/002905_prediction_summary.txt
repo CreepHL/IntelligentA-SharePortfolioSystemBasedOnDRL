@@ -1,0 +1,5 @@
+Average Accuracy: nan
+Best Stock: 002905
+Worst Stock: 002905
+Average RMSE: nan
+Average MAE: nan

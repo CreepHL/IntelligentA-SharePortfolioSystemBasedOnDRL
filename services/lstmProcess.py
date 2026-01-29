@@ -15,7 +15,7 @@ from torch import nn, optim
 from torch.utils.data import TensorDataset, DataLoader
 
 from models.LSTM_model import LSTMMain
-from services.technicalService import get_stock_data
+from services.technicalService import get_history_data
 from tools.visualization import plot_cumulative_earnings, plot_accuracy_comparison, plot_stock_prediction
 
 # # 必要参数定义
@@ -105,18 +105,43 @@ def get_rolling_window_multistep(forecasting_length, interval_length, window_len
 
 
 def visualize_predictions(ticker, data, predict_result, test_indices, predictions, actual_percentages, save_dir):
-    actual_prices = data['Close'].loc[test_indices].values
-    predicted_prices = np.array(predictions)
-
+    mask = data['Date'].isin(test_indices)
+    actual_prices = data.loc[mask, 'Close'].values
+    predicted_prices = np.array(predictions[:-1])
     mse = np.mean((predicted_prices - actual_prices) ** 2)
     rmse = np.sqrt(mse)
     mae = np.mean(np.abs(predicted_prices - actual_prices))
     accuracy = 1 - np.mean(np.abs(predicted_prices - actual_prices) / actual_prices)
 
     metrics = {'rmse': rmse, 'mae': mae, 'accuracy': accuracy}
-    plot_stock_prediction(ticker, test_indices, actual_prices, predicted_prices, metrics, save_dir)
-
+    plot_stock_prediction(ticker, test_indices[:-1], actual_prices, predicted_prices, metrics, save_dir)
+    # 绘制涨跌幅比较图
+    predict_percentages = [predict_result[str(date)]*4 for date in test_indices if str(date) in predict_result]
+    plot_returns_comparison(ticker, test_indices, actual_percentages, predict_percentages, save_dir)
     return metrics
+
+
+def plot_returns_comparison(ticker, test_indices, actual_percentages, predict_percentages, save_dir):
+    """
+    绘制实际收益率与预测收益率对比图
+    """
+    plt.figure(figsize=(12, 6))
+    plt.plot(test_indices, actual_percentages, label='Actual Returns', marker='o')
+    plt.plot(test_indices, predict_percentages, label='Predicted Returns', marker='s')
+    plt.xlabel('Date')
+    plt.ylabel('Returns')
+    plt.title(f'Actual vs Predicted Returns Comparison for {ticker}')
+    plt.legend()
+    plt.grid(True)
+    plt.xticks(rotation=45)
+
+    returns_dir = os.path.join(save_dir, 'pic/returns')
+    os.makedirs(returns_dir, exist_ok=True)
+    save_path = os.path.join(returns_dir, f'{ticker}_returns_comparison.png')
+    plt.savefig(save_path)
+    plt.close()
+
+    return save_path
 
 
 def train_and_predict_lstm(ticker, data, X, y, save_dir, n_steps=60, num_epochs=100, batch_size=32, learning_rate=0.001):
@@ -128,7 +153,7 @@ def train_and_predict_lstm(ticker, data, X, y, save_dir, n_steps=60, num_epochs=
     X_scaled = scaler_X.fit_transform(X)
 
     X_train, y_train = prepare_data(X_scaled, n_steps)
-    y_train = y_scaled[n_steps-1:-1]
+    y_train = y_scaled[n_steps:]
 
     train_per = 0.8
     split_index = int(train_per * len(X_train))
@@ -196,6 +221,10 @@ def train_and_predict_lstm(ticker, data, X, y, save_dir, n_steps=60, num_epochs=
     test_indices = []
     predict_percentages = []
     actual_percentages = []
+    res_data = data.iloc[1+split_index-n_steps:].copy()
+    # 添加一行空行
+    new_row = pd.Series(index=data.columns, dtype=object, name=len(data) - 1)
+    res_data = pd.concat([res_data, new_row.to_frame().T], ignore_index=False)
 
     with torch.no_grad():
         for i in range(1 + split_index, len(X_scaled) + 1):
@@ -203,15 +232,39 @@ def train_and_predict_lstm(ticker, data, X, y, save_dir, n_steps=60, num_epochs=
                                  dtype=torch.float32).to(device)
             y_pred = model(x_input)
             y_pred = scaler_y.inverse_transform(y_pred.cpu().numpy().reshape(-1, 1))
-            predictions.append((1 + y_pred[0][0]) * data['Close'].iloc[i - 2])
-            test_indices.append(data.index[i - 1])
+            predictions.append((1 + y_pred[0][0]) * data['Close'].iloc[i - 1])
             predict_percentages.append(y_pred[0][0] * 100)
-            actual_percentages.append(y[i - 1] * 100)
+            if i < len(y):
+                test_indices.append(data['Date'].iloc[i])
+                actual_percentages.append(y[i] * 100)
+            else:
+                test_indices.append(data['Date'].iloc[-1] + pd.Timedelta(days=1))
+                actual_percentages.append(np.nan)
 
     # 使用可视化工具绘制累积收益率曲线
     plot_cumulative_earnings(ticker, test_indices, actual_percentages, predict_percentages, save_dir)
 
-    predict_result = {str(date): pred / 100 for date, pred in zip(test_indices, predict_percentages)}
+    predict_result = {str(date): pred for date, pred in zip(test_indices, predict_percentages)}
+    # 初始化预测列，前n_steps行为NaN（历史数据）
+    res_data['prediction'] = np.nan
+    res_data['predict_percentages'] = np.nan
+    res_data['actual_percentage'] = np.nan
+    # 从第n_steps行开始拼接预测结果
+    res_data.iloc[n_steps:, res_data.columns.get_loc('prediction')] = predictions
+    res_data.iloc[n_steps:, res_data.columns.get_loc('predict_percentages')] = predict_percentages
+    res_data.iloc[n_steps:, res_data.columns.get_loc('actual_percentage')] = actual_percentages
+
+    os.makedirs(os.path.join(save_dir, 'complete_results'), exist_ok=True)
+    complete_file = os.path.join(save_dir, 'complete_results', f'{ticker}_complete_results.csv')
+    res_data.to_csv(complete_file)
+
+    file_path = os.path.join(save_dir, 'predictions', f'{ticker}_predictions.pkl')
+    os.makedirs(os.path.dirname(file_path), exist_ok=True)
+    with open(file_path, 'wb') as file:
+        pickle.dump(res_data, file)
+
+    print(f'Saved predictions for {ticker} to {file_path}')
+
     return predict_result, test_indices, predictions, actual_percentages
 
 
@@ -232,7 +285,6 @@ def predict(ticker_name, stock_data, stock_features, save_dir, epochs=100, batch
                                     save_dir)
     prediction_metrics[ticker_name] = metrics
 
-    save_predictions_with_indices(ticker_name, test_indices, predictions, save_dir)
 
     # 保存预测指标
     os.makedirs(os.path.join(save_dir, 'output'), exist_ok=True)
@@ -265,32 +317,18 @@ def predict(ticker_name, stock_data, stock_features, save_dir, epochs=100, batch
     return metrics
 
 
-def save_predictions_with_indices(ticker, test_indices, predictions, save_dir):
-    df = pd.DataFrame({
-        'Date': test_indices,
-        'Prediction': predictions
-    })
-
-    file_path = os.path.join(save_dir, 'predictions', f'{ticker}_predictions.pkl')
-    os.makedirs(os.path.dirname(file_path), exist_ok=True)
-    with open(file_path, 'wb') as file:
-        pickle.dump(df, file)
-
-    print(f'Saved predictions for {ticker} to {file_path}')
-
-
 async def lstm_stock_predict(stock_code: str):
     current_date = datetime.now()
     yesterday = current_date - timedelta(days=1)
     end_date = yesterday.strftime('%Y-%m-%d')
-    stock_data = get_stock_data(stock_code, '2016-01-16', end_date)
+    stock_data = get_history_data(stock_code, '2016-01-16', end_date)
     features = [
         'Volume', 'Year', 'Month', 'Day', 'MA5', 'MA10', 'MA20', 'RSI', 'MACD',
         'VWAP', 'SMA', 'Std_dev', 'Upper_band', 'Lower_band', 'Relative_Performance', 'ATR',
         'Close_yes', 'Open_yes', 'High_yes', 'Low_yes'
     ]
-    X = stock_data[features].iloc[1:]
-    y = stock_data['Close'].pct_change().iloc[1:]
+    X = stock_data[features]
+    y = stock_data['pct_change'] / 100
     stock_features = X, y
     predict(stock_code, stock_data, stock_features, 'output')
 
@@ -492,15 +530,6 @@ async def lstm_stock_predict(stock_code: str):
 #             predict_percentages.append(y_pred[0][0] * 100)
 #             actual_percentages.append(labels_[i + 119])
 #
-#     # 使用可视化工具绘制累积收益率曲线
-#     plt.figure(figsize=(14, 7))
-#     plt.plot(test_indices, predict_percentages, 'g')
-#     plt.plot(test_indices, actual_percentages, "r")
-#     plt.legend(["forecast", "actual"], loc='upper right')
-#     plt.pause(10)
-#     plt.close()
-#     predict_result = {str(date): pred / 100 for date, pred in zip(test_indices, predict_percentages)}
-#     return predict_result, test_indices, predictions, actual_percentages
 
 async def async_lstm_all_stock(stock_codes: List[str]):
     tasks = [lstm_stock_predict(code) for code in stock_codes]

@@ -1,102 +1,92 @@
+import time
+
 import numpy as np
+import pandas as pd
 import torch
 import torch.nn as nn
 from typing import Dict, Any
 
+from stable_baselines3 import PPO
+from stable_baselines3.common.vec_env import DummyVecEnv
 
-class PortfolioStateEncoder:
-    """Encode agent signals into RL state representation"""
-
-    def encode_state(self) -> np.ndarray:
-        """Extract features from agent signals"""
-        # Get agent signals (similar to portfolio_manager.py)
-        messages = state.get("messages", [])
-        portfolio = state.get("data", {}).get("portfolio", {})
-
-        # Extract signal features
-        features = []
-
-        # Portfolio state
-        features.extend([
-            portfolio.get("cash", 0) / 1000000,  # Normalized cash
-            portfolio.get("stock", 0) / 1000,  # Normalized shares
-        ])
-
-        # Agent signals (convert to numerical)
-        for agent_name in ["technical_analyst_agent", "fundamentals_agent",
-                           "sentiment_agent", "valuation_agent", "macro_analyst_agent"]:
-            signal = self._extract_signal(messages, agent_name)
-            features.extend(signal)
-
-        return np.array(features, dtype=np.float32)
-
-    def _extract_signal(self, messages, agent_name):
-        """Extract numerical signal from agent message"""
-        # Implementation to parse agent signals
-        # Returns [bullish_score, bearish_score, confidence]
-        pass
+from models.drl_env_train import StockEnvTrain
 
 
-class RLPolicyNetwork(nn.Module):
-    """Deep Q-Network for portfolio decisions"""
-
-    def __init__(self, state_dim: int, action_dim: int = 3):
-        super().__init__()
-        self.network = nn.Sequential(
-            nn.Linear(state_dim, 256),
-            nn.ReLU(),
-            nn.Linear(256, 128),
-            nn.ReLU(),
-            nn.Linear(128, action_dim)
-        )
-
-    def forward(self, state):
-        return self.network(state)
+def data_split(df,start,end):
+    """
+    split the dataset into training or testing using date
+    :param data: (df) pandas dataframe, start, end
+    :return: (df) pandas dataframe
+    """
+    data = df[(df.datadate >= start) & (df.datadate < end)]
+    data=data.sort_values(['datadate','tic'],ignore_index=True)
+    #data  = data[final_columns]
+    data.index = data.datadate.factorize()[0]
+    return data
 
 
-class DRLPortfolio:
-    """DRL-based portfolio management agent"""
+def train_ppo(env_train, model_name, timesteps=50000):
+    """PPO model"""
 
-    def __init__(self, model_path: str = None):
-        self.state_encoder = PortfolioStateEncoder()
-        self.policy_net = RLPolicyNetwork(state_dim=20)
-        if model_path:
-            self.policy_net.load_state_dict(torch.load(model_path))
+    start = time.time()
+    model = PPO('MlpPolicy', env_train, ent_coef = 0.005, batch_size=256, n_steps=2048, n_epochs=10)
+    #model = PPO2('MlpPolicy', env_train, ent_coef = 0.005)
 
-    def __call__(self, state: AgentState) -> Dict[str, Any]:
-        """Make portfolio decision using trained policy"""
-        # Encode current state
-        state_tensor = torch.FloatTensor(self.state_encoder.encode_state(state))
+    model.learn(total_timesteps=timesteps)
+    end = time.time()
 
-        # Get action from policy
-        with torch.no_grad():
-            q_values = self.policy_net(state_tensor)
-            action_idx = torch.argmax(q_values).item()
+    model.save(f"./models/{model_name}")
+    print('Training time (PPO): ', (end - start) / 60, ' minutes')
+    return model
 
-            # Map action to decision
-        actions = ["hold", "buy", "sell"]
-        action = actions[action_idx]
 
-        # Calculate quantity (simplified)
-        portfolio = state["data"]["portfolio"]
-        if action == "buy" and portfolio["cash"] > 0:
-            quantity = min(100, int(portfolio["cash"] / 100))  # Buy with 10% of cash
-        elif action == "sell" and portfolio["stock"] > 0:
-            quantity = min(100, portfolio["stock"] // 10)  # Sell 10% of holdings
-        else:
-            quantity = 0
+def DRL_prediction(df,
+                   model,
+                   name,
+                   last_state,
+                   iter_num,
+                   unique_trade_date,
+                   rebalance_window,
+                   turbulence_threshold,
+                   initial):
+    ### make a prediction based on trained model###
 
-        return {
-            "messages": state["messages"] + [HumanMessage(
-                content=json.dumps({
-                    "action": action,
-                    "quantity": quantity,
-                    "confidence": 0.8,
-                    "agent_signals": [],  # Can include original signals for transparency
-                    "reasoning": f"DRL policy decision: {action}"
-                }),
-                name="rl_portfolio_agent"
-            )],
-            "data": state["data"],
-            "metadata": state["metadata"]
-        }
+    ## trading env
+    trade_data = data_split(df, start=unique_trade_date[iter_num - rebalance_window], end=unique_trade_date[iter_num])
+    env_trade = DummyVecEnv([lambda: StockEnvTrade(trade_data,
+                                                   turbulence_threshold=turbulence_threshold,
+                                                   initial=initial,
+                                                   previous_state=last_state,
+                                                   model_name=name,
+                                                   iteration=iter_num)])
+    obs_trade = env_trade.reset()
+
+    for i in range(len(trade_data.index.unique())):
+        action, _states = model.predict(obs_trade)
+        obs_trade, rewards, dones, info = env_trade.step(action)
+        if i == (len(trade_data.index.unique()) - 2):
+            # print(env_test.render())
+            last_state = env_trade.render()
+
+    df_last_state = pd.DataFrame({'last_state': last_state})
+    df_last_state.to_csv('./output/last_state_{}_{}.csv'.format(name, i), index=False)
+    return last_state
+
+
+def run_drl_portfolio(self, stock_df, unique_trade_date, rebalance, validation):
+    last_state_ensemble = []
+    ppo_sharpe_list = []
+    for i in range(rebalance + validation, len(unique_trade_date), rebalance):
+        train = data_split(stock_df, start=unique_trade_date[0], end=unique_trade_date[i - rebalance - validation])
+        env_train = DummyVecEnv([lambda: StockEnvTrain(train)])
+        initial = True
+        # validation = data_split(stock_df, start=unique_trade_date[i - rebalance - validation], end=unique_trade_date[i - rebalance])
+        # env_val = DummyVecEnv([lambda: StockEnvValidation(validation, i - rebalance)])
+        # obs_val = env_val.reset()
+        model_ppo = train_ppo(env_train, model_name="PPO_100k_dow_{}".format(i), timesteps=100000)
+        last_state_ensemble = DRL_prediction(df=stock_df, model=model_ppo, name="ensemble",
+                                             last_state=last_state_ensemble, iter_num=i,
+                                             unique_trade_date=unique_trade_date,
+                                             rebalance_window=rebalance,
+                                             turbulence_threshold=turbulence_threshold,
+                                             initial=initial)

@@ -6,7 +6,6 @@ from sqlalchemy.orm import Session
 from entity.portfolio import Portfolio
 from entity.recommendation import Recommendation
 from services.stockDataService import StockDataService
-from tools.dataprocess import DataProcess
 
 router = (APIRouter(prefix="/recommend", tags=["recommend"]))
 
@@ -23,8 +22,6 @@ def simple_equal_weight(db, portfolio_id: int):
     #     data, scaler, df_display = DataProcess.preprocess_data(datas)
     market_data = stocks.market_all_data(symbols, pf)
     # 获取研究员观点
-    DataProcess().researcher_bear(market_data)
-    DataProcess().researcher_bull(market_data)
 
 
     target = {}

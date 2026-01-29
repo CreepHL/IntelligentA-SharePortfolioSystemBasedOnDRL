@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>股票投资组合管理系统</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .card {
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+            border: 1px solid rgba(0, 0, 0, 0.125);
+        }
+        .portfolio-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        .risk-low { color: #28a745; font-weight: bold; }
+        .risk-medium { color: #ffc107; font-weight: bold; }
+        .risk-high { color: #dc3545; font-weight: bold; }
+        .positive { color: #28a745; }
+        .negative { color: #dc3545; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">股票投资组合管理系统</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">投资组合</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">市场分析</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">风险评估</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">设置</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <!-- 用户信息卡片 -->
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">用户名</h5>
+                        <p class="card-text">张三</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">风险偏好</h5>
+                        <p class="card-text risk-medium">稳健型</p>
+                        <small class="text-muted">可根据市场情况调整</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">账户状态</h5>
+                        <p class="card-text">正常</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 资金概览 -->
+        <div class="row mb-4">
+            <div class="col-md-3">
+                <div class="card bg-primary text-white">
+                    <div class="card-body">
+                        <h6 class="card-subtitle">总资产</h6>
+                        <h4 class="card-title">¥125,430</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card bg-success text-white">
+                    <div class="card-body">
+                        <h6 class="card-subtitle">可用资金</h6>
+                        <h4 class="card-title">¥45,210</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card bg-info text-white">
+                    <div class="card-body">
+                        <h6 class="card-subtitle">持仓市值</h6>
+                        <h4 class="card-title">¥80,220</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card bg-warning text-dark">
+                    <div class="card-body">
+                        <h6 class="card-subtitle">浮动盈亏</h6>
+                        <h4 class="card-title">+¥12,450</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 投资组合图表 -->
+        <div class="row mb-4">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">资产分布</h5>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="assetDistributionChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">盈亏分析</h5>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="profitLossChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 持仓详情表格 -->
+        <div class="card mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">持仓详情</h5>
+                <button class="btn btn-sm btn-outline-primary">导出数据</button>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>股票代码</th>
+                                <th>股票名称</th>
+                                <th>持仓数量</th>
+                                <th>成本价</th>
+                                <th>当前价</th>
+                                <th>盈亏金额</th>
+                                <th>盈亏比例</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>000001</td>
+                                <td>平安银行</td>
+                                <td>1000</td>
+                                <td>¥15.20</td>
+                                <td>¥18.45</td>
+                                <td class="positive">+¥3,250</td>
+                                <td class="positive">+21.38%</td>
+                                <td><button class="btn btn-sm btn-outline-danger">卖出</button></td>
+                            </tr>
+                            <tr>
+                                <td>600519</td>
+                                <td>贵州茅台</td>
+                                <td>100</td>
+                                <td>¥1850.00</td>
+                                <td>¥1780.50</td>
+                                <td class="negative">-¥6,950</td>
+                                <td class="negative">-3.76%</td>
+                                <td><button class="btn btn-sm btn-outline-danger">卖出</button></td>
+                            </tr>
+                            <tr>
+                                <td>000858</td>
+                                <td>五粮液</td>
+                                <td>500</td>
+                                <td>¥180.00</td>
+                                <td>¥210.30</td>
+                                <td class="positive">+¥15,150</td>
+                                <td class="positive">+16.83%</td>
+                                <td><button class="btn btn-sm btn-outline-danger">卖出</button></td>
+                            </tr>
+                            <tr>
+                                <td>300750</td>
+                                <td>宁德时代</td>
+                                <td>300</td>
+                                <td>¥420.00</td>
+                                <td>¥405.60</td>
+                                <td class="negative">-¥4,320</td>
+                                <td class="negative">-3.43%</td>
+                                <td><button class="btn btn-sm btn-outline-danger">卖出</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- 风险偏好设置 -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="mb-0">风险偏好设置</h5>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">风险承受能力</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="riskLevel" id="lowRisk" checked>
+                            <label class="form-check-label risk-low" for="lowRisk">保守型</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="riskLevel" id="mediumRisk">
+                            <label class="form-check-label risk-medium" for="mediumRisk">稳健型</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="riskLevel" id="highRisk">
+                            <label class="form-check-label risk-high" for="highRisk">积极型</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="investmentHorizon" class="form-label">投资期限</label>
+                        <select class="form-select" id="investmentHorizon">
+                            <option>短期（1年以内）</option>
+                            <option selected>中期（1-3年）</option>
+                            <option>长期（3年以上）</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="investmentGoal" class="form-label">投资目标</label>
+                        <textarea class="form-control" id="investmentGoal" rows="3">资产增值，适度风险</textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">保存设置</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // 资产分布饼图
+        const assetCtx = document.getElementById('assetDistributionChart').getContext('2d');
+        new Chart(assetCtx, {
+            type: 'pie',
+            data: {
+                labels: ['贵州茅台', '五粮液', '平安银行', '宁德时代', '现金'],
+                datasets: [{
+                    data: [25, 30, 15, 20, 10],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.7)',
+                        'rgba(54, 162, 235, 0.7)',
+                        'rgba(255, 206, 86, 0.7)',
+                        'rgba(75, 192, 192, 0.7)',
+                        'rgba(153, 102, 255, 0.7)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: '资产分布比例'
+                    }
+                }
+            }
+        });
+
+        // 盈亏分析柱状图
+        const profitCtx = document.getElementById('profitLossChart').getContext('2d');
+        new Chart(profitCtx, {
+            type: 'bar',
+            data: {
+                labels: ['平安银行', '贵州茅台', '五粮液', '宁德时代'],
+                datasets: [{
+                    label: '盈亏金额 (¥)',
+                    data: [3250, -6950, 15150, -4320],
+                    backgroundColor: function(context) {
+                        const value = context.dataset.data[context.dataIndex];
+                        return value >= 0 ? 'rgba(75, 192, 192, 0.7)' : 'rgba(255, 99, 132, 0.7)';
+                    }
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: '各股票盈亏分析'
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
