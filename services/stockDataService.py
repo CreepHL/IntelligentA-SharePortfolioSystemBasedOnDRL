@@ -10,7 +10,9 @@ import akshare as ak
 import requests
 
 from core.config import STOCK_FILTER_CONFIG
+from models.gflownets import run_gflownets
 from services.asyncDataService import batch_get_stock_data_sync
+from services.drlPortfolioService import run_drl_portfolio
 from services.lstmProcess import async_lstm_all_stock
 from tools.logConfig import log_config
 
@@ -372,14 +374,21 @@ class StockDataService:
 
     def calculate_risk_score(self, stock_data: Dict) -> float:
         """
-        计算股票风险评分（0-10分），分数越高风险越高。
+        计算股票风险评分（0-10分），分数越高风险越低。
         使用连续变量 + 分位数标准化，确保个股差异明显。
         """
         risk_factors = {}
 
         # 1. 波动性风险（基于换手率 + 收盘价标准差）
         turnover = stock_data.get('turnover_rate', 0)
-        price_std = stock_data.get('price_std_20d', 1.4)  # 需要提前计算20日收盘价标准差
+        price_std_raw = stock_data.get('price_std_20d')  # 需要提前计算20日收盘价标准差
+        price_std = 1.4
+        if isinstance(price_std_raw, pd.Series):
+            # 如果是Series，去除NaN后取平均
+            price_std = price_std_raw.dropna().mean()
+            # 如果去除NaN后Series为空，使用默认值
+            if pd.isna(price_std):
+                price_std = 1.4
 
         # 换手率：过高（>8%）或过低（<0.5%）都危险
         if turnover <= 0:
@@ -421,7 +430,17 @@ class StockDataService:
 
         # 3. 基本面恶化风险
         roe = stock_data.get('roe', 0)
+        if roe is None or roe == [] or (hasattr(roe, '__len__') and len(roe) == 0):
+            roe = 0
+        elif isinstance(roe, list):
+            roe = roe[0] if len(roe) > 0 else 0
+
         profit_growth = stock_data.get('profit_growth', 0)
+        if profit_growth is None or profit_growth == [] or (
+                hasattr(profit_growth, '__len__') and len(profit_growth) == 0):
+            profit_growth = 0
+        elif isinstance(profit_growth, list):
+            profit_growth = profit_growth[0] if len(profit_growth) > 0 else 0
 
         fundamental_risk = 0.0
         if roe < 5:
@@ -458,12 +477,10 @@ class StockDataService:
             risk_factors[k] * w for k, w in weights.items()
         )
 
-        # 映射到 0-10 分（分数越高风险越高）
-        risk_score_0_10 = min(10.0, max(0.0, total_risk_raw * 10))
+        # 将风险转换为安全性评分：10 - 风险值*10，这样风险越低分数越高
+        safety_score = max(0.0, 10.0 - total_risk_raw * 10)
 
-        return round(risk_score_0_10, 2)
-
-
+        return round(safety_score, 2)
 
     def calculate_strength_score(self, stock_data: Dict) -> Dict:
         """计算股票强势分数 - 增强版,包含基本面评分"""
@@ -668,31 +685,26 @@ class StockDataService:
 
     def filter_by_strength(self, stocks_data: List[Dict]) -> List[Dict]:
         """按强势指标筛选股票"""
-        try:
-            # 计算每只股票的强势分数
-            for stock in stocks_data:
-                score_result = self.calculate_strength_score(stock)
-                stock['strength_score_detail'] = score_result  # 保存详细评分
-                stock['strength_score'] = score_result['total']  # 保存总分
-                stock['strength_grade'] = score_result['grade']  # 保存评级
-                risk_score = self.calculate_risk_score(stock)
-                stock['strength_risk'] = risk_score['risk']
 
-            # 按强势分数排序，选择前N只
-            sorted_stocks = sorted(stocks_data,
-                                   key=lambda x: x['strength_score'],
-                                   reverse=True)
+        # 计算每只股票的强势分数
+        for stock in stocks_data:
+            score_result = self.calculate_strength_score(stock)
+            stock['strength_score_detail'] = score_result  # 保存详细评分
+            stock['strength_score'] = score_result['total']  # 保存总分
+            stock['strength_grade'] = score_result['grade']  # 保存评级
+            risk_score = self.calculate_risk_score(stock)
+            stock['strength_risk'] = risk_score
+        # 按强势分数排序，选择前N只
+        sorted_stocks = sorted(stocks_data,
+                               key=lambda x: x['strength_score'],
+                               reverse=True)
+        # 根据配置的最小强势分数筛选
+        min_score = STOCK_FILTER_CONFIG.get('min_strength_score', 45)  # 降低到45分
+        strong_stocks = [stock for stock in sorted_stocks if stock['strength_score'] >= min_score]
+        logger.info(f"强势筛选后剩余 {len(strong_stocks)} 只股票")
+        return strong_stocks
 
-            # 根据配置的最小强势分数筛选
-            min_score = STOCK_FILTER_CONFIG.get('min_strength_score', 45)  # 降低到45分
-            strong_stocks = [stock for stock in sorted_stocks if stock['strength_score'] >= min_score]
 
-            logger.info(f"强势筛选后剩余 {len(strong_stocks)} 只股票")
-            return strong_stocks
-
-        except Exception as e:
-            logger.error(f"强势筛选失败: {e}")
-            return []
 
     def apply_additional_filters(self, stocks_data: List[Dict]) -> List[Dict]:
         """应用额外的筛选条件"""
@@ -783,43 +795,32 @@ class StockDataService:
 
     def select_top_stocks(self, stocks_data: List[Dict]) -> List[Dict]:
         """选择最终的推荐股票 - 直接按分数排序选择，不限制行业"""
-        try:
-            # 0. 去重（防止输入数据中有重复）
-            unique_stocks = {}
-            for stock in stocks_data:
-                code = stock.get('code')
-                if code and code not in unique_stocks:
-                    unique_stocks[code] = stock
+        # 0. 去重（防止输入数据中有重复）
+        unique_stocks = {}
+        for stock in stocks_data:
+            code = stock.get('code')
+            if code and code not in unique_stocks:
+                unique_stocks[code] = stock
+        stocks_data = list(unique_stocks.values())
+        logger.info(f"去重后股票数量: {len(stocks_data)}")
+        # 1. 首先按PE筛选
+        pe_filtered = self.filter_by_pe_ratio(stocks_data)
+        # 2. 应用额外筛选条件
+        additional_filtered = self.apply_additional_filters(pe_filtered)
+        # 3. 按强势筛选并排序
+        strength_filtered = self.filter_by_strength(additional_filtered)
+        # 4. 直接按分数排序，不限制行业
+        strength_filtered.sort(key=lambda x: x['strength_score'], reverse=True)
+        # 5. 选择前N只股票
+        final_selection = strength_filtered[:STOCK_FILTER_CONFIG['max_stocks']]
+        # 6. 添加选择理由和排名
+        for i, stock in enumerate(final_selection):
+            stock['rank'] = i + 1
+            stock['selection_reason'] = self._generate_selection_reason(stock)
+        logger.info(f"最终选择 {len(final_selection)} 只股票 (不限制行业)")
+        return final_selection
 
-            stocks_data = list(unique_stocks.values())
-            logger.info(f"去重后股票数量: {len(stocks_data)}")
 
-            # 1. 首先按PE筛选
-            pe_filtered = self.filter_by_pe_ratio(stocks_data)
-
-            # 2. 应用额外筛选条件
-            additional_filtered = self.apply_additional_filters(pe_filtered)
-
-            # 3. 按强势筛选并排序
-            strength_filtered = self.filter_by_strength(additional_filtered)
-
-            # 4. 直接按分数排序，不限制行业
-            strength_filtered.sort(key=lambda x: x['strength_score'], reverse=True)
-
-            # 5. 选择前N只股票
-            final_selection = strength_filtered[:STOCK_FILTER_CONFIG['max_stocks']]
-
-            # 6. 添加选择理由和排名
-            for i, stock in enumerate(final_selection):
-                stock['rank'] = i + 1
-                stock['selection_reason'] = self._generate_selection_reason(stock)
-
-            logger.info(f"最终选择 {len(final_selection)} 只股票 (不限制行业)")
-            return final_selection
-
-        except Exception as e:
-            logger.error(f"股票选择失败: {e}")
-            return []
 
     def csi300_data(self):
         """加载沪深300成分股列表 - 优先使用本地缓存"""
@@ -877,38 +878,76 @@ class StockDataService:
         # 初步筛选出的股票列表
         selected_stocks = self.select_top_stocks(all_stock_data)
         code_list = [stock['code'] for stock in selected_stocks if 'code' in stock]
+        strength_scores = [stock['strength_score'] for stock in selected_stocks]
+        risk_scores = [stock['strength_risk'] for stock in selected_stocks]
+        run_gflownets(strength_scores, risk_scores)
         # LSTM收益率预测
-        pre_list = ['000776', '002001', '002415']
+        asyncio.run(async_lstm_all_stock(code_list))
+        pre_list = code_list
+        hold = {'stocks': {'002905': [9.3, 1000], '600795': [3.7, 2000], '300442': [23.33, 1000]}, 'capital': 1000000}
+        features = [
+            'Tic', 'Open', 'Close', 'High', 'Low', 'Volume', 'MA5', 'MA10', 'MA20', 'RSI', 'MACD',
+            'VWAP', 'SMA', 'Std_dev', 'Upper_band', 'Lower_band', 'Relative_Performance', 'ATR', 'predict_percentages', 'prediction'
+        ]
+        # 读取并找出最晚起始日期
+        all_dfs = []
+        max_start_date = None
+
         for ticker in pre_list:
             df = pd.read_pickle(f'./output/predictions/{ticker}_predictions.pkl')
-            close = df.Prediction.values.tolist()
-        asyncio.run(async_lstm_all_stock(code_list))
-        current_date = datetime.now()
-        yesterday = current_date - timedelta(days=1)
-        end_date = data.get("end_date", yesterday.strftime('%Y-%m-%d'))
+            df['Tic'] = ticker
+            df['Date'] = pd.to_datetime(df['Date'])
 
-        # Ensure end_date is not in the future
-        end_date_obj = datetime.strptime(end_date, '%Y-%m-%d')
-        if end_date_obj > yesterday:
-            end_date = yesterday.strftime('%Y-%m-%d')
-            end_date_obj = yesterday
+            current_start_date = df['Date'].min()
+            if max_start_date is None or current_start_date > max_start_date:
+                max_start_date = current_start_date
 
-        start_date = data.get("start_date", (end_date_obj - timedelta(days=365)).strftime('%Y-%m-%d'))
-        financial_metrics = self.financial_metrics(symbols)
-        financial_line_items = self.financial_statements(symbols)
-        macro_data = self.macro_data(symbols)
+            all_dfs.append(df)
 
-        # 保存推理信息到metadata供API使用
-        market_data = {
-            "data": {
-                "ticker": symbols,
-                "start_date": start_date,
-                "end_date": end_date,
-                "financial_metrics": financial_metrics,
-                "financial_line_items": financial_line_items,
-                "market_cap": macro_data.get("market_cap", 0),
-                "market_data": macro_data,
-            },
-        }
-        return market_data
+            # 从统一起始日期截取并拼接
+        stock_dfs = []
+        for df in all_dfs:
+            df_filtered = df[df['Date'] >= max_start_date].copy()
+            df_filtered = df_filtered[['Date'] + features]
+            stock_dfs.append(df_filtered)
+
+        stock_df = pd.concat(stock_dfs, ignore_index=True)
+        unique_trade_date = stock_dfs['Date'].unique().tolist()
+        rebalance = 63  # 季度再平衡 (约3个月)
+        validation = 20  # 验证期
+        run_drl_portfolio(
+            stock_df=stock_df,
+            unique_trade_date=unique_trade_date,
+            rebalance=rebalance,
+            validation=validation,
+            hold=hold
+        )
+        # current_date = datetime.now()
+        # yesterday = current_date - timedelta(days=1)
+        # end_date = data.get("end_date", yesterday.strftime('%Y-%m-%d'))
+        #
+        # # Ensure end_date is not in the future
+        # end_date_obj = datetime.strptime(end_date, '%Y-%m-%d')
+        # if end_date_obj > yesterday:
+        #     end_date = yesterday.strftime('%Y-%m-%d')
+        #     end_date_obj = yesterday
+        #
+        # start_date = data.get("start_date", (end_date_obj - timedelta(days=365)).strftime('%Y-%m-%d'))
+        # financial_metrics = self.financial_metrics(symbols)
+        # financial_line_items = self.financial_statements(symbols)
+        # macro_data = self.macro_data(symbols)
+        #
+        # # 保存推理信息到metadata供API使用
+        # market_data = {
+        #     "data": {
+        #         "ticker": symbols,
+        #         "start_date": start_date,
+        #         "end_date": end_date,
+        #         "financial_metrics": financial_metrics,
+        #         "financial_line_items": financial_line_items,
+        #         "market_cap": macro_data.get("market_cap", 0),
+        #         "market_data": macro_data,
+        #     },
+        # }
+        # return market_data
 

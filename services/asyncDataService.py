@@ -1,11 +1,14 @@
 import asyncio
 import functools
+import json
 import random
+import time
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta
 from typing import List, Dict, Optional
 
 import aiohttp
+import pandas as pd
 
 from services.technicalService import get_history_data
 from tools.logConfig import log_config
@@ -382,6 +385,71 @@ class AsyncDataService:
 
             }
 
+
+    async def get_stock_historical_data(self, session: aiohttp.ClientSession,
+                                       stock_code: str, days: int = 30) -> pd.DataFrame:
+        """异步获取股票历史数据"""
+        async with self.semaphore:
+            try:
+                # 检查缓存
+                cache_key = f"{stock_code}_{days}"
+                if cache_key in self._hist_cache:
+                    cached_data, cached_time = self._hist_cache[cache_key]
+                    if time.time() - cached_time < 3600:  # 1小时缓存
+                        return cached_data
+
+                # 确定市场代码
+                if stock_code.startswith('6') or stock_code.startswith('688'):
+                    market = 'sh'
+                else:
+                    market = 'sz'
+
+                symbol = f"{market}{stock_code}"
+                actual_days = int(days * 2)
+
+                url = f"https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param={symbol},day,,,{actual_days},qfq&_var=kline_dayqfq"
+
+                content = await self._fetch_with_retry(session, url, max_retries=3, timeout=15)
+
+                if content and 'kline_dayqfq=' in content:
+                    json_str = content.replace('kline_dayqfq=', '')
+                    data_json = json.loads(json_str)
+
+                    if 'data' in data_json and symbol in data_json['data']:
+                        kline_data = data_json['data'][symbol]
+
+                        if 'qfqday' in kline_data and kline_data['qfqday']:
+                            klines = kline_data['qfqday']
+
+                            if klines:
+                                df_data = []
+                                for kline in klines:
+                                    df_data.append({
+                                        'date': kline[0],
+                                        'open': float(kline[1]),
+                                        'close': float(kline[2]),
+                                        'high': float(kline[3]),
+                                        'low': float(kline[4]),
+                                        'volume': float(kline[5]) if len(kline) > 5 else 0
+                                    })
+
+                                data = pd.DataFrame(df_data)
+                                data['date'] = pd.to_datetime(data['date'])
+
+                                if len(data) > days:
+                                    data = data.tail(days)
+
+                                # 存入缓存
+                                self._hist_cache[cache_key] = (data, time.time())
+
+                                return data
+
+            except Exception as e:
+                logger.debug(f"获取股票 {stock_code} 历史数据失败: {e}")
+
+            return pd.DataFrame()
+
+
     async def get_stock_data(self, stock_code: List[str], calculate_momentum: bool = True,
                              include_fundamental: bool = True) -> List[Dict]:
         self.semaphore = asyncio.Semaphore(self.max_concurrent)
@@ -401,29 +469,34 @@ class AsyncDataService:
                     stock.update(fundamental)
             if calculate_momentum:
                 logger.info("开始批量计算股票动量数据")
-                current_date = datetime.now()
-                yesterday = current_date - timedelta(days=1)
-                end_date = yesterday.strftime('%Y-%m-%d')
-                start_date = (current_date - timedelta(days=60)).strftime('%Y-%m-%d')
-                # 创建线程池执行器
-                loop = asyncio.get_running_loop()
-                with ThreadPoolExecutor(max_workers=10) as pool:
-                    history_tasks = [
-                        loop.run_in_executor(pool, functools.partial(get_history_data, code, start_date, end_date))
-                        for code in stock_code
-                    ]
-                    history_results = await asyncio.gather(*history_tasks, return_exceptions=True)
-                for stock, history in zip(realtime_data, history_results):
-                    if isinstance(history, Exception):
-                        logger.error(f"获取股票 {stock.get('code', 'Unknown')} 历史数据失败: {history}")
-                        stock['momentum'] = None
-                        stock['ma20_mean'] = None
+                historical_tasks = [
+                    self.get_stock_historical_data(session, stock, days=60)
+                    for stock in stock_code
+                ]
+                historical_results = await asyncio.gather(*historical_tasks)
+
+                # 计算动量
+                momentum_success = 0
+                for stock, hist_data in zip(realtime_data, historical_results):
+                    if not hist_data.empty and len(hist_data) >= 20:
+                        stock['price_std_20d'] = hist_data['close'].rolling(20).std()
+                        momentum = self.calculate_momentum(hist_data, days=20)
+                        stock['momentum_20d'] = momentum
+                        momentum_success += 1
                     else:
-                        stock['momentum'] = history['Close'].rolling(20).std()
-                        stock['ma20_mean'] = history['MA20'].rolling(20).mean()
+                        stock['momentum_20d'] = 0
 
         return realtime_data
 
+
+    def calculate_momentum(self, price_data: pd.DataFrame, days: int = 20) -> float:
+        """计算动量指标"""
+        if len(price_data) < days:
+            return 0
+
+        recent_prices = price_data['close'].tail(days)
+        momentum = (recent_prices.iloc[-1] / recent_prices.iloc[0] - 1) * 100
+        return momentum
 
 def batch_get_stock_data_sync(stock_codes: List[str], calculate_momentum: bool = True,
                               include_fundamental: bool = True, max_concurrent: int = 20) -> List[Dict]:

@@ -249,15 +249,8 @@ def generate_ranked_paths(
     return uniq
 
 
-# -----------------------------
-# Example
-# -----------------------------
-if __name__ == "__main__":
+def run_gflownets(profit_scores, safety_scores):
     device = "cuda" if torch.cuda.is_available() else "cpu"
-
-    # 15 stocks: profit higher better, safety higher safer
-    profit_scores = [1.2, 0.8, 1.6, 0.9, 1.1, 1.4, 0.7, 1.3, 1.0, 0.95, 1.5, 0.6, 1.25, 0.85, 1.05]
-    safety_scores = [0.6, 0.9, 0.4, 0.8, 0.7, 0.5, 0.95, 0.65, 0.75, 0.8, 0.45, 0.98, 0.6, 0.85, 0.7]
 
     # user risk preference: 0 aggressive, 1 conservative
     risk_pref = 0.7   # 偏保守 => 更看安全分数

@@ -10,7 +10,7 @@ import pandas as pd
 import torch
 import tqdm
 from matplotlib import pyplot as plt
-from sklearn.preprocessing import MinMaxScaler
+from sklearn.preprocessing import MinMaxScaler, StandardScaler
 from torch import nn, optim
 from torch.utils.data import TensorDataset, DataLoader
 
@@ -116,7 +116,7 @@ def visualize_predictions(ticker, data, predict_result, test_indices, prediction
     metrics = {'rmse': rmse, 'mae': mae, 'accuracy': accuracy}
     plot_stock_prediction(ticker, test_indices[:-1], actual_prices, predicted_prices, metrics, save_dir)
     # 绘制涨跌幅比较图
-    predict_percentages = [predict_result[str(date)]*4 for date in test_indices if str(date) in predict_result]
+    predict_percentages = [predict_result[str(date)] for date in test_indices if str(date) in predict_result]
     plot_returns_comparison(ticker, test_indices, actual_percentages, predict_percentages, save_dir)
     return metrics
 
@@ -146,8 +146,8 @@ def plot_returns_comparison(ticker, test_indices, actual_percentages, predict_pe
 
 def train_and_predict_lstm(ticker, data, X, y, save_dir, n_steps=60, num_epochs=100, batch_size=32, learning_rate=0.001):
     # 数据归一化和准备部分
-    scaler_y = MinMaxScaler()
-    scaler_X = MinMaxScaler()
+    scaler_y = StandardScaler()
+    scaler_X = StandardScaler()
     scaler_y.fit(y.values.reshape(-1, 1))
     y_scaled = scaler_y.transform(y.values.reshape(-1, 1))
     X_scaled = scaler_X.fit_transform(X)

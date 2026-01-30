@@ -16,7 +16,7 @@ STOCK_FILTER_CONFIG = {
 
     'min_price': 1.0,
 
-    'max_stocks': 15,  # 从5只增加到10只
+    'max_stocks': 10,  # 从5只增加到10只
 
     'min_strength_score': 40   # 从50降低到40
 
