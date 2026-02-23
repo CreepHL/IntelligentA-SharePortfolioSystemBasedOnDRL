@@ -10,13 +10,12 @@ HMAX_NORMALIZE = 100
 # transaction fee: 1/1000 reasonable percentage
 TRANSACTION_FEE_PERCENT = 0.001
 # avoid gradient explosion
-REWARD_SCALING = 1e-4
+REWARD_SCALING = 1e-3
 INITIAL_ACCOUNT_BALANCE = 1000000
 
 feature_columns = [
     'Open', 'Close', 'High', 'Low', 'Volume', 'MA5', 'MA10', 'MA20',
-    'RSI', 'MACD', 'VWAP', 'SMA', 'Std_dev', 'Upper_band', 'Lower_band',
-    'Relative_Performance', 'ATR', 'predict_percentages'
+    'RSI', 'MACD', 'VWAP', 'SMA', 'Std_dev', 'Upper_band', 'Relative_Performance', 'ATR', 'predict_percentages'
 ]
 
 
@@ -64,12 +63,18 @@ class StockEnvTrain(gym.Env):
             holdings.append(holding_quantity)
         # 技术指标
         features = []
+        matched = []
         for feature in feature_columns:
-            for col in [col for col in self.data.columns if feature in col]:
-                if col in self.data.columns:
+            matched_cols = [col for col in self.data.columns if feature in col]
+            matched.append(matched_cols)
+
+            if matched_cols:
+                # 如果找到匹配的列，依次扩展它们的值
+                for col in matched_cols:
                     features.extend(self.data[col].values.tolist())
-                else:
-                    features.extend([0] * self.stock_dim)
+            else:
+                # 如果没有匹配的列，填充默认值
+                features.extend([0] * self.stock_dim)
         return balance + prices + holdings + features
 
     def sell(self, index, action):
@@ -87,7 +92,8 @@ class StockEnvTrain(gym.Env):
 
     def buy(self, index, action):
         # perform buy action based on the sign of the action
-        available_amount = self.state[0] // self.state[index + 1]
+        price = max(self.state[index + 1], 1e-8)  # 避免除零
+        available_amount = self.state[0] // price
         # print('available_amount:{}'.format(available_amount))
 
         # update balance
@@ -104,14 +110,14 @@ class StockEnvTrain(gym.Env):
 
         if self.terminal:
             plt.plot(self.asset_memory, 'r')
-            plt.savefig('results/account_value_train.png')
+            plt.savefig('output/results/account_value_train.png')
             plt.close()
             end_total_asset = self.state[0] + \
                               sum(np.array(self.state[1:(self.stock_dim + 1)]) * np.array(
                                   self.state[(self.stock_dim + 1):(self.stock_dim * 2 + 1)]))
 
             df_total_value = pd.DataFrame(self.asset_memory)
-            df_total_value.to_csv('results/account_value_train.csv')
+            df_total_value.to_csv('output/results/account_value_train.csv')
             # print("total_reward:{}".format(self.state[0]+sum(np.array(self.state[1:(self.stock_dim +1)])*np.array(self.state[(self.stock_dim +1):61]))- INITIAL_ACCOUNT_BALANCE ))
             # print("total_cost: ", self.cost)
             # print("total_trades: ", self.trades)

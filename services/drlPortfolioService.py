@@ -25,11 +25,11 @@ def data_split(df,start,end):
     return data
 
 
-def train_ppo(env_train, model_name, timesteps=50000):
+def train_ppo(env_train, model_name, timesteps=5000):
     """PPO model"""
 
     start = time.time()
-    model = PPO('MlpPolicy', env_train, ent_coef = 0.005, batch_size=256, n_steps=2048, n_epochs=10)
+    model = PPO('MlpPolicy', env_train, ent_coef=0.005, clip_range=0.2, max_grad_norm=0.5, batch_size=256, n_steps=2048, n_epochs=10)
     #model = PPO2('MlpPolicy', env_train, ent_coef = 0.005)
 
     model.learn(total_timesteps=timesteps)
@@ -47,12 +47,14 @@ def DRL_prediction(df,
                    iter_num,
                    unique_trade_date,
                    rebalance_window,
-                   initial):
+                   initial, hold):
     ### make a prediction based on trained model###
 
     ## trading env
     trade_data = data_split(df, start=unique_trade_date[iter_num - rebalance_window], end=unique_trade_date[iter_num])
+    trade_data = trade_data.fillna(0)
     env_trade = DummyVecEnv([lambda: StockEnvTrade(trade_data,
+                                                   hold=hold,
                                                    initial=initial,
                                                    previous_state=last_state,
                                                    model_name=name,
@@ -64,9 +66,10 @@ def DRL_prediction(df,
         obs_trade, rewards, dones, info = env_trade.step(action)
         if i == (len(trade_data.index.unique()) - 2):
             # print(env_test.render())
-            last_state = env_trade.render()
+            last_state = env_trade.envs[0].render()
 
-    df_last_state = pd.DataFrame({'last_state': last_state})
+    last_state = np.asarray(last_state).reshape(-1)  # (dim,)
+    df_last_state = pd.DataFrame([last_state])  # 1 row, dim columns
     df_last_state.to_csv('./output/last_state_{}_{}.csv'.format(name, i), index=False)
     return last_state
 
@@ -83,16 +86,16 @@ def run_drl_portfolio(stock_df, unique_trade_date, rebalance, validation, hold):
             # previous state
             initial = False
         train = data_split(stock_df, start=pd.to_datetime('2009-01-01'), end=unique_trade_date[i - rebalance - validation])
+        train = train.fillna(0)
         env_train = DummyVecEnv([lambda: StockEnvTrain(train, hold=hold)])
-        initial = True
         # validation = data_split(stock_df, start=unique_trade_date[i - rebalance - validation], end=unique_trade_date[i - rebalance])
         # env_val = DummyVecEnv([lambda: StockEnvValidation(validation, i - rebalance)])
         # obs_val = env_val.reset()
-        model_ppo = train_ppo(env_train, model_name="PPO_100k_dow_{}".format(i), timesteps=100000)
+        model_ppo = train_ppo(env_train, model_name="PPO_100k_dow_{}".format(i), timesteps=1000)
         last_state_ensemble = DRL_prediction(df=stock_df, model=model_ppo, name="ppo",
                                              last_state=last_state_ensemble, iter_num=i,
                                              unique_trade_date=unique_trade_date,
                                              rebalance_window=rebalance,
-                                             initial=initial)
+                                             initial=initial, hold=hold)
         end = time.time()
         print("Ensemble Strategy took: ", (end - start) / 60, " minutes")

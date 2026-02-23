@@ -5,6 +5,8 @@ import torch.nn.functional as F
 from dataclasses import dataclass
 from typing import List, Dict
 
+from matplotlib import pyplot as plt
+
 
 # -----------------------------
 # 1) Utility / Reward (profit high better, safety high safer)
@@ -20,7 +22,7 @@ def utility(
     profit: torch.Tensor,     # [N]
     safety: torch.Tensor,     # [N] higher=safer
     pref: UserPref,
-    size_penalty: float = 0.05,
+    size_penalty: float = 0.4,
 ) -> torch.Tensor:
     """
     U(S) = (1-rho)*profit_sum + rho*safety_sum - size_penalty*|S|
@@ -151,7 +153,7 @@ def train_gflownet(
     risk_pref: float,
     kmax: int = 6,
     beta: float = 3.0,
-    size_penalty: float = 0.05,
+    size_penalty: float = 0.4,
     steps: int = 2500,
     batch_size: int = 64,
     lr: float = 2e-4,
@@ -163,7 +165,12 @@ def train_gflownet(
 
     model = SubsetGFlowNetTB(n_assets=len(profit_scores), kmax=kmax, hidden=128).to(device)
     opt = torch.optim.Adam(model.parameters(), lr=lr)
-
+    # 添加损失记录
+    loss_history = []
+    step_history = []
+    logzlist = []
+    best__U = []
+    mean_U = []
     for s in range(1, steps + 1):
         sel_mask, actions = model.sample_paths(risk_pref, n_samples=batch_size, temperature=1.0, device=device)
 
@@ -178,13 +185,43 @@ def train_gflownet(
         loss.backward()
         torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
         opt.step()
+        # 记录损失
+        if s % 100 == 0:
 
-        if s % 300 == 0:
             with torch.no_grad():
                 sm, ac = model.sample_paths(risk_pref, n_samples=200, temperature=0.8, device=device)
                 U_s = utility(sm, profit, safety, pref, size_penalty=size_penalty)
+                loss_history.append(loss.item())
+                step_history.append(s)
+                logzlist.append(model.logZ.item())
+                best__U.append(U_s.max().item())
+                mean_U.append(U_s.mean().item())
                 print(f"[step {s:4d}] loss={loss.item():.4f} logZ={model.logZ.item():.3f} U_best={U_s.max().item():.3f} U_mean={U_s.mean().item():.3f}")
 
+    fig, ax1 = plt.subplots(figsize=(12, 6))
+
+    color1 = 'tab:red'
+    ax1.set_xlabel('Training Step')
+    ax1.set_ylabel('Loss Value', color=color1)
+    line1, = ax1.plot(step_history, loss_history, color=color1, label='Loss', linewidth=2)
+    ax1.tick_params(axis='y', labelcolor=color1)
+    ax1.grid(True, alpha=0.3)
+
+    ax2 = ax1.twinx()
+    color2 = 'tab:blue'
+    ax2.set_ylabel('logZ / Utility', color=color2)
+    line2, = ax2.plot(step_history, logzlist, color='orange', label='logZ', linestyle='--', linewidth=2)
+    line3, = ax2.plot(step_history, best__U, color='green', label='Best Utility', linestyle='-.', linewidth=2)
+    line4, = ax2.plot(step_history, mean_U, color='purple', label='Mean Utility', linestyle=':', linewidth=2)
+    ax2.tick_params(axis='y', labelcolor=color2)
+
+    plt.title('GFlowNet Training Metrics Over Time')
+    lines = [line1, line2, line3, line4]
+    labels = [l.get_label() for l in lines]
+    ax1.legend(lines, labels, loc='upper left')
+    fig.tight_layout()
+    plt.savefig("gflownet_training_metrics.png", dpi=300, bbox_inches='tight')
+    plt.show()
     return model
 
 
@@ -258,16 +295,16 @@ def run_gflownets(profit_scores, safety_scores):
     model = train_gflownet(
         profit_scores, safety_scores,
         risk_pref=risk_pref,
-        kmax=6, beta=3.0,
+        kmax=5, beta=3.0,
         size_penalty=0.4,
-        steps=2000, batch_size=64,
-        lr=2e-4, device=device
+        steps=10000, batch_size=64,
+        lr=1e-4, device=device
     )
 
     # 你要求“按盈利降序输出多条路径”
     top = generate_ranked_paths(
         model, profit_scores, safety_scores, risk_pref,
-        n_generate=800, top_k=8,
+        n_generate=800, top_k=6,
         sort_by="profit",
         device=device
     )

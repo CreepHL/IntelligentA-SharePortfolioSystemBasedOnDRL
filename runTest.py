@@ -4,6 +4,7 @@ from concurrent.futures import ThreadPoolExecutor
 
 import pandas as pd
 
+from models.gflownets import run_gflownets
 from services.drlPortfolioService import run_drl_portfolio
 from services.lstmProcess import lstm_stock_predict
 from services.technicalService import get_history_data
@@ -39,11 +40,13 @@ if __name__ == '__main__':
     # results = asyncio.run(fetch_all(['600518', '600519', '600598', '600522', '600487'], '2025-12-01', '2026-01-25'))
     # results = get_history_data('600518', '2025-12-01', '2026-01-25')
     # print(results)
+
+    #
     pre_list = ['002905', '600795', '300442']
     hold = {'stocks': {'002905': [9.3, 1000], '600795': [3.7, 2000], '300442': [23.33, 1000]}, 'capital': 1000000}
     features = [
         'Tic', 'Open', 'Close', 'High', 'Low', 'Volume', 'MA5', 'MA10', 'MA20', 'RSI', 'MACD',
-        'VWAP', 'SMA', 'Std_dev', 'Upper_band', 'Lower_band', 'Relative_Performance', 'ATR', 'predict_percentages',
+        'VWAP', 'SMA', 'Std_dev', 'Upper_band', 'Relative_Performance', 'ATR', 'predict_percentages',
         'prediction'
     ]
     # 读取并找出最晚起始日期
@@ -89,7 +92,10 @@ if __name__ == '__main__':
         hold=hold
     )
 
-
-
+    #
+    # strength_scores = [74, 73, 72, 72, 70, 65, 65, 62, 61, 59]
+    # risk_scores = [6.05, 8.35, 6.55, 8.05, 7.2, 7.55, 8.05, 8.05, 8.2, 7.95]
+    # run_gflownets(strength_scores, risk_scores)
     # 用法
     # results = asyncio.run(fetch_all(stock_code, start_date, end_date, max_workers=8))
+
