@@ -1,0 +1,5 @@
+Average Accuracy: 98.50364779186658
+Best Stock: sh.601319
+Worst Stock: sh.601319
+Average RMSE: 0.18574177951088003
+Average MAE: 0.12669237397857022

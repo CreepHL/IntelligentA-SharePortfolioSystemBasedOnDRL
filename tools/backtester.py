@@ -61,16 +61,19 @@ import matplotlib.pyplot as plt
 import pyfolio as pf
 import pyfolio.timeseries as ts
 
+
 # ------- helper：把各种类型（int位置/字符串/时间戳/NaT）统一成 Timestamp/NaT -------
 def _to_timestamp_or_nat(x, idx):
     if x is None or pd.isna(x):
         return pd.NaT
-    if isinstance(x, (int, np.integer)):         # 有些版本会返回位置索引
+    if isinstance(x, (int, np.integer)):  # 有些版本会返回位置索引
         return pd.Timestamp(idx[int(x)])
     return pd.Timestamp(x)
 
+
 # ------- 1) patch get_top_drawdowns：保证用于绘图的 recovery 一定是一个日期 -------
 _orig_get_top_drawdowns = ts.get_top_drawdowns
+
 
 def get_top_drawdowns_fixed(returns, top=10):
     returns = returns.dropna()
@@ -91,10 +94,12 @@ def get_top_drawdowns_fixed(returns, top=10):
         fixed.append((peak_ts, valley_ts, recovery_ts))
     return fixed
 
+
 ts.get_top_drawdowns = get_top_drawdowns_fixed
 
 # ------- 2) patch gen_drawdown_table：不再 strftime(NaT)，并增加 Recovered 标记 -------
 _orig_gen_drawdown_table = ts.gen_drawdown_table
+
 
 def gen_drawdown_table_fixed(returns, top=10):
     returns = returns.dropna()
@@ -124,15 +129,18 @@ def gen_drawdown_table_fixed(returns, top=10):
         rows.append({
             "Peak date": peak_ts,
             "Valley date": valley_ts,
-            "Recovery date": recovery_plot,   # 没恢复则=样本末尾
-            "Recovered": recovered,           # 关键标记：是否真实恢复
+            "Recovery date": recovery_plot,  # 没恢复则=样本末尾
+            "Recovered": recovered,  # 关键标记：是否真实恢复
             "Duration": duration,
             "Net drawdown in %": net_dd,
         })
 
     return pd.DataFrame(rows)
 
+
 ts.gen_drawdown_table = gen_drawdown_table_fixed
+
+
 def get_daily_return(df: pd.DataFrame) -> pd.DataFrame:
     """Add daily_return and print Sharpe."""
     out = df.copy()
@@ -158,7 +166,7 @@ def backtest_strat(df: pd.DataFrame) -> pd.Series:
         if "datadate" in s.columns:
             # datadate is usually like 20160104
             s["Date"] = pd.to_datetime(s["datadate"]).dt.strftime("%Y%m%d")
-            #s["Date"] = pd.to_datetime(s["datadate"].astype(str), format="%Y%m%d", errors="coerce")
+            # s["Date"] = pd.to_datetime(s["datadate"].astype(str), format="%Y%m%d", errors="coerce")
         else:
             raise ValueError("backtest_strat(): need column 'Date' or 'datadate'.")
 
@@ -176,12 +184,12 @@ def backtest_strat(df: pd.DataFrame) -> pd.Series:
 # Data loaders
 # -----------------------------
 def get_account_value(
-    model_name: str,
-    results_dir: str,
-    unique_trade_date: np.ndarray,
-    df_trade_date: pd.DataFrame,
-    rebalance_window: int,
-    validation_window: int,
+        model_name: str,
+        results_dir: str,
+        unique_trade_date: np.ndarray,
+        df_trade_date: pd.DataFrame,
+        rebalance_window: int,
+        validation_window: int,
 ) -> pd.DataFrame:
     """
     Load account value csv fragments and stitch into one DataFrame:
@@ -238,6 +246,9 @@ def get_dow_benchmark(dji_path="../data/^CSI300.csv", start="2023-12-26", end="2
 def main():
     # df = pd.read_csv("data/dow_30_2009_2020.csv")
     df = pd.read_pickle(f'../output/predictions/002905_predictions.pkl')
+    start_date = pd.to_datetime('2024-04-01')
+    end_date = pd.to_datetime('2026-01-26')
+    df = df[(df['Date'] >= start_date) & (df['Date'] <= end_date)].copy()
     df['Date'] = pd.to_datetime(df['Date'])
     rebalance_window = 63
     validation_window = 20
@@ -248,21 +259,77 @@ def main():
     # 1) strategy account value
     ensemble_account_value = get_account_value(
         model_name="ppo",
-        results_dir="../output/results",
+        results_dir="../output/results1",
         unique_trade_date=unique_trade_date,
         df_trade_date=df_trade_date,
         rebalance_window=rebalance_window,
         validation_window=validation_window,
     )
 
+    sac_account_value = get_account_value(
+        model_name="sac",
+        results_dir="../output/results1",
+        unique_trade_date=unique_trade_date,
+        df_trade_date=df_trade_date,
+        rebalance_window=rebalance_window,
+        validation_window=validation_window,
+    )
+
+    pf2_ppo_account_value = get_account_value(
+        model_name="ppo",
+        results_dir="../output/results2",
+        unique_trade_date=unique_trade_date,
+        df_trade_date=df_trade_date,
+        rebalance_window=rebalance_window,
+        validation_window=validation_window,
+    )
+
+    pf2_sac_account_value = get_account_value(
+        model_name="sac",
+        results_dir="../output/results2",
+        unique_trade_date=unique_trade_date,
+        df_trade_date=df_trade_date,
+        rebalance_window=rebalance_window,
+        validation_window=validation_window,
+    )
+
+    pf3_ppo_account_value = get_account_value(
+        model_name="ppo",
+        results_dir="../output/results3",
+        unique_trade_date=unique_trade_date,
+        df_trade_date=df_trade_date,
+        rebalance_window=rebalance_window,
+        validation_window=validation_window,
+    )
+
+    pf3_sac_account_value = get_account_value(
+        model_name="sac",
+        results_dir="../output/results3",
+        unique_trade_date=unique_trade_date,
+        df_trade_date=df_trade_date,
+        rebalance_window=rebalance_window,
+        validation_window=validation_window,
+    )
     # plot account value
-    ensemble_account_value.set_index("Date")["account_value"].plot(title="Ensemble Account Value")
-    plt.show()
 
     # 2) convert to daily return series
     ensemble_account_value = get_daily_return(ensemble_account_value)
     ensemble_strat = backtest_strat(ensemble_account_value)
 
+    sac_account_value = get_daily_return(sac_account_value)
+    dow_strat = backtest_strat(sac_account_value)
+
+    pf2_ppo_account_value = get_daily_return(pf2_ppo_account_value)
+    pf2_ppo_strat = backtest_strat(pf2_ppo_account_value)
+
+    pf2_sac_account_value = get_daily_return(pf2_sac_account_value)
+    pf2_sac_strat = backtest_strat(pf2_sac_account_value)
+
+    pf3_ppo_account_value = get_daily_return(pf3_ppo_account_value)
+    pf3_ppo_strat = backtest_strat(pf3_ppo_account_value)
+
+    pf3_sac_account_value = get_daily_return(pf3_sac_account_value)
+    pf3_sac_strat = backtest_strat(pf3_sac_account_value)
     # 3) benchmark
     # csi_df = ak.index_zh_a_hist(symbol="000300", period="daily")
     # column_mapping = {
@@ -280,23 +347,55 @@ def main():
     # selected_columns = ['Date', 'Open', 'High', 'Low', 'Close', 'Volume']
     # df_selected = csi_df[selected_columns]
     # df_selected.to_csv("../data/^CSI300.csv", index=False)
-    dow_strat = get_dow_benchmark()
+    # dow_strat = get_dow_benchmark()
 
     # 4) align indices (important for pyfolio)
     common_index = ensemble_strat.index.intersection(dow_strat.index)
     ensemble_strat = ensemble_strat.loc[common_index]
     dow_strat = dow_strat.loc[common_index]
-
-    print(type(ensemble_strat.index), ensemble_strat.index.dtype, ensemble_strat.index[:3])
-    print(type(dow_strat.index), dow_strat.index.dtype, dow_strat.index[:3])
+    pf2_ppo = pf2_ppo_strat.loc[common_index]
+    pf2_sac = pf2_sac_strat.loc[common_index]
+    pf3_ppo = pf3_ppo_strat.loc[common_index]
+    pf3_sac = pf3_sac_strat.loc[common_index]
     # 5) tear sheet
-    with pf.plotting.plotting_context(font_scale=1.1):
-        pf.create_full_tear_sheet(
-            returns=ensemble_strat,
-            benchmark_rets=dow_strat,
-            set_context=False,
-        )
-
+    # with pf.plotting.plotting_context(font_scale=1.1):
+    #     pf.create_full_tear_sheet(
+    #         returns=ensemble_strat,
+    #         benchmark_rets=dow_strat,
+    #         set_context=False,
+    #     )
+    ensemble_cumulative = (1 + ensemble_strat).cumprod()
+    dow_cumulative = (1 + dow_strat).cumprod()
+    pf2_ppo_cumulative = (1 + pf2_ppo).cumprod()
+    pf2_sac_cumulative = (1 + pf2_sac).cumprod()
+    pf3_ppo_cumulative = (1 + pf3_ppo).cumprod()
+    pf3_sac_cumulative = (1 + pf3_sac).cumprod()
+    # 绘制累计收益曲线
+    plt.figure(figsize=(10, 6))
+    plt.plot(ensemble_cumulative.index, ensemble_cumulative.values, label="pf1_PPO Strategy Cumulative Return")
+    plt.plot(dow_cumulative.index, dow_cumulative.values, label="pf1_SAC Strategy Cumulative Return")
+    plt.plot(pf2_ppo_cumulative.index, pf2_ppo_cumulative.values, label="pf2_PPO Strategy Cumulative Return")
+    plt.plot(pf2_sac_cumulative.index, pf2_sac_cumulative.values, label="pf2_SAC Strategy Cumulative Return")
+    plt.plot(pf3_ppo_cumulative.index, pf3_ppo_cumulative.values, label="pf3_PPO Strategy Cumulative Return")
+    plt.plot(pf3_sac_cumulative.index, pf3_sac_cumulative.values, label="pf3_SAC Strategy Cumulative Return")
+    # 添加标题和标签
+    plt.title("Cumulative Return Comparison")
+    plt.xlabel("Date")
+    plt.ylabel("Cumulative Return")
+    plt.legend()
+    plt.grid(True)
+    plt.tight_layout()
     plt.show()
+
+    # # 绘制累计收益比较图
+    # fig, ax = plt.subplots(figsize=(10, 6))
+    # pf.plotting.plot_rolling_returns(
+    #     returns=ensemble_strat,
+    #     factor_returns=dow_strat,
+    #     ax=ax,
+    #     title="Cumulative Return Comparison"
+    # )
+    # plt.show()
+
 if __name__ == "__main__":
     main()

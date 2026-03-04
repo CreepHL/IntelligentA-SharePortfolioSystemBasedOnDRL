@@ -912,7 +912,7 @@ class StockDataService:
             stock_dfs.append(df_filtered)
 
         stock_df = pd.concat(stock_dfs, ignore_index=True)
-        unique_trade_date = stock_dfs['Date'].unique().tolist()
+        unique_trade_date = pd.to_datetime(stock_df['Date'].unique()).strftime('%Y-%m-%d').tolist()
         rebalance = 63  # 季度再平衡 (约3个月)
         validation = 20  # 验证期
         run_drl_portfolio(

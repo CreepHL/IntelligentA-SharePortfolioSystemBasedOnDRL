@@ -1,0 +1,2477 @@
+tic,type,quantity,price,high,low,day
+600795,sell,100,3.8824156005866826,"0    4.07
+Name: High_600795, dtype: float64","0    3.86
+Name: Low_600795, dtype: float64","0   2025-02-17
+Name: Date, dtype: datetime64[ns]"
+000776,sell,34,15.33864719800651,"0    15.66
+Name: High_000776, dtype: float64","0    15.41
+Name: Low_000776, dtype: float64","0   2025-02-17
+Name: Date, dtype: datetime64[ns]"
+000338,buy,100,13.930526879662649,"0    14.15
+Name: High_000338, dtype: float64","0    13.82
+Name: Low_000338, dtype: float64","0   2025-02-17
+Name: Date, dtype: datetime64[ns]"
+002905,buy,100,8.22581615406554,"0    8.3
+Name: High_002905, dtype: float64","0    7.82
+Name: Low_002905, dtype: float64","0   2025-02-17
+Name: Date, dtype: datetime64[ns]"
+601336,buy,93,60.60020978382056,"0    65.109329
+Name: High_601336, dtype: float64","0    62.647319
+Name: Low_601336, dtype: float64","0   2025-02-17
+Name: Date, dtype: datetime64[ns]"
+601628,buy,89,40.430533749088646,"0    40.77
+Name: High_601628, dtype: float64","0    39.12
+Name: Low_601628, dtype: float64","0   2025-02-17
+Name: Date, dtype: datetime64[ns]"
+002001,buy,68,21.396896002851427,"0    21.37
+Name: High_002001, dtype: float64","0    21.01
+Name: Low_002001, dtype: float64","0   2025-02-17
+Name: Date, dtype: datetime64[ns]"
+002600,buy,55,9.719094089814462,"0    9.98
+Name: High_002600, dtype: float64","0    9.66
+Name: Low_002600, dtype: float64","0   2025-02-17
+Name: Date, dtype: datetime64[ns]"
+601877,buy,37,21.38274005047919,"0    23.0
+Name: High_601877, dtype: float64","0    21.07
+Name: Low_601877, dtype: float64","0   2025-02-17
+Name: Date, dtype: datetime64[ns]"
+300628,buy,23,39.28045466955286,"0    40.42
+Name: High_300628, dtype: float64","0    38.9
+Name: Low_300628, dtype: float64","0   2025-02-17
+Name: Date, dtype: datetime64[ns]"
+600795,sell,85,4.038900748156011,"1    4.09
+Name: High_600795, dtype: float64","1    4.0
+Name: Low_600795, dtype: float64","1   2025-02-18
+Name: Date, dtype: datetime64[ns]"
+601336,sell,73,61.84016552135444,"1    63.540276
+Name: High_601336, dtype: float64","1    61.588527
+Name: Low_601336, dtype: float64","1   2025-02-18
+Name: Date, dtype: datetime64[ns]"
+002600,sell,58,9.878683201689274,"1    10.06
+Name: High_002600, dtype: float64","1    9.36
+Name: Low_002600, dtype: float64","1   2025-02-18
+Name: Date, dtype: datetime64[ns]"
+000338,sell,48,13.926033314326778,"1    14.35
+Name: High_000338, dtype: float64","1    13.81
+Name: Low_000338, dtype: float64","1   2025-02-18
+Name: Date, dtype: datetime64[ns]"
+300628,sell,27,39.35903047329397,"1    39.44
+Name: High_300628, dtype: float64","1    38.39
+Name: Low_300628, dtype: float64","1   2025-02-18
+Name: Date, dtype: datetime64[ns]"
+601877,buy,100,22.861177822249008,"1    23.95
+Name: High_601877, dtype: float64","1    22.43
+Name: Low_601877, dtype: float64","1   2025-02-18
+Name: Date, dtype: datetime64[ns]"
+002905,buy,100,7.817025931701064,"1    7.94
+Name: High_002905, dtype: float64","1    7.39
+Name: Low_002905, dtype: float64","1   2025-02-18
+Name: Date, dtype: datetime64[ns]"
+000776,buy,100,15.393364944686182,"1    15.5
+Name: High_000776, dtype: float64","1    14.96
+Name: Low_000776, dtype: float64","1   2025-02-18
+Name: Date, dtype: datetime64[ns]"
+002001,buy,96,21.075071678208186,"1    21.29
+Name: High_002001, dtype: float64","1    20.87
+Name: Low_002001, dtype: float64","1   2025-02-18
+Name: Date, dtype: datetime64[ns]"
+601628,buy,21,40.205324728861456,"1    40.05
+Name: High_601628, dtype: float64","1    38.99
+Name: Low_601628, dtype: float64","1   2025-02-18
+Name: Date, dtype: datetime64[ns]"
+300628,sell,92,38.62287346073194,"2    39.36
+Name: High_300628, dtype: float64","2    38.57
+Name: Low_300628, dtype: float64","2   2025-02-19
+Name: Date, dtype: datetime64[ns]"
+000776,sell,65,14.942812174307182,"2    15.2
+Name: High_000776, dtype: float64","2    14.97
+Name: Low_000776, dtype: float64","2   2025-02-19
+Name: Date, dtype: datetime64[ns]"
+601336,sell,35,60.94829932108419,"2    62.800397
+Name: High_601336, dtype: float64","2    61.32064
+Name: Low_601336, dtype: float64","2   2025-02-19
+Name: Date, dtype: datetime64[ns]"
+600795,buy,100,3.9996629019454115,"2    4.08
+Name: High_600795, dtype: float64","2    3.97
+Name: Low_600795, dtype: float64","2   2025-02-19
+Name: Date, dtype: datetime64[ns]"
+002905,buy,100,7.323401483148337,"2    7.46
+Name: High_002905, dtype: float64","2    7.28
+Name: Low_002905, dtype: float64","2   2025-02-19
+Name: Date, dtype: datetime64[ns]"
+002600,buy,100,9.410247966125606,"2    10.0
+Name: High_002600, dtype: float64","2    9.42
+Name: Low_002600, dtype: float64","2   2025-02-19
+Name: Date, dtype: datetime64[ns]"
+000338,buy,89,13.80589946417138,"2    14.09
+Name: High_000338, dtype: float64","2    13.8
+Name: Low_000338, dtype: float64","2   2025-02-19
+Name: Date, dtype: datetime64[ns]"
+601628,buy,73,39.814257825314996,"2    39.54
+Name: High_601628, dtype: float64","2    38.58
+Name: Low_601628, dtype: float64","2   2025-02-19
+Name: Date, dtype: datetime64[ns]"
+601877,buy,20,22.692952974094077,"2    25.09
+Name: High_601877, dtype: float64","2    22.4
+Name: Low_601877, dtype: float64","2   2025-02-19
+Name: Date, dtype: datetime64[ns]"
+002001,buy,3,20.822360295429824,"2    20.98
+Name: High_002001, dtype: float64","2    20.63
+Name: Low_002001, dtype: float64","2   2025-02-19
+Name: Date, dtype: datetime64[ns]"
+601877,sell,76,24.042636966705324,"3    24.39
+Name: High_601877, dtype: float64","3    23.77
+Name: Low_601877, dtype: float64","3   2025-02-20
+Name: Date, dtype: datetime64[ns]"
+002600,sell,49,9.91760740672471,"3    10.89
+Name: High_002600, dtype: float64","3    9.89
+Name: Low_002600, dtype: float64","3   2025-02-20
+Name: Date, dtype: datetime64[ns]"
+000338,sell,26,13.98472502173856,"3    14.15
+Name: High_000338, dtype: float64","3    13.85
+Name: Low_000338, dtype: float64","3   2025-02-20
+Name: Date, dtype: datetime64[ns]"
+600795,sell,2,4.02066960696131,"3    4.07
+Name: High_600795, dtype: float64","3    3.99
+Name: Low_600795, dtype: float64","3   2025-02-20
+Name: Date, dtype: datetime64[ns]"
+002905,buy,100,7.328258684724569,"3    7.43
+Name: High_002905, dtype: float64","3    7.31
+Name: Low_002905, dtype: float64","3   2025-02-20
+Name: Date, dtype: datetime64[ns]"
+601628,buy,78,39.840397150106725,"3    39.11
+Name: High_601628, dtype: float64","3    38.03
+Name: Low_601628, dtype: float64","3   2025-02-20
+Name: Date, dtype: datetime64[ns]"
+000776,buy,57,15.015448703891598,"3    15.12
+Name: High_000776, dtype: float64","3    14.96
+Name: Low_000776, dtype: float64","3   2025-02-20
+Name: Date, dtype: datetime64[ns]"
+300628,buy,45,39.2542022038321,"3    39.32
+Name: High_300628, dtype: float64","3    38.46
+Name: Low_300628, dtype: float64","3   2025-02-20
+Name: Date, dtype: datetime64[ns]"
+002001,buy,25,20.925998416806106,"3    21.13
+Name: High_002001, dtype: float64","3    20.83
+Name: Low_002001, dtype: float64","3   2025-02-20
+Name: Date, dtype: datetime64[ns]"
+601336,buy,0,61.51767023069935,"3    61.932953
+Name: High_601336, dtype: float64","3    60.759352
+Name: Low_601336, dtype: float64","3   2025-02-20
+Name: Date, dtype: datetime64[ns]"
+002600,sell,100,10.497933615446092,"4    11.45
+Name: High_002600, dtype: float64","4    10.46
+Name: Low_002600, dtype: float64","4   2025-02-21
+Name: Date, dtype: datetime64[ns]"
+600795,sell,100,4.021905694585294,"4    4.05
+Name: High_600795, dtype: float64","4    3.97
+Name: Low_600795, dtype: float64","4   2025-02-21
+Name: Date, dtype: datetime64[ns]"
+601877,sell,100,23.42730078066699,"4    24.14
+Name: High_601877, dtype: float64","4    23.53
+Name: Low_601877, dtype: float64","4   2025-02-21
+Name: Date, dtype: datetime64[ns]"
+601336,sell,57,61.36020274488735,"4    63.629572
+Name: High_601336, dtype: float64","4    60.478709
+Name: Low_601336, dtype: float64","4   2025-02-21
+Name: Date, dtype: datetime64[ns]"
+000338,sell,47,13.987580575221218,"4    15.18
+Name: High_000338, dtype: float64","4    14.3
+Name: Low_000338, dtype: float64","4   2025-02-21
+Name: Date, dtype: datetime64[ns]"
+000776,sell,44,14.98104962259531,"4    15.37
+Name: High_000776, dtype: float64","4    14.92
+Name: Low_000776, dtype: float64","4   2025-02-21
+Name: Date, dtype: datetime64[ns]"
+601628,sell,7,39.21540111709386,"4    39.53
+Name: High_601628, dtype: float64","4    37.89
+Name: Low_601628, dtype: float64","4   2025-02-21
+Name: Date, dtype: datetime64[ns]"
+002001,buy,86,20.6966451227013,"4    21.28
+Name: High_002001, dtype: float64","4    20.9
+Name: Low_002001, dtype: float64","4   2025-02-21
+Name: Date, dtype: datetime64[ns]"
+002905,buy,83,7.244044519476593,"4    7.42
+Name: High_002905, dtype: float64","4    7.18
+Name: Low_002905, dtype: float64","4   2025-02-21
+Name: Date, dtype: datetime64[ns]"
+300628,buy,20,39.35544912293553,"4    39.86
+Name: High_300628, dtype: float64","4    38.61
+Name: Low_300628, dtype: float64","4   2025-02-21
+Name: Date, dtype: datetime64[ns]"
+000338,sell,100,14.908054630961269,"5    14.99
+Name: High_000338, dtype: float64","5    14.59
+Name: Low_000338, dtype: float64","5   2025-02-24
+Name: Date, dtype: datetime64[ns]"
+002600,sell,94,10.543326567411423,"5    10.91
+Name: High_002600, dtype: float64","5    10.29
+Name: Low_002600, dtype: float64","5   2025-02-24
+Name: Date, dtype: datetime64[ns]"
+002905,sell,3,7.246074501285329,"5    7.58
+Name: High_002905, dtype: float64","5    7.27
+Name: Low_002905, dtype: float64","5   2025-02-24
+Name: Date, dtype: datetime64[ns]"
+601336,buy,100,62.46490641372612,"5    65.696129
+Name: High_601336, dtype: float64","5    62.073275
+Name: Low_601336, dtype: float64","5   2025-02-24
+Name: Date, dtype: datetime64[ns]"
+601628,buy,100,39.91997378021478,"5    39.86
+Name: High_601628, dtype: float64","5    38.7
+Name: Low_601628, dtype: float64","5   2025-02-24
+Name: Date, dtype: datetime64[ns]"
+300628,buy,100,39.8489243061631,"5    39.9
+Name: High_300628, dtype: float64","5    38.51
+Name: Low_300628, dtype: float64","5   2025-02-24
+Name: Date, dtype: datetime64[ns]"
+601877,buy,100,24.10651813931763,"5    24.25
+Name: High_601877, dtype: float64","5    23.41
+Name: Low_601877, dtype: float64","5   2025-02-24
+Name: Date, dtype: datetime64[ns]"
+600795,buy,100,3.972854964863509,"5    4.06
+Name: High_600795, dtype: float64","5    3.95
+Name: Low_600795, dtype: float64","5   2025-02-24
+Name: Date, dtype: datetime64[ns]"
+002001,buy,69,20.899056850820777,"5    21.36
+Name: High_002001, dtype: float64","5    20.92
+Name: Low_002001, dtype: float64","5   2025-02-24
+Name: Date, dtype: datetime64[ns]"
+000776,buy,36,15.304202874880284,"5    15.57
+Name: High_000776, dtype: float64","5    15.26
+Name: Low_000776, dtype: float64","5   2025-02-24
+Name: Date, dtype: datetime64[ns]"
+000776,sell,100,15.385792995253578,"6    15.32
+Name: High_000776, dtype: float64","6    15.05
+Name: Low_000776, dtype: float64","6   2025-02-25
+Name: Date, dtype: datetime64[ns]"
+002905,sell,100,7.430026552290656,"6    7.45
+Name: High_002905, dtype: float64","6    7.25
+Name: Low_002905, dtype: float64","6   2025-02-25
+Name: Date, dtype: datetime64[ns]"
+002001,sell,100,20.916456044185907,"6    21.12
+Name: High_002001, dtype: float64","6    20.69
+Name: Low_002001, dtype: float64","6   2025-02-25
+Name: Date, dtype: datetime64[ns]"
+300628,sell,30,39.07860851380974,"6    38.9
+Name: High_300628, dtype: float64","6    38.2
+Name: Low_300628, dtype: float64","6   2025-02-25
+Name: Date, dtype: datetime64[ns]"
+601628,sell,4,40.142123628035186,"6    40.39
+Name: High_601628, dtype: float64","6    38.33
+Name: Low_601628, dtype: float64","6   2025-02-25
+Name: Date, dtype: datetime64[ns]"
+000338,buy,100,14.621291005229576,"6    15.24
+Name: High_000338, dtype: float64","6    14.5
+Name: Low_000338, dtype: float64","6   2025-02-25
+Name: Date, dtype: datetime64[ns]"
+601877,buy,89,25.805729932114485,"6    24.07
+Name: High_601877, dtype: float64","6    23.44
+Name: Low_601877, dtype: float64","6   2025-02-25
+Name: Date, dtype: datetime64[ns]"
+600795,buy,57,3.9629032428190114,"6    3.98
+Name: High_600795, dtype: float64","6    3.91
+Name: Low_600795, dtype: float64","6   2025-02-25
+Name: Date, dtype: datetime64[ns]"
+002600,buy,35,10.347168402043172,"6    10.76
+Name: High_002600, dtype: float64","6    10.14
+Name: Low_002600, dtype: float64","6   2025-02-25
+Name: Date, dtype: datetime64[ns]"
+601336,buy,18,63.494735231093074,"6    66.997296
+Name: High_601336, dtype: float64","6    62.978989
+Name: Low_601336, dtype: float64","6   2025-02-25
+Name: Date, dtype: datetime64[ns]"
+002600,sell,100,10.343251053742133,"7    11.15
+Name: High_002600, dtype: float64","7    10.26
+Name: Low_002600, dtype: float64","7   2025-02-26
+Name: Date, dtype: datetime64[ns]"
+601877,sell,100,25.79294577240944,"7    23.89
+Name: High_601877, dtype: float64","7    23.49
+Name: Low_601877, dtype: float64","7   2025-02-26
+Name: Date, dtype: datetime64[ns]"
+000338,sell,100,14.827520568063482,"7    15.21
+Name: High_000338, dtype: float64","7    14.91
+Name: Low_000338, dtype: float64","7   2025-02-26
+Name: Date, dtype: datetime64[ns]"
+000776,sell,69,15.070782406653743,"7    15.35
+Name: High_000776, dtype: float64","7    15.0
+Name: Low_000776, dtype: float64","7   2025-02-26
+Name: Date, dtype: datetime64[ns]"
+002905,sell,66,7.281377833831357,"7    7.37
+Name: High_002905, dtype: float64","7    7.21
+Name: Low_002905, dtype: float64","7   2025-02-26
+Name: Date, dtype: datetime64[ns]"
+002001,sell,55,20.827295983433725,"7    20.79
+Name: High_002001, dtype: float64","7    20.64
+Name: Low_002001, dtype: float64","7   2025-02-26
+Name: Date, dtype: datetime64[ns]"
+601628,sell,54,39.198158550709486,"7    39.28
+Name: High_601628, dtype: float64","7    38.49
+Name: Low_601628, dtype: float64","7   2025-02-26
+Name: Date, dtype: datetime64[ns]"
+300628,buy,53,38.76841413097456,"7    39.0
+Name: High_300628, dtype: float64","7    38.35
+Name: Low_300628, dtype: float64","7   2025-02-26
+Name: Date, dtype: datetime64[ns]"
+600795,buy,44,3.8938842756301164,"7    4.08
+Name: High_600795, dtype: float64","7    3.9
+Name: Low_600795, dtype: float64","7   2025-02-26
+Name: Date, dtype: datetime64[ns]"
+601336,buy,11,61.785387282538906,"7    65.185868
+Name: High_601336, dtype: float64","7    63.361685
+Name: Low_601336, dtype: float64","7   2025-02-26
+Name: Date, dtype: datetime64[ns]"
+002600,sell,100,10.724190235782881,"8    10.8
+Name: High_002600, dtype: float64","8    10.16
+Name: Low_002600, dtype: float64","8   2025-02-27
+Name: Date, dtype: datetime64[ns]"
+601628,sell,100,39.68238263312727,"8    39.77
+Name: High_601628, dtype: float64","8    38.64
+Name: Low_601628, dtype: float64","8   2025-02-27
+Name: Date, dtype: datetime64[ns]"
+000776,sell,70,15.327152290499507,"8    15.36
+Name: High_000776, dtype: float64","8    15.03
+Name: Low_000776, dtype: float64","8   2025-02-27
+Name: Date, dtype: datetime64[ns]"
+601336,sell,34,63.82630645349282,"8    65.530295
+Name: High_601336, dtype: float64","8    63.795407
+Name: Low_601336, dtype: float64","8   2025-02-27
+Name: Date, dtype: datetime64[ns]"
+600795,sell,1,3.993670302308164,"8    4.07
+Name: High_600795, dtype: float64","8    4.0
+Name: Low_600795, dtype: float64","8   2025-02-27
+Name: Date, dtype: datetime64[ns]"
+000338,buy,100,15.022558838455007,"8    15.38
+Name: High_000338, dtype: float64","8    14.98
+Name: Low_000338, dtype: float64","8   2025-02-27
+Name: Date, dtype: datetime64[ns]"
+002001,buy,100,20.541989096328614,"8    20.82
+Name: High_002001, dtype: float64","8    20.6
+Name: Low_002001, dtype: float64","8   2025-02-27
+Name: Date, dtype: datetime64[ns]"
+002905,buy,74,7.3129962079972035,"8    7.36
+Name: High_002905, dtype: float64","8    7.12
+Name: Low_002905, dtype: float64","8   2025-02-27
+Name: Date, dtype: datetime64[ns]"
+601877,buy,54,25.010845514684913,"8    23.65
+Name: High_601877, dtype: float64","8    23.08
+Name: Low_601877, dtype: float64","8   2025-02-27
+Name: Date, dtype: datetime64[ns]"
+300628,buy,4,38.80900894930121,"8    38.77
+Name: High_300628, dtype: float64","8    37.83
+Name: Low_300628, dtype: float64","8   2025-02-27
+Name: Date, dtype: datetime64[ns]"
+601336,sell,100,63.721552881440985,"9    64.101563
+Name: High_601336, dtype: float64","9    61.295127
+Name: Low_601336, dtype: float64","9   2025-02-28
+Name: Date, dtype: datetime64[ns]"
+002001,sell,80,20.646932124509476,"9    20.79
+Name: High_002001, dtype: float64","9    20.43
+Name: Low_002001, dtype: float64","9   2025-02-28
+Name: Date, dtype: datetime64[ns]"
+601877,sell,68,24.079160724803806,"9    23.4
+Name: High_601877, dtype: float64","9    22.7
+Name: Low_601877, dtype: float64","9   2025-02-28
+Name: Date, dtype: datetime64[ns]"
+002905,sell,19,7.284189982432872,"9    7.25
+Name: High_002905, dtype: float64","9    6.97
+Name: Low_002905, dtype: float64","9   2025-02-28
+Name: Date, dtype: datetime64[ns]"
+000776,sell,15,15.269066579290666,"9    15.42
+Name: High_000776, dtype: float64","9    14.82
+Name: Low_000776, dtype: float64","9   2025-02-28
+Name: Date, dtype: datetime64[ns]"
+601628,buy,100,40.17445317585021,"9    39.91
+Name: High_601628, dtype: float64","9    38.22
+Name: Low_601628, dtype: float64","9   2025-02-28
+Name: Date, dtype: datetime64[ns]"
+000338,buy,100,15.301920929821208,"9    15.38
+Name: High_000338, dtype: float64","9    14.98
+Name: Low_000338, dtype: float64","9   2025-02-28
+Name: Date, dtype: datetime64[ns]"
+300628,buy,68,38.649349064333364,"9    38.54
+Name: High_300628, dtype: float64","9    37.4
+Name: Low_300628, dtype: float64","9   2025-02-28
+Name: Date, dtype: datetime64[ns]"
+600795,buy,13,4.014448294551112,"9    4.08
+Name: High_600795, dtype: float64","9    4.01
+Name: Low_600795, dtype: float64","9   2025-02-28
+Name: Date, dtype: datetime64[ns]"
+002600,buy,6,10.39410634160653,"9    10.35
+Name: High_002600, dtype: float64","9    9.63
+Name: Low_002600, dtype: float64","9   2025-02-28
+Name: Date, dtype: datetime64[ns]"
+000776,sell,100,14.885877855177968,"10    15.02
+Name: High_000776, dtype: float64","10    14.78
+Name: Low_000776, dtype: float64","10   2025-03-03
+Name: Date, dtype: datetime64[ns]"
+601877,sell,100,23.700447028912603,"10    23.07
+Name: High_601877, dtype: float64","10    22.47
+Name: Low_601877, dtype: float64","10   2025-03-03
+Name: Date, dtype: datetime64[ns]"
+300628,sell,100,37.756546774134044,"10    38.97
+Name: High_300628, dtype: float64","10    37.6
+Name: Low_300628, dtype: float64","10   2025-03-03
+Name: Date, dtype: datetime64[ns]"
+002600,sell,94,9.70389634490013,"10    9.86
+Name: High_002600, dtype: float64","10    9.41
+Name: Low_002600, dtype: float64","10   2025-03-03
+Name: Date, dtype: datetime64[ns]"
+002905,sell,91,7.0831543746590615,"10    7.13
+Name: High_002905, dtype: float64","10    6.97
+Name: Low_002905, dtype: float64","10   2025-03-03
+Name: Date, dtype: datetime64[ns]"
+601336,buy,100,61.02839361902474,"10    61.856414
+Name: High_601336, dtype: float64","10    60.440439
+Name: Low_601336, dtype: float64","10   2025-03-03
+Name: Date, dtype: datetime64[ns]"
+000338,buy,100,15.011745881119278,"10    15.61
+Name: High_000338, dtype: float64","10    15.01
+Name: Low_000338, dtype: float64","10   2025-03-03
+Name: Date, dtype: datetime64[ns]"
+600795,buy,82,4.0052640737732865,"10    4.03
+Name: High_600795, dtype: float64","10    3.95
+Name: Low_600795, dtype: float64","10   2025-03-03
+Name: Date, dtype: datetime64[ns]"
+002001,buy,56,20.703007765266815,"10    20.9
+Name: High_002001, dtype: float64","10    20.47
+Name: Low_002001, dtype: float64","10   2025-03-03
+Name: Date, dtype: datetime64[ns]"
+601628,buy,8,38.587720525637266,"10    38.59
+Name: High_601628, dtype: float64","10    37.54
+Name: Low_601628, dtype: float64","10   2025-03-03
+Name: Date, dtype: datetime64[ns]"
+002600,sell,86,9.629660947825759,"11    9.94
+Name: High_002600, dtype: float64","11    9.39
+Name: Low_002600, dtype: float64","11   2025-03-04
+Name: Date, dtype: datetime64[ns]"
+300628,sell,84,38.45614954315126,"11    38.7
+Name: High_300628, dtype: float64","11    38.01
+Name: Low_300628, dtype: float64","11   2025-03-04
+Name: Date, dtype: datetime64[ns]"
+601877,sell,44,23.254518302790817,"11    22.7
+Name: High_601877, dtype: float64","11    22.41
+Name: Low_601877, dtype: float64","11   2025-03-04
+Name: Date, dtype: datetime64[ns]"
+600795,sell,20,3.9546124389069153,"11    3.98
+Name: High_600795, dtype: float64","11    3.93
+Name: Low_600795, dtype: float64","11   2025-03-04
+Name: Date, dtype: datetime64[ns]"
+002905,buy,100,7.0444005155097695,"11    7.08
+Name: High_002905, dtype: float64","11    6.95
+Name: Low_002905, dtype: float64","11   2025-03-04
+Name: Date, dtype: datetime64[ns]"
+601628,buy,99,37.889838267434385,"11    37.73
+Name: High_601628, dtype: float64","11    37.34
+Name: Low_601628, dtype: float64","11   2025-03-04
+Name: Date, dtype: datetime64[ns]"
+002001,buy,85,20.547317556450142,"11    21.04
+Name: High_002001, dtype: float64","11    20.61
+Name: Low_002001, dtype: float64","11   2025-03-04
+Name: Date, dtype: datetime64[ns]"
+000776,buy,43,14.927436911587137,"11    14.97
+Name: High_000776, dtype: float64","11    14.79
+Name: Low_000776, dtype: float64","11   2025-03-04
+Name: Date, dtype: datetime64[ns]"
+601336,buy,14,61.87179061875981,"11    60.976213
+Name: High_601336, dtype: float64","11    60.274604
+Name: Low_601336, dtype: float64","11   2025-03-04
+Name: Date, dtype: datetime64[ns]"
+000338,buy,8,15.156010266859084,"11    15.3
+Name: High_000338, dtype: float64","11    14.85
+Name: Low_000338, dtype: float64","11   2025-03-04
+Name: Date, dtype: datetime64[ns]"
+600795,sell,100,3.944894785695942,"12    3.97
+Name: High_600795, dtype: float64","12    3.91
+Name: Low_600795, dtype: float64","12   2025-03-05
+Name: Date, dtype: datetime64[ns]"
+601877,sell,86,23.24258356830105,"12    22.68
+Name: High_601877, dtype: float64","12    22.3
+Name: Low_601877, dtype: float64","12   2025-03-05
+Name: Date, dtype: datetime64[ns]"
+601336,sell,19,63.152874097027144,"12    61.167561
+Name: High_601336, dtype: float64","12    60.465952
+Name: Low_601336, dtype: float64","12   2025-03-05
+Name: Date, dtype: datetime64[ns]"
+002001,sell,6,20.794762052223085,"12    21.02
+Name: High_002001, dtype: float64","12    20.86
+Name: Low_002001, dtype: float64","12   2025-03-05
+Name: Date, dtype: datetime64[ns]"
+601628,buy,100,37.52104398859199,"12    37.91
+Name: High_601628, dtype: float64","12    37.24
+Name: Low_601628, dtype: float64","12   2025-03-05
+Name: Date, dtype: datetime64[ns]"
+300628,buy,100,38.78820826392388,"12    38.96
+Name: High_300628, dtype: float64","12    38.32
+Name: Low_300628, dtype: float64","12   2025-03-05
+Name: Date, dtype: datetime64[ns]"
+002905,buy,100,7.069433959438465,"12    7.2
+Name: High_002905, dtype: float64","12    6.94
+Name: Low_002905, dtype: float64","12   2025-03-05
+Name: Date, dtype: datetime64[ns]"
+002600,buy,100,9.908562192795799,"12    9.87
+Name: High_002600, dtype: float64","12    9.71
+Name: Low_002600, dtype: float64","12   2025-03-05
+Name: Date, dtype: datetime64[ns]"
+000776,buy,100,14.956462329449131,"12    14.98
+Name: High_000776, dtype: float64","12    14.78
+Name: Low_000776, dtype: float64","12   2025-03-05
+Name: Date, dtype: datetime64[ns]"
+000338,buy,53,15.244852434669156,"12    15.74
+Name: High_000338, dtype: float64","12    15.27
+Name: Low_000338, dtype: float64","12   2025-03-05
+Name: Date, dtype: datetime64[ns]"
+002600,sell,100,9.922497891355306,"13    10.24
+Name: High_002600, dtype: float64","13    9.87
+Name: Low_002600, dtype: float64","13   2025-03-06
+Name: Date, dtype: datetime64[ns]"
+601877,sell,100,22.774640999883413,"13    23.28
+Name: High_601877, dtype: float64","13    22.34
+Name: Low_601877, dtype: float64","13   2025-03-06
+Name: Date, dtype: datetime64[ns]"
+300628,sell,66,38.96691643676371,"13    39.75
+Name: High_300628, dtype: float64","13    38.66
+Name: Low_300628, dtype: float64","13   2025-03-06
+Name: Date, dtype: datetime64[ns]"
+600795,sell,39,3.9513159922510384,"13    3.97
+Name: High_600795, dtype: float64","13    3.92
+Name: Low_600795, dtype: float64","13   2025-03-06
+Name: Date, dtype: datetime64[ns]"
+601336,sell,37,61.6450643535978,"13    63.093797
+Name: High_601336, dtype: float64","13    61.039996
+Name: Low_601336, dtype: float64","13   2025-03-06
+Name: Date, dtype: datetime64[ns]"
+000338,sell,36,15.378339746012498,"13    15.94
+Name: High_000338, dtype: float64","13    15.49
+Name: Low_000338, dtype: float64","13   2025-03-06
+Name: Date, dtype: datetime64[ns]"
+002001,sell,27,21.025036810082383,"13    21.08
+Name: High_002001, dtype: float64","13    20.84
+Name: Low_002001, dtype: float64","13   2025-03-06
+Name: Date, dtype: datetime64[ns]"
+000776,sell,7,14.911662897579372,"13    15.26
+Name: High_000776, dtype: float64","13    14.96
+Name: Low_000776, dtype: float64","13   2025-03-06
+Name: Date, dtype: datetime64[ns]"
+601628,buy,41,37.700163790718946,"13    38.7
+Name: High_601628, dtype: float64","13    37.53
+Name: Low_601628, dtype: float64","13   2025-03-06
+Name: Date, dtype: datetime64[ns]"
+002905,buy,14,7.202478168364614,"13    7.34
+Name: High_002905, dtype: float64","13    7.14
+Name: Low_002905, dtype: float64","13   2025-03-06
+Name: Date, dtype: datetime64[ns]"
+000338,sell,100,15.673824745322344,"14    16.07
+Name: High_000338, dtype: float64","14    15.52
+Name: Low_000338, dtype: float64","14   2025-03-07
+Name: Date, dtype: datetime64[ns]"
+600795,sell,89,3.92694221034646,"14    3.94
+Name: High_600795, dtype: float64","14    3.91
+Name: Low_600795, dtype: float64","14   2025-03-07
+Name: Date, dtype: datetime64[ns]"
+002001,sell,40,21.20142808268778,"14    21.45
+Name: High_002001, dtype: float64","14    20.96
+Name: Low_002001, dtype: float64","14   2025-03-07
+Name: Date, dtype: datetime64[ns]"
+601336,sell,33,61.02784001043103,"14    61.996736
+Name: High_601336, dtype: float64","14    61.103779
+Name: Low_601336, dtype: float64","14   2025-03-07
+Name: Date, dtype: datetime64[ns]"
+601877,sell,18,23.395207491684705,"14    23.24
+Name: High_601877, dtype: float64","14    22.89
+Name: Low_601877, dtype: float64","14   2025-03-07
+Name: Date, dtype: datetime64[ns]"
+002905,buy,100,7.301011908603832,"14    7.43
+Name: High_002905, dtype: float64","14    7.21
+Name: Low_002905, dtype: float64","14   2025-03-07
+Name: Date, dtype: datetime64[ns]"
+000776,buy,100,15.163467209488154,"14    15.18
+Name: High_000776, dtype: float64","14    14.98
+Name: Low_000776, dtype: float64","14   2025-03-07
+Name: Date, dtype: datetime64[ns]"
+601628,buy,66,38.50001512244344,"14    38.39
+Name: High_601628, dtype: float64","14    37.77
+Name: Low_601628, dtype: float64","14   2025-03-07
+Name: Date, dtype: datetime64[ns]"
+300628,buy,40,39.358520098817536,"14    39.44
+Name: High_300628, dtype: float64","14    38.45
+Name: Low_300628, dtype: float64","14   2025-03-07
+Name: Date, dtype: datetime64[ns]"
+002600,buy,19,10.090335171381012,"14    10.33
+Name: High_002600, dtype: float64","14    9.95
+Name: Low_002600, dtype: float64","14   2025-03-07
+Name: Date, dtype: datetime64[ns]"
+002905,sell,100,7.339425968709402,"15    7.34
+Name: High_002905, dtype: float64","15    7.25
+Name: Low_002905, dtype: float64","15   2025-03-10
+Name: Date, dtype: datetime64[ns]"
+600795,sell,100,3.903574554696679,"15    3.94
+Name: High_600795, dtype: float64","15    3.9
+Name: Low_600795, dtype: float64","15   2025-03-10
+Name: Date, dtype: datetime64[ns]"
+300628,sell,100,38.702430150708096,"15    38.68
+Name: High_300628, dtype: float64","15    37.75
+Name: Low_300628, dtype: float64","15   2025-03-10
+Name: Date, dtype: datetime64[ns]"
+601628,sell,86,38.053243533037026,"15    37.91
+Name: High_601628, dtype: float64","15    36.68
+Name: Low_601628, dtype: float64","15   2025-03-10
+Name: Date, dtype: datetime64[ns]"
+601877,sell,64,23.268872113968246,"15    23.35
+Name: High_601877, dtype: float64","15    23.0
+Name: Low_601877, dtype: float64","15   2025-03-10
+Name: Date, dtype: datetime64[ns]"
+000776,sell,55,14.936818298874423,"15    15.03
+Name: High_000776, dtype: float64","15    14.85
+Name: Low_000776, dtype: float64","15   2025-03-10
+Name: Date, dtype: datetime64[ns]"
+601336,buy,100,60.47060428623692,"15    61.511988
+Name: High_601336, dtype: float64","15    60.083256
+Name: Low_601336, dtype: float64","15   2025-03-10
+Name: Date, dtype: datetime64[ns]"
+002001,buy,100,21.110570823866873,"15    21.43
+Name: High_002001, dtype: float64","15    20.98
+Name: Low_002001, dtype: float64","15   2025-03-10
+Name: Date, dtype: datetime64[ns]"
+002600,buy,100,10.045362066056988,"15    10.41
+Name: High_002600, dtype: float64","15    9.97
+Name: Low_002600, dtype: float64","15   2025-03-10
+Name: Date, dtype: datetime64[ns]"
+000338,buy,49,15.86537627079175,"15    16.01
+Name: High_000338, dtype: float64","15    15.53
+Name: Low_000338, dtype: float64","15   2025-03-10
+Name: Date, dtype: datetime64[ns]"
+002001,sell,100,21.542341352999212,"16    21.5
+Name: High_002001, dtype: float64","16    20.9
+Name: Low_002001, dtype: float64","16   2025-03-11
+Name: Date, dtype: datetime64[ns]"
+601628,sell,100,37.1099763039872,"16    37.05
+Name: High_601628, dtype: float64","16    36.44
+Name: Low_601628, dtype: float64","16   2025-03-11
+Name: Date, dtype: datetime64[ns]"
+002600,sell,86,10.037056237431244,"16    10.08
+Name: High_002600, dtype: float64","16    9.77
+Name: Low_002600, dtype: float64","16   2025-03-11
+Name: Date, dtype: datetime64[ns]"
+601877,sell,79,23.328042163671928,"16    23.35
+Name: High_601877, dtype: float64","16    22.92
+Name: Low_601877, dtype: float64","16   2025-03-11
+Name: Date, dtype: datetime64[ns]"
+000338,sell,60,15.646571855203947,"16    15.93
+Name: High_000338, dtype: float64","16    15.41
+Name: Low_000338, dtype: float64","16   2025-03-11
+Name: Date, dtype: datetime64[ns]"
+601336,buy,46,60.03868416030749,"16    61.231344
+Name: High_601336, dtype: float64","16    59.968448
+Name: Low_601336, dtype: float64","16   2025-03-11
+Name: Date, dtype: datetime64[ns]"
+600795,buy,45,3.8904431526502594,"16    3.95
+Name: High_600795, dtype: float64","16    3.88
+Name: Low_600795, dtype: float64","16   2025-03-11
+Name: Date, dtype: datetime64[ns]"
+000776,buy,29,14.810851764734835,"16    14.92
+Name: High_000776, dtype: float64","16    14.76
+Name: Low_000776, dtype: float64","16   2025-03-11
+Name: Date, dtype: datetime64[ns]"
+002905,buy,24,7.343692173715681,"16    7.42
+Name: High_002905, dtype: float64","16    7.2
+Name: Low_002905, dtype: float64","16   2025-03-11
+Name: Date, dtype: datetime64[ns]"
+300628,buy,16,38.45315109661286,"16    38.68
+Name: High_300628, dtype: float64","16    37.95
+Name: Low_300628, dtype: float64","16   2025-03-11
+Name: Date, dtype: datetime64[ns]"
+000776,sell,100,14.799419650621711,"17    15.11
+Name: High_000776, dtype: float64","17    14.86
+Name: Low_000776, dtype: float64","17   2025-03-12
+Name: Date, dtype: datetime64[ns]"
+000338,sell,53,15.796831269698158,"17    15.92
+Name: High_000338, dtype: float64","17    15.62
+Name: Low_000338, dtype: float64","17   2025-03-12
+Name: Date, dtype: datetime64[ns]"
+601877,sell,38,23.455639716400768,"17    24.58
+Name: High_601877, dtype: float64","17    23.43
+Name: Low_601877, dtype: float64","17   2025-03-12
+Name: Date, dtype: datetime64[ns]"
+002600,sell,28,9.910806587859987,"17    10.21
+Name: High_002600, dtype: float64","17    9.81
+Name: Low_002600, dtype: float64","17   2025-03-12
+Name: Date, dtype: datetime64[ns]"
+300628,buy,100,38.39043704297627,"17    38.95
+Name: High_300628, dtype: float64","17    38.21
+Name: Low_300628, dtype: float64","17   2025-03-12
+Name: Date, dtype: datetime64[ns]"
+002001,buy,100,20.87133645772934,"17    21.56
+Name: High_002001, dtype: float64","17    21.13
+Name: Low_002001, dtype: float64","17   2025-03-12
+Name: Date, dtype: datetime64[ns]"
+600795,buy,100,3.918285356229171,"17    4.0
+Name: High_600795, dtype: float64","17    3.92
+Name: Low_600795, dtype: float64","17   2025-03-12
+Name: Date, dtype: datetime64[ns]"
+601336,buy,74,60.80344079848661,"17    63.336171
+Name: High_601336, dtype: float64","17    60.98897
+Name: Low_601336, dtype: float64","17   2025-03-12
+Name: Date, dtype: datetime64[ns]"
+002905,buy,71,7.422457446344197,"17    8.14
+Name: High_002905, dtype: float64","17    7.42
+Name: Low_002905, dtype: float64","17   2025-03-12
+Name: Date, dtype: datetime64[ns]"
+601628,buy,49,37.13842051983811,"17    37.19
+Name: High_601628, dtype: float64","17    36.51
+Name: Low_601628, dtype: float64","17   2025-03-12
+Name: Date, dtype: datetime64[ns]"
+601628,sell,91,36.962696638307534,"18    37.16
+Name: High_601628, dtype: float64","18    36.53
+Name: Low_601628, dtype: float64","18   2025-03-13
+Name: Date, dtype: datetime64[ns]"
+600795,sell,68,3.9669546417100356,"18    4.03
+Name: High_600795, dtype: float64","18    3.99
+Name: Low_600795, dtype: float64","18   2025-03-13
+Name: Date, dtype: datetime64[ns]"
+002600,sell,66,10.025892498986796,"18    10.01
+Name: High_002600, dtype: float64","18    9.42
+Name: Low_002600, dtype: float64","18   2025-03-13
+Name: Date, dtype: datetime64[ns]"
+300628,sell,18,38.465056526620174,"18    38.63
+Name: High_300628, dtype: float64","18    37.96
+Name: Low_300628, dtype: float64","18   2025-03-13
+Name: Date, dtype: datetime64[ns]"
+601336,buy,100,61.90783862223865,"18    63.502006
+Name: High_601336, dtype: float64","18    61.869171
+Name: Low_601336, dtype: float64","18   2025-03-13
+Name: Date, dtype: datetime64[ns]"
+000338,buy,67,15.69524767242372,"18    15.69
+Name: High_000338, dtype: float64","18    15.11
+Name: Low_000338, dtype: float64","18   2025-03-13
+Name: Date, dtype: datetime64[ns]"
+002001,buy,48,21.26680857430212,"18    21.2
+Name: High_002001, dtype: float64","18    20.55
+Name: Low_002001, dtype: float64","18   2025-03-13
+Name: Date, dtype: datetime64[ns]"
+601877,buy,26,24.656024921648203,"18    25.64
+Name: High_601877, dtype: float64","18    24.3
+Name: Low_601877, dtype: float64","18   2025-03-13
+Name: Date, dtype: datetime64[ns]"
+002905,buy,21,8.133200486826246,"18    8.95
+Name: High_002905, dtype: float64","18    8.95
+Name: Low_002905, dtype: float64","18   2025-03-13
+Name: Date, dtype: datetime64[ns]"
+000776,buy,14,14.806971636228264,"18    15.04
+Name: High_000776, dtype: float64","18    14.81
+Name: Low_000776, dtype: float64","18   2025-03-13
+Name: Date, dtype: datetime64[ns]"
+601628,sell,100,37.05541898589581,"19    39.1
+Name: High_601628, dtype: float64","19    36.63
+Name: Low_601628, dtype: float64","19   2025-03-14
+Name: Date, dtype: datetime64[ns]"
+000776,sell,95,14.757690179571508,"19    15.45
+Name: High_000776, dtype: float64","19    14.87
+Name: Low_000776, dtype: float64","19   2025-03-14
+Name: Date, dtype: datetime64[ns]"
+002905,sell,21,8.904980965494177,"19    9.85
+Name: High_002905, dtype: float64","19    9.85
+Name: Low_002905, dtype: float64","19   2025-03-14
+Name: Date, dtype: datetime64[ns]"
+601336,sell,7,61.925318956999604,"19    68.515323
+Name: High_601336, dtype: float64","19    62.137058
+Name: Low_601336, dtype: float64","19   2025-03-14
+Name: Date, dtype: datetime64[ns]"
+300628,sell,6,38.26311501560849,"19    38.98
+Name: High_300628, dtype: float64","19    38.13
+Name: Low_300628, dtype: float64","19   2025-03-14
+Name: Date, dtype: datetime64[ns]"
+601877,sell,1,24.772801691361238,"19    25.0
+Name: High_601877, dtype: float64","19    24.3
+Name: Low_601877, dtype: float64","19   2025-03-14
+Name: Date, dtype: datetime64[ns]"
+600795,buy,100,3.976874502375722,"19    4.04
+Name: High_600795, dtype: float64","19    4.0
+Name: Low_600795, dtype: float64","19   2025-03-14
+Name: Date, dtype: datetime64[ns]"
+002600,buy,100,9.563534742593765,"19    9.8
+Name: High_002600, dtype: float64","19    9.43
+Name: Low_002600, dtype: float64","19   2025-03-14
+Name: Date, dtype: datetime64[ns]"
+000338,buy,88,15.372845324994996,"19    15.39
+Name: High_000338, dtype: float64","19    15.12
+Name: Low_000338, dtype: float64","19   2025-03-14
+Name: Date, dtype: datetime64[ns]"
+002001,buy,87,21.24585707567632,"19    20.87
+Name: High_002001, dtype: float64","19    20.5
+Name: Low_002001, dtype: float64","19   2025-03-14
+Name: Date, dtype: datetime64[ns]"
+601877,sell,100,24.598945116088725,"20    24.83
+Name: High_601877, dtype: float64","20    24.24
+Name: Low_601877, dtype: float64","20   2025-03-17
+Name: Date, dtype: datetime64[ns]"
+300628,sell,100,38.8656318713387,"20    39.34
+Name: High_300628, dtype: float64","20    38.28
+Name: Low_300628, dtype: float64","20   2025-03-17
+Name: Date, dtype: datetime64[ns]"
+601336,sell,100,67.40628928047134,"20    69.267958
+Name: High_601336, dtype: float64","20    67.609609
+Name: Low_601336, dtype: float64","20   2025-03-17
+Name: Date, dtype: datetime64[ns]"
+002600,sell,74,9.70520138493972,"20    9.81
+Name: High_002600, dtype: float64","20    9.65
+Name: Low_002600, dtype: float64","20   2025-03-17
+Name: Date, dtype: datetime64[ns]"
+002905,sell,27,9.766424881713464,"20    10.84
+Name: High_002905, dtype: float64","20    9.05
+Name: Low_002905, dtype: float64","20   2025-03-17
+Name: Date, dtype: datetime64[ns]"
+600795,buy,100,4.00716293737758,"20    4.11
+Name: High_600795, dtype: float64","20    4.03
+Name: Low_600795, dtype: float64","20   2025-03-17
+Name: Date, dtype: datetime64[ns]"
+002001,buy,55,20.717441379779483,"20    21.12
+Name: High_002001, dtype: float64","20    20.81
+Name: Low_002001, dtype: float64","20   2025-03-17
+Name: Date, dtype: datetime64[ns]"
+601628,buy,52,39.079914567177184,"20    38.86
+Name: High_601628, dtype: float64","20    38.37
+Name: Low_601628, dtype: float64","20   2025-03-17
+Name: Date, dtype: datetime64[ns]"
+000776,buy,49,15.230901499651372,"20    15.4
+Name: High_000776, dtype: float64","20    15.24
+Name: Low_000776, dtype: float64","20   2025-03-17
+Name: Date, dtype: datetime64[ns]"
+000338,buy,31,15.456908050738276,"20    15.72
+Name: High_000338, dtype: float64","20    15.26
+Name: Low_000338, dtype: float64","20   2025-03-17
+Name: Date, dtype: datetime64[ns]"
+002600,sell,100,9.727601652094163,"21    9.93
+Name: High_002600, dtype: float64","21    9.69
+Name: Low_002600, dtype: float64","21   2025-03-18
+Name: Date, dtype: datetime64[ns]"
+300628,sell,100,38.36292679044418,"21    38.9
+Name: High_300628, dtype: float64","21    38.05
+Name: Low_300628, dtype: float64","21   2025-03-18
+Name: Date, dtype: datetime64[ns]"
+601628,sell,96,38.868239445239304,"21    39.01
+Name: High_601628, dtype: float64","21    38.32
+Name: Low_601628, dtype: float64","21   2025-03-18
+Name: Date, dtype: datetime64[ns]"
+002001,sell,75,20.995397749356925,"21    21.28
+Name: High_002001, dtype: float64","21    20.86
+Name: Low_002001, dtype: float64","21   2025-03-18
+Name: Date, dtype: datetime64[ns]"
+002905,sell,51,10.672402309142052,"21    10.83
+Name: High_002905, dtype: float64","21    9.76
+Name: Low_002905, dtype: float64","21   2025-03-18
+Name: Date, dtype: datetime64[ns]"
+601336,sell,42,68.0431238396395,"21    69.523089
+Name: High_601336, dtype: float64","21    68.387757
+Name: Low_601336, dtype: float64","21   2025-03-18
+Name: Date, dtype: datetime64[ns]"
+000776,sell,27,15.234849645397626,"21    15.54
+Name: High_000776, dtype: float64","21    15.39
+Name: Low_000776, dtype: float64","21   2025-03-18
+Name: Date, dtype: datetime64[ns]"
+000338,sell,0,15.76955372376833,"21    15.73
+Name: High_000338, dtype: float64","21    15.5
+Name: Low_000338, dtype: float64","21   2025-03-18
+Name: Date, dtype: datetime64[ns]"
+601877,buy,67,24.335707578272558,"21    24.4
+Name: High_601877, dtype: float64","21    23.94
+Name: Low_601877, dtype: float64","21   2025-03-18
+Name: Date, dtype: datetime64[ns]"
+600795,buy,62,4.0365113117266445,"21    4.08
+Name: High_600795, dtype: float64","21    4.03
+Name: Low_600795, dtype: float64","21   2025-03-18
+Name: Date, dtype: datetime64[ns]"
+601336,sell,100,68.01772259273862,"22    69.880271
+Name: High_601336, dtype: float64","22    68.375001
+Name: Low_601336, dtype: float64","22   2025-03-19
+Name: Date, dtype: datetime64[ns]"
+002600,sell,64,9.804390578159946,"22    9.8
+Name: High_002600, dtype: float64","22    9.58
+Name: Low_002600, dtype: float64","22   2025-03-19
+Name: Date, dtype: datetime64[ns]"
+600795,sell,37,4.047590471906588,"22    4.19
+Name: High_600795, dtype: float64","22    4.05
+Name: Low_600795, dtype: float64","22   2025-03-19
+Name: Date, dtype: datetime64[ns]"
+002905,sell,36,9.499449582695961,"22    9.2
+Name: High_002905, dtype: float64","22    8.78
+Name: Low_002905, dtype: float64","22   2025-03-19
+Name: Date, dtype: datetime64[ns]"
+601628,sell,28,38.58405394645408,"22    38.66
+Name: High_601628, dtype: float64","22    38.06
+Name: Low_601628, dtype: float64","22   2025-03-19
+Name: Date, dtype: datetime64[ns]"
+002001,sell,9,20.872994131203743,"22    21.23
+Name: High_002001, dtype: float64","22    21.01
+Name: Low_002001, dtype: float64","22   2025-03-19
+Name: Date, dtype: datetime64[ns]"
+000338,buy,100,15.758965333811938,"22    17.01
+Name: High_000338, dtype: float64","22    15.78
+Name: Low_000338, dtype: float64","22   2025-03-19
+Name: Date, dtype: datetime64[ns]"
+300628,buy,100,38.81214034001634,"22    39.03
+Name: High_300628, dtype: float64","22    38.41
+Name: Low_300628, dtype: float64","22   2025-03-19
+Name: Date, dtype: datetime64[ns]"
+601877,buy,100,24.081242518499494,"22    24.15
+Name: High_601877, dtype: float64","22    23.8
+Name: Low_601877, dtype: float64","22   2025-03-19
+Name: Date, dtype: datetime64[ns]"
+000776,buy,16,15.342266430566088,"22    15.59
+Name: High_000776, dtype: float64","22    15.36
+Name: Low_000776, dtype: float64","22   2025-03-19
+Name: Date, dtype: datetime64[ns]"
+000338,sell,83,16.152346579905135,"23    16.05
+Name: High_000338, dtype: float64","23    15.76
+Name: Low_000338, dtype: float64","23   2025-03-20
+Name: Date, dtype: datetime64[ns]"
+601877,sell,76,24.041677645575255,"23    24.24
+Name: High_601877, dtype: float64","23    23.68
+Name: Low_601877, dtype: float64","23   2025-03-20
+Name: Date, dtype: datetime64[ns]"
+002001,sell,59,21.25270029881154,"23    21.13
+Name: High_002001, dtype: float64","23    20.91
+Name: Low_002001, dtype: float64","23   2025-03-20
+Name: Date, dtype: datetime64[ns]"
+002600,sell,48,9.689635821307311,"23    9.72
+Name: High_002600, dtype: float64","23    9.56
+Name: Low_002600, dtype: float64","23   2025-03-20
+Name: Date, dtype: datetime64[ns]"
+300628,sell,35,38.648747165218225,"23    39.54
+Name: High_300628, dtype: float64","23    38.29
+Name: Low_300628, dtype: float64","23   2025-03-20
+Name: Date, dtype: datetime64[ns]"
+000776,sell,29,15.427646905109286,"23    15.53
+Name: High_000776, dtype: float64","23    15.29
+Name: Low_000776, dtype: float64","23   2025-03-20
+Name: Date, dtype: datetime64[ns]"
+600795,sell,27,4.137351619452239,"23    4.24
+Name: High_600795, dtype: float64","23    4.15
+Name: Low_600795, dtype: float64","23   2025-03-20
+Name: Date, dtype: datetime64[ns]"
+002905,buy,100,8.449095450267196,"23    8.45
+Name: High_002905, dtype: float64","23    8.19
+Name: Low_002905, dtype: float64","23   2025-03-20
+Name: Date, dtype: datetime64[ns]"
+601336,buy,45,68.48808147678052,"23    69.267958
+Name: High_601336, dtype: float64","23    65.504782
+Name: Low_601336, dtype: float64","23   2025-03-20
+Name: Date, dtype: datetime64[ns]"
+601628,buy,31,38.74499640829861,"23    38.51
+Name: High_601628, dtype: float64","23    37.13
+Name: Low_601628, dtype: float64","23   2025-03-20
+Name: Date, dtype: datetime64[ns]"
+601336,sell,98,65.48597426049507,"24    66.487034
+Name: High_601336, dtype: float64","24    64.101563
+Name: Low_601336, dtype: float64","24   2025-03-21
+Name: Date, dtype: datetime64[ns]"
+601877,sell,80,24.01568362886319,"24    24.08
+Name: High_601877, dtype: float64","24    23.41
+Name: Low_601877, dtype: float64","24   2025-03-21
+Name: Date, dtype: datetime64[ns]"
+000776,sell,66,15.297363845212384,"24    15.38
+Name: High_000776, dtype: float64","24    15.08
+Name: Low_000776, dtype: float64","24   2025-03-21
+Name: Date, dtype: datetime64[ns]"
+601628,sell,35,37.53275888499804,"24    37.8
+Name: High_601628, dtype: float64","24    36.71
+Name: Low_601628, dtype: float64","24   2025-03-21
+Name: Date, dtype: datetime64[ns]"
+002905,sell,18,7.8474101491644985,"24    8.18
+Name: High_002905, dtype: float64","24    8.01
+Name: Low_002905, dtype: float64","24   2025-03-21
+Name: Date, dtype: datetime64[ns]"
+300628,buy,75,38.98148319447959,"24    39.88
+Name: High_300628, dtype: float64","24    38.68
+Name: Low_300628, dtype: float64","24   2025-03-21
+Name: Date, dtype: datetime64[ns]"
+000338,buy,56,15.92453851987375,"24    15.97
+Name: High_000338, dtype: float64","24    15.46
+Name: Low_000338, dtype: float64","24   2025-03-21
+Name: Date, dtype: datetime64[ns]"
+002600,buy,34,9.575863788641291,"24    9.51
+Name: High_002600, dtype: float64","24    9.06
+Name: Low_002600, dtype: float64","24   2025-03-21
+Name: Date, dtype: datetime64[ns]"
+002001,buy,3,21.020739199784582,"24    21.13
+Name: High_002001, dtype: float64","24    20.7
+Name: Low_002001, dtype: float64","24   2025-03-21
+Name: Date, dtype: datetime64[ns]"
+600795,buy,2,4.12849976751022,"24    4.23
+Name: High_600795, dtype: float64","24    4.1
+Name: Low_600795, dtype: float64","24   2025-03-21
+Name: Date, dtype: datetime64[ns]"
+600795,sell,96,4.109962485567666,"25    4.18
+Name: High_600795, dtype: float64","25    4.11
+Name: Low_600795, dtype: float64","25   2025-03-24
+Name: Date, dtype: datetime64[ns]"
+000338,sell,57,15.614588945973665,"25    15.78
+Name: High_000338, dtype: float64","25    15.42
+Name: Low_000338, dtype: float64","25   2025-03-24
+Name: Date, dtype: datetime64[ns]"
+002001,sell,54,20.806134726069867,"25    20.91
+Name: High_002001, dtype: float64","25    20.65
+Name: Low_002001, dtype: float64","25   2025-03-24
+Name: Date, dtype: datetime64[ns]"
+002905,sell,33,7.695385725535452,"25    8.06
+Name: High_002905, dtype: float64","25    7.73
+Name: Low_002905, dtype: float64","25   2025-03-24
+Name: Date, dtype: datetime64[ns]"
+601336,sell,27,64.5989013398968,"25    66.142608
+Name: High_601336, dtype: float64","25    64.484259
+Name: Low_601336, dtype: float64","25   2025-03-24
+Name: Date, dtype: datetime64[ns]"
+000776,sell,10,15.094714514063671,"25    15.3
+Name: High_000776, dtype: float64","25    15.06
+Name: Low_000776, dtype: float64","25   2025-03-24
+Name: Date, dtype: datetime64[ns]"
+601628,buy,100,37.147380237188194,"25    37.26
+Name: High_601628, dtype: float64","25    36.75
+Name: Low_601628, dtype: float64","25   2025-03-24
+Name: Date, dtype: datetime64[ns]"
+601877,buy,100,23.577230192385613,"25    23.72
+Name: High_601877, dtype: float64","25    23.33
+Name: Low_601877, dtype: float64","25   2025-03-24
+Name: Date, dtype: datetime64[ns]"
+002600,buy,89,9.09017856628794,"25    9.29
+Name: High_002600, dtype: float64","25    8.9
+Name: Low_002600, dtype: float64","25   2025-03-24
+Name: Date, dtype: datetime64[ns]"
+300628,buy,59,39.140285192881706,"25    39.96
+Name: High_300628, dtype: float64","25    39.0
+Name: Low_300628, dtype: float64","25   2025-03-24
+Name: Date, dtype: datetime64[ns]"
+002600,sell,40,9.139130736553925,"26    9.17
+Name: High_002600, dtype: float64","26    8.93
+Name: Low_002600, dtype: float64","26   2025-03-25
+Name: Date, dtype: datetime64[ns]"
+002905,sell,23,7.602398084886373,"26    7.88
+Name: High_002905, dtype: float64","26    7.67
+Name: Low_002905, dtype: float64","26   2025-03-25
+Name: Date, dtype: datetime64[ns]"
+600795,buy,100,4.140857984721661,"26    4.23
+Name: High_600795, dtype: float64","26    4.12
+Name: Low_600795, dtype: float64","26   2025-03-25
+Name: Date, dtype: datetime64[ns]"
+000776,buy,100,15.212255356424722,"26    15.37
+Name: High_000776, dtype: float64","26    15.18
+Name: Low_000776, dtype: float64","26   2025-03-25
+Name: Date, dtype: datetime64[ns]"
+601628,buy,82,37.44891906062141,"26    37.3
+Name: High_601628, dtype: float64","26    36.83
+Name: Low_601628, dtype: float64","26   2025-03-25
+Name: Date, dtype: datetime64[ns]"
+601336,buy,47,66.76944445968816,"26    66.129852
+Name: High_601336, dtype: float64","26    64.560798
+Name: Low_601336, dtype: float64","26   2025-03-25
+Name: Date, dtype: datetime64[ns]"
+000338,buy,37,15.62905638923403,"26    15.58
+Name: High_000338, dtype: float64","26    15.22
+Name: Low_000338, dtype: float64","26   2025-03-25
+Name: Date, dtype: datetime64[ns]"
+601877,buy,33,23.601732188172175,"26    24.13
+Name: High_601877, dtype: float64","26    23.48
+Name: Low_601877, dtype: float64","26   2025-03-25
+Name: Date, dtype: datetime64[ns]"
+002001,buy,11,20.935374395060354,"26    21.12
+Name: High_002001, dtype: float64","26    20.68
+Name: Low_002001, dtype: float64","26   2025-03-25
+Name: Date, dtype: datetime64[ns]"
+300628,buy,5,39.810363685932245,"26    40.04
+Name: High_300628, dtype: float64","26    39.05
+Name: Low_300628, dtype: float64","26   2025-03-25
+Name: Date, dtype: datetime64[ns]"
+000338,sell,99,15.358187980949879,"27    15.28
+Name: High_000338, dtype: float64","27    15.08
+Name: Low_000338, dtype: float64","27   2025-03-26
+Name: Date, dtype: datetime64[ns]"
+002001,sell,88,20.773871101420376,"27    21.34
+Name: High_002001, dtype: float64","27    21.03
+Name: Low_002001, dtype: float64","27   2025-03-26
+Name: Date, dtype: datetime64[ns]"
+000776,sell,40,15.306549746482197,"27    15.33
+Name: High_000776, dtype: float64","27    15.21
+Name: Low_000776, dtype: float64","27   2025-03-26
+Name: Date, dtype: datetime64[ns]"
+600795,buy,100,4.201642166543752,"27    4.23
+Name: High_600795, dtype: float64","27    4.14
+Name: Low_600795, dtype: float64","27   2025-03-26
+Name: Date, dtype: datetime64[ns]"
+002600,buy,100,8.996115409293562,"27    9.15
+Name: High_002600, dtype: float64","27    8.94
+Name: Low_002600, dtype: float64","27   2025-03-26
+Name: Date, dtype: datetime64[ns]"
+300628,buy,42,39.294887214903724,"27    38.75
+Name: High_300628, dtype: float64","27    37.77
+Name: Low_300628, dtype: float64","27   2025-03-26
+Name: Date, dtype: datetime64[ns]"
+002905,buy,41,7.549315211828798,"27    7.8
+Name: High_002905, dtype: float64","27    7.7
+Name: Low_002905, dtype: float64","27   2025-03-26
+Name: Date, dtype: datetime64[ns]"
+601628,buy,36,37.55787161093205,"27    37.45
+Name: High_601628, dtype: float64","27    36.78
+Name: Low_601628, dtype: float64","27   2025-03-26
+Name: Date, dtype: datetime64[ns]"
+601877,buy,26,23.550455548837782,"27    23.68
+Name: High_601877, dtype: float64","27    23.36
+Name: Low_601877, dtype: float64","27   2025-03-26
+Name: Date, dtype: datetime64[ns]"
+601336,buy,21,67.37160923567048,"27    65.402729
+Name: High_601336, dtype: float64","27    64.382207
+Name: Low_601336, dtype: float64","27   2025-03-26
+Name: Date, dtype: datetime64[ns]"
+000776,sell,100,15.300219776759622,"28    15.68
+Name: High_000776, dtype: float64","28    15.23
+Name: Low_000776, dtype: float64","28   2025-03-27
+Name: Date, dtype: datetime64[ns]"
+300628,sell,76,38.12097027085838,"28    39.77
+Name: High_300628, dtype: float64","28    37.9
+Name: Low_300628, dtype: float64","28   2025-03-27
+Name: Date, dtype: datetime64[ns]"
+002905,sell,38,7.607128476500511,"28    7.87
+Name: High_002905, dtype: float64","28    7.58
+Name: Low_002905, dtype: float64","28   2025-03-27
+Name: Date, dtype: datetime64[ns]"
+601336,sell,22,67.29595497750702,"28    65.849208
+Name: High_601336, dtype: float64","28    63.78265
+Name: Low_601336, dtype: float64","28   2025-03-27
+Name: Date, dtype: datetime64[ns]"
+000338,buy,100,15.213115850789473,"28    15.15
+Name: High_000338, dtype: float64","28    15.0
+Name: Low_000338, dtype: float64","28   2025-03-27
+Name: Date, dtype: datetime64[ns]"
+002001,buy,100,21.481985282339156,"28    21.96
+Name: High_002001, dtype: float64","28    21.1
+Name: Low_002001, dtype: float64","28   2025-03-27
+Name: Date, dtype: datetime64[ns]"
+002600,buy,100,9.134847961440682,"28    9.22
+Name: High_002600, dtype: float64","28    8.94
+Name: Low_002600, dtype: float64","28   2025-03-27
+Name: Date, dtype: datetime64[ns]"
+601628,buy,76,37.553636271227155,"28    37.88
+Name: High_601628, dtype: float64","28    36.84
+Name: Low_601628, dtype: float64","28   2025-03-27
+Name: Date, dtype: datetime64[ns]"
+600795,buy,29,4.133384063863196,"28    4.17
+Name: High_600795, dtype: float64","28    4.11
+Name: Low_600795, dtype: float64","28   2025-03-27
+Name: Date, dtype: datetime64[ns]"
+601877,buy,23,23.511133181427137,"28    23.52
+Name: High_601877, dtype: float64","28    22.98
+Name: Low_601877, dtype: float64","28   2025-03-27
+Name: Date, dtype: datetime64[ns]"
+000776,sell,100,15.658209654102102,"29    16.09
+Name: High_000776, dtype: float64","29    15.58
+Name: Low_000776, dtype: float64","29   2025-03-28
+Name: Date, dtype: datetime64[ns]"
+002905,sell,100,7.485199177637696,"29    7.75
+Name: High_002905, dtype: float64","29    7.53
+Name: Low_002905, dtype: float64","29   2025-03-28
+Name: Date, dtype: datetime64[ns]"
+601336,sell,100,65.01996009485116,"29    67.903009
+Name: High_601336, dtype: float64","29    66.117095
+Name: Low_601336, dtype: float64","29   2025-03-28
+Name: Date, dtype: datetime64[ns]"
+601877,sell,66,23.286197512521756,"29    23.37
+Name: High_601877, dtype: float64","29    23.09
+Name: Low_601877, dtype: float64","29   2025-03-28
+Name: Date, dtype: datetime64[ns]"
+000338,buy,100,15.127642671614886,"29    15.68
+Name: High_000338, dtype: float64","29    15.26
+Name: Low_000338, dtype: float64","29   2025-03-28
+Name: Date, dtype: datetime64[ns]"
+300628,buy,100,39.56838761458173,"29    40.19
+Name: High_300628, dtype: float64","29    39.25
+Name: Low_300628, dtype: float64","29   2025-03-28
+Name: Date, dtype: datetime64[ns]"
+600795,buy,100,4.1150985330576075,"29    4.23
+Name: High_600795, dtype: float64","29    4.14
+Name: Low_600795, dtype: float64","29   2025-03-28
+Name: Date, dtype: datetime64[ns]"
+601628,buy,96,37.793726202640684,"29    37.65
+Name: High_601628, dtype: float64","29    37.01
+Name: Low_601628, dtype: float64","29   2025-03-28
+Name: Date, dtype: datetime64[ns]"
+002600,buy,93,9.132347553763537,"29    9.17
+Name: High_002600, dtype: float64","29    9.05
+Name: Low_002600, dtype: float64","29   2025-03-28
+Name: Date, dtype: datetime64[ns]"
+002001,buy,16,21.310957940509542,"29    22.1
+Name: High_002001, dtype: float64","29    21.53
+Name: Low_002001, dtype: float64","29   2025-03-28
+Name: Date, dtype: datetime64[ns]"
+601628,sell,100,37.52807076088153,"30    37.56
+Name: High_601628, dtype: float64","30    36.73
+Name: Low_601628, dtype: float64","30   2025-03-31
+Name: Date, dtype: datetime64[ns]"
+300628,sell,55,39.92912339910632,"30    40.7
+Name: High_300628, dtype: float64","30    39.0
+Name: Low_300628, dtype: float64","30   2025-03-31
+Name: Date, dtype: datetime64[ns]"
+000776,sell,47,15.923658943315969,"30    16.06
+Name: High_000776, dtype: float64","30    15.58
+Name: Low_000776, dtype: float64","30   2025-03-31
+Name: Date, dtype: datetime64[ns]"
+601877,sell,35,23.13526621699799,"30    23.28
+Name: High_601877, dtype: float64","30    22.72
+Name: Low_601877, dtype: float64","30   2025-03-31
+Name: Date, dtype: datetime64[ns]"
+002600,sell,19,9.14943187404424,"30    9.06
+Name: High_002600, dtype: float64","30    8.87
+Name: Low_002600, dtype: float64","30   2025-03-31
+Name: Date, dtype: datetime64[ns]"
+600795,buy,100,4.135806744091679,"30    4.34
+Name: High_600795, dtype: float64","30    4.17
+Name: Low_600795, dtype: float64","30   2025-03-31
+Name: Date, dtype: datetime64[ns]"
+002905,buy,100,7.537707347497344,"30    7.61
+Name: High_002905, dtype: float64","30    7.25
+Name: Low_002905, dtype: float64","30   2025-03-31
+Name: Date, dtype: datetime64[ns]"
+000338,buy,98,15.558897206559777,"30    15.89
+Name: High_000338, dtype: float64","30    15.46
+Name: Low_000338, dtype: float64","30   2025-03-31
+Name: Date, dtype: datetime64[ns]"
+002001,buy,17,21.68618351686746,"30    22.15
+Name: High_002001, dtype: float64","30    21.6
+Name: Low_002001, dtype: float64","30   2025-03-31
+Name: Date, dtype: datetime64[ns]"
+601336,buy,1,63.61932995324349,"30    67.277939
+Name: High_601336, dtype: float64","30    65.185868
+Name: Low_601336, dtype: float64","30   2025-03-31
+Name: Date, dtype: datetime64[ns]"
+002600,sell,100,9.039088793569244,"31    9.19
+Name: High_002600, dtype: float64","31    8.99
+Name: Low_002600, dtype: float64","31   2025-04-01
+Name: Date, dtype: datetime64[ns]"
+002905,sell,100,7.5583934327587485,"31    7.72
+Name: High_002905, dtype: float64","31    7.58
+Name: Low_002905, dtype: float64","31   2025-04-01
+Name: Date, dtype: datetime64[ns]"
+000338,sell,100,15.643080523367972,"31    15.7
+Name: High_000338, dtype: float64","31    15.25
+Name: Low_000338, dtype: float64","31   2025-04-01
+Name: Date, dtype: datetime64[ns]"
+601336,sell,100,62.63186835173939,"31    66.767678
+Name: High_601336, dtype: float64","31    65.428242
+Name: Low_601336, dtype: float64","31   2025-04-01
+Name: Date, dtype: datetime64[ns]"
+600795,sell,1,4.215063255953138,"31    4.41
+Name: High_600795, dtype: float64","31    4.21
+Name: Low_600795, dtype: float64","31   2025-04-01
+Name: Date, dtype: datetime64[ns]"
+002001,buy,100,22.101133007928727,"31    22.09
+Name: High_002001, dtype: float64","31    21.5
+Name: Low_002001, dtype: float64","31   2025-04-01
+Name: Date, dtype: datetime64[ns]"
+601877,buy,100,22.893468531081453,"31    23.34
+Name: High_601877, dtype: float64","31    22.83
+Name: Low_601877, dtype: float64","31   2025-04-01
+Name: Date, dtype: datetime64[ns]"
+000776,buy,100,15.673443649602122,"31    15.91
+Name: High_000776, dtype: float64","31    15.67
+Name: Low_000776, dtype: float64","31   2025-04-01
+Name: Date, dtype: datetime64[ns]"
+300628,buy,81,39.14793746281648,"31    39.49
+Name: High_300628, dtype: float64","31    38.54
+Name: Low_300628, dtype: float64","31   2025-04-01
+Name: Date, dtype: datetime64[ns]"
+601628,buy,40,37.340179760772735,"31    37.0
+Name: High_601628, dtype: float64","31    36.5
+Name: Low_601628, dtype: float64","31   2025-04-01
+Name: Date, dtype: datetime64[ns]"
+601336,sell,100,63.9120260811657,"32    67.303452
+Name: High_601336, dtype: float64","32    65.696129
+Name: Low_601336, dtype: float64","32   2025-04-02
+Name: Date, dtype: datetime64[ns]"
+300628,sell,93,38.915248962077314,"32    39.14
+Name: High_300628, dtype: float64","32    38.48
+Name: Low_300628, dtype: float64","32   2025-04-02
+Name: Date, dtype: datetime64[ns]"
+000776,sell,91,15.805683267361019,"32    15.87
+Name: High_000776, dtype: float64","32    15.61
+Name: Low_000776, dtype: float64","32   2025-04-02
+Name: Date, dtype: datetime64[ns]"
+600795,sell,20,4.386393024091958,"32    4.43
+Name: High_600795, dtype: float64","32    4.31
+Name: Low_600795, dtype: float64","32   2025-04-02
+Name: Date, dtype: datetime64[ns]"
+601877,sell,3,23.16266367654316,"32    23.33
+Name: High_601877, dtype: float64","32    23.12
+Name: Low_601877, dtype: float64","32   2025-04-02
+Name: Date, dtype: datetime64[ns]"
+000338,buy,100,15.172441667113453,"32    15.39
+Name: High_000338, dtype: float64","32    15.11
+Name: Low_000338, dtype: float64","32   2025-04-02
+Name: Date, dtype: datetime64[ns]"
+002905,buy,100,7.607838418222964,"32    7.74
+Name: High_002905, dtype: float64","32    7.56
+Name: Low_002905, dtype: float64","32   2025-04-02
+Name: Date, dtype: datetime64[ns]"
+002600,buy,75,9.05915132118389,"32    9.15
+Name: High_002600, dtype: float64","32    8.94
+Name: Low_002600, dtype: float64","32   2025-04-02
+Name: Date, dtype: datetime64[ns]"
+601628,buy,64,36.9323282009922,"32    36.93
+Name: High_601628, dtype: float64","32    36.46
+Name: Low_601628, dtype: float64","32   2025-04-02
+Name: Date, dtype: datetime64[ns]"
+002001,buy,54,21.74942257905379,"32    21.82
+Name: High_002001, dtype: float64","32    21.26
+Name: Low_002001, dtype: float64","32   2025-04-02
+Name: Date, dtype: datetime64[ns]"
+300628,sell,100,38.636039480092,"33    38.1
+Name: High_300628, dtype: float64","33    35.84
+Name: Low_300628, dtype: float64","33   2025-04-03
+Name: Date, dtype: datetime64[ns]"
+601336,sell,100,65.62887743602876,"33    67.558583
+Name: High_601336, dtype: float64","33    65.313434
+Name: Low_601336, dtype: float64","33   2025-04-03
+Name: Date, dtype: datetime64[ns]"
+601628,sell,78,36.74255067792663,"33    36.98
+Name: High_601628, dtype: float64","33    36.22
+Name: Low_601628, dtype: float64","33   2025-04-03
+Name: Date, dtype: datetime64[ns]"
+000338,sell,2,15.167604266963899,"33    15.25
+Name: High_000338, dtype: float64","33    14.87
+Name: Low_000338, dtype: float64","33   2025-04-03
+Name: Date, dtype: datetime64[ns]"
+002600,buy,74,9.121998560456559,"33    8.92
+Name: High_002600, dtype: float64","33    8.31
+Name: Low_002600, dtype: float64","33   2025-04-03
+Name: Date, dtype: datetime64[ns]"
+601877,buy,66,23.114334272006527,"33    23.2
+Name: High_601877, dtype: float64","33    22.88
+Name: Low_601877, dtype: float64","33   2025-04-03
+Name: Date, dtype: datetime64[ns]"
+000776,buy,43,15.666664023245685,"33    15.75
+Name: High_000776, dtype: float64","33    15.51
+Name: Low_000776, dtype: float64","33   2025-04-03
+Name: Date, dtype: datetime64[ns]"
+002905,buy,32,7.641031088693999,"33    7.78
+Name: High_002905, dtype: float64","33    7.51
+Name: Low_002905, dtype: float64","33   2025-04-03
+Name: Date, dtype: datetime64[ns]"
+600795,buy,29,4.328544584932388,"33    4.39
+Name: High_600795, dtype: float64","33    4.29
+Name: Low_600795, dtype: float64","33   2025-04-03
+Name: Date, dtype: datetime64[ns]"
+002001,buy,20,21.557058681501076,"33    21.28
+Name: High_002001, dtype: float64","33    20.87
+Name: Low_002001, dtype: float64","33   2025-04-03
+Name: Date, dtype: datetime64[ns]"
+002905,sell,100,7.822054198365659,"34    7.35
+Name: High_002905, dtype: float64","34    6.94
+Name: Low_002905, dtype: float64","34   2025-04-07
+Name: Date, dtype: datetime64[ns]"
+601877,sell,100,22.8345288708061,"34    21.89
+Name: High_601877, dtype: float64","34    20.57
+Name: Low_601877, dtype: float64","34   2025-04-07
+Name: Date, dtype: datetime64[ns]"
+000338,sell,100,14.827753279991448,"34    14.05
+Name: High_000338, dtype: float64","34    13.38
+Name: Low_000338, dtype: float64","34   2025-04-07
+Name: Date, dtype: datetime64[ns]"
+300628,sell,61,36.07095580999274,"34    33.69
+Name: High_300628, dtype: float64","34    30.93
+Name: Low_300628, dtype: float64","34   2025-04-07
+Name: Date, dtype: datetime64[ns]"
+002001,sell,35,20.90287473628297,"34    19.95
+Name: High_002001, dtype: float64","34    18.82
+Name: Low_002001, dtype: float64","34   2025-04-07
+Name: Date, dtype: datetime64[ns]"
+601336,sell,10,66.02144009039591,"34    62.098788
+Name: High_601336, dtype: float64","34    59.126517
+Name: Low_601336, dtype: float64","34   2025-04-07
+Name: Date, dtype: datetime64[ns]"
+600795,buy,76,4.355784629809205,"34    4.29
+Name: High_600795, dtype: float64","34    4.0
+Name: Low_600795, dtype: float64","34   2025-04-07
+Name: Date, dtype: datetime64[ns]"
+000776,buy,70,15.697257586415798,"34    15.09
+Name: High_000776, dtype: float64","34    14.08
+Name: Low_000776, dtype: float64","34   2025-04-07
+Name: Date, dtype: datetime64[ns]"
+601628,buy,62,36.666278165983385,"34    35.61
+Name: High_601628, dtype: float64","34    32.92
+Name: Low_601628, dtype: float64","34   2025-04-07
+Name: Date, dtype: datetime64[ns]"
+002600,buy,20,8.429540312290191,"34    7.6
+Name: High_002600, dtype: float64","34    7.56
+Name: Low_002600, dtype: float64","34   2025-04-07
+Name: Date, dtype: datetime64[ns]"
+000776,sell,100,14.121644806861877,"35    14.6
+Name: High_000776, dtype: float64","35    13.9
+Name: Low_000776, dtype: float64","35   2025-04-08
+Name: Date, dtype: datetime64[ns]"
+600795,sell,100,4.130289762821048,"35    4.25
+Name: High_600795, dtype: float64","35    4.12
+Name: Low_600795, dtype: float64","35   2025-04-08
+Name: Date, dtype: datetime64[ns]"
+300628,sell,100,33.06169900163426,"35    33.64
+Name: High_300628, dtype: float64","35    31.49
+Name: Low_300628, dtype: float64","35   2025-04-08
+Name: Date, dtype: datetime64[ns]"
+002600,sell,64,7.573255622754805,"35    7.02
+Name: High_002600, dtype: float64","35    6.8
+Name: Low_002600, dtype: float64","35   2025-04-08
+Name: Date, dtype: datetime64[ns]"
+002905,sell,48,7.110201300941408,"35    7.28
+Name: High_002905, dtype: float64","35    6.6
+Name: Low_002905, dtype: float64","35   2025-04-08
+Name: Date, dtype: datetime64[ns]"
+601336,sell,15,60.37035497202477,"35    60.976213
+Name: High_601336, dtype: float64","35    59.381647
+Name: Low_601336, dtype: float64","35   2025-04-08
+Name: Date, dtype: datetime64[ns]"
+002001,sell,7,21.112886609705164,"35    19.63
+Name: High_002001, dtype: float64","35    18.98
+Name: Low_002001, dtype: float64","35   2025-04-08
+Name: Date, dtype: datetime64[ns]"
+601628,buy,16,34.18869445944903,"35    35.11
+Name: High_601628, dtype: float64","35    33.53
+Name: Low_601628, dtype: float64","35   2025-04-08
+Name: Date, dtype: datetime64[ns]"
+601877,buy,14,20.557059926300425,"35    20.9
+Name: High_601877, dtype: float64","35    20.06
+Name: Low_601877, dtype: float64","35   2025-04-08
+Name: Date, dtype: datetime64[ns]"
+000338,buy,6,13.643897366710007,"35    14.03
+Name: High_000338, dtype: float64","35    13.63
+Name: Low_000338, dtype: float64","35   2025-04-08
+Name: Date, dtype: datetime64[ns]"
+600795,sell,95,4.237258488079533,"36    4.25
+Name: High_600795, dtype: float64","36    4.09
+Name: Low_600795, dtype: float64","36   2025-04-09
+Name: Date, dtype: datetime64[ns]"
+601336,sell,56,60.739202076665975,"36    60.580761
+Name: High_601336, dtype: float64","36    59.292351
+Name: Low_601336, dtype: float64","36   2025-04-09
+Name: Date, dtype: datetime64[ns]"
+000338,sell,19,13.876469604671001,"36    14.28
+Name: High_000338, dtype: float64","36    13.6
+Name: Low_000338, dtype: float64","36   2025-04-09
+Name: Date, dtype: datetime64[ns]"
+002600,buy,100,6.797801866638474,"36    6.83
+Name: High_002600, dtype: float64","36    6.12
+Name: Low_002600, dtype: float64","36   2025-04-09
+Name: Date, dtype: datetime64[ns]"
+000776,buy,100,14.696373035050929,"36    14.7
+Name: High_000776, dtype: float64","36    14.22
+Name: Low_000776, dtype: float64","36   2025-04-09
+Name: Date, dtype: datetime64[ns]"
+300628,buy,76,32.04277029417339,"36    32.56
+Name: High_300628, dtype: float64","36    30.92
+Name: Low_300628, dtype: float64","36   2025-04-09
+Name: Date, dtype: datetime64[ns]"
+601877,buy,69,20.675787361375985,"36    20.73
+Name: High_601877, dtype: float64","36    20.07
+Name: Low_601877, dtype: float64","36   2025-04-09
+Name: Date, dtype: datetime64[ns]"
+002001,buy,43,18.83589020673535,"36    19.47
+Name: High_002001, dtype: float64","36    18.88
+Name: Low_002001, dtype: float64","36   2025-04-09
+Name: Date, dtype: datetime64[ns]"
+601628,buy,42,35.16838534892304,"36    35.31
+Name: High_601628, dtype: float64","36    34.33
+Name: Low_601628, dtype: float64","36   2025-04-09
+Name: Date, dtype: datetime64[ns]"
+002905,buy,42,7.166863378062844,"36    7.22
+Name: High_002905, dtype: float64","36    6.33
+Name: Low_002905, dtype: float64","36   2025-04-09
+Name: Date, dtype: datetime64[ns]"
+000338,sell,100,14.02918902623467,"37    14.83
+Name: High_000338, dtype: float64","37    14.38
+Name: Low_000338, dtype: float64","37   2025-04-10
+Name: Date, dtype: datetime64[ns]"
+601628,sell,60,35.04951326473616,"37    35.41
+Name: High_601628, dtype: float64","37    34.82
+Name: Low_601628, dtype: float64","37   2025-04-10
+Name: Date, dtype: datetime64[ns]"
+002600,sell,51,6.680721408920363,"37    7.3
+Name: High_002600, dtype: float64","37    6.98
+Name: Low_002600, dtype: float64","37   2025-04-10
+Name: Date, dtype: datetime64[ns]"
+601877,sell,46,20.770539576290176,"37    21.28
+Name: High_601877, dtype: float64","37    20.75
+Name: Low_601877, dtype: float64","37   2025-04-10
+Name: Date, dtype: datetime64[ns]"
+002001,sell,0,19.66282843146473,"37    20.02
+Name: High_002001, dtype: float64","37    19.47
+Name: Low_002001, dtype: float64","37   2025-04-10
+Name: Date, dtype: datetime64[ns]"
+601336,buy,100,60.35286950889607,"37    62.073275
+Name: High_601336, dtype: float64","37    60.721083
+Name: Low_601336, dtype: float64","37   2025-04-10
+Name: Date, dtype: datetime64[ns]"
+600795,buy,100,4.22551330331713,"37    4.26
+Name: High_600795, dtype: float64","37    4.2
+Name: Low_600795, dtype: float64","37   2025-04-10
+Name: Date, dtype: datetime64[ns]"
+300628,buy,83,31.559261900939163,"37    33.5
+Name: High_300628, dtype: float64","37    32.1
+Name: Low_300628, dtype: float64","37   2025-04-10
+Name: Date, dtype: datetime64[ns]"
+002905,buy,47,7.226534528471529,"37    7.6
+Name: High_002905, dtype: float64","37    7.17
+Name: Low_002905, dtype: float64","37   2025-04-10
+Name: Date, dtype: datetime64[ns]"
+000776,buy,12,14.761932370159775,"37    15.15
+Name: High_000776, dtype: float64","37    14.61
+Name: Low_000776, dtype: float64","37   2025-04-10
+Name: Date, dtype: datetime64[ns]"
+002001,sell,100,19.35278022523038,"38    20.06
+Name: High_002001, dtype: float64","38    19.59
+Name: Low_002001, dtype: float64","38   2025-04-11
+Name: Date, dtype: datetime64[ns]"
+300628,sell,91,32.08057897539227,"38    32.59
+Name: High_300628, dtype: float64","38    31.57
+Name: Low_300628, dtype: float64","38   2025-04-11
+Name: Date, dtype: datetime64[ns]"
+601336,sell,82,60.8835495412298,"38    61.32064
+Name: High_601336, dtype: float64","38    60.096013
+Name: Low_601336, dtype: float64","38   2025-04-11
+Name: Date, dtype: datetime64[ns]"
+601877,buy,100,21.147149494383484,"38    21.14
+Name: High_601877, dtype: float64","38    20.73
+Name: Low_601877, dtype: float64","38   2025-04-11
+Name: Date, dtype: datetime64[ns]"
+600795,buy,100,4.224931549169123,"38    4.27
+Name: High_600795, dtype: float64","38    4.19
+Name: Low_600795, dtype: float64","38   2025-04-11
+Name: Date, dtype: datetime64[ns]"
+000338,buy,77,14.39008222354576,"38    14.96
+Name: High_000338, dtype: float64","38    14.45
+Name: Low_000338, dtype: float64","38   2025-04-11
+Name: Date, dtype: datetime64[ns]"
+002600,buy,65,6.999767869245261,"38    7.32
+Name: High_002600, dtype: float64","38    6.79
+Name: Low_002600, dtype: float64","38   2025-04-11
+Name: Date, dtype: datetime64[ns]"
+002905,buy,61,7.519916596706025,"38    7.67
+Name: High_002905, dtype: float64","38    7.37
+Name: Low_002905, dtype: float64","38   2025-04-11
+Name: Date, dtype: datetime64[ns]"
+601628,buy,22,35.538674703240396,"38    35.33
+Name: High_601628, dtype: float64","38    34.52
+Name: Low_601628, dtype: float64","38   2025-04-11
+Name: Date, dtype: datetime64[ns]"
+000776,buy,13,15.180753980437293,"38    14.97
+Name: High_000776, dtype: float64","38    14.71
+Name: Low_000776, dtype: float64","38   2025-04-11
+Name: Date, dtype: datetime64[ns]"
+300628,sell,100,32.43288105268031,"39    33.65
+Name: High_300628, dtype: float64","39    32.42
+Name: Low_300628, dtype: float64","39   2025-04-14
+Name: Date, dtype: datetime64[ns]"
+000338,sell,100,14.708589250128716,"39    15.06
+Name: High_000338, dtype: float64","39    14.63
+Name: Low_000338, dtype: float64","39   2025-04-14
+Name: Date, dtype: datetime64[ns]"
+601628,sell,100,35.454278184687716,"39    35.34
+Name: High_601628, dtype: float64","39    34.96
+Name: Low_601628, dtype: float64","39   2025-04-14
+Name: Date, dtype: datetime64[ns]"
+601336,sell,100,60.401070937865946,"39    61.716092
+Name: High_601336, dtype: float64","39    60.976213
+Name: Low_601336, dtype: float64","39   2025-04-14
+Name: Date, dtype: datetime64[ns]"
+002905,sell,36,7.345899212323129,"39    7.61
+Name: High_002905, dtype: float64","39    7.35
+Name: Low_002905, dtype: float64","39   2025-04-14
+Name: Date, dtype: datetime64[ns]"
+600795,sell,13,4.224872593469918,"39    4.38
+Name: High_600795, dtype: float64","39    4.23
+Name: Low_600795, dtype: float64","39   2025-04-14
+Name: Date, dtype: datetime64[ns]"
+002001,sell,2,19.996522056246175,"39    20.43
+Name: High_002001, dtype: float64","39    19.95
+Name: Low_002001, dtype: float64","39   2025-04-14
+Name: Date, dtype: datetime64[ns]"
+000776,buy,54,15.01236797813326,"39    14.97
+Name: High_000776, dtype: float64","39    14.8
+Name: Low_000776, dtype: float64","39   2025-04-14
+Name: Date, dtype: datetime64[ns]"
+601877,buy,37,21.028335242259782,"39    21.52
+Name: High_601877, dtype: float64","39    21.15
+Name: Low_601877, dtype: float64","39   2025-04-14
+Name: Date, dtype: datetime64[ns]"
+002600,buy,15,7.207386944710742,"39    7.61
+Name: High_002600, dtype: float64","39    7.24
+Name: Low_002600, dtype: float64","39   2025-04-14
+Name: Date, dtype: datetime64[ns]"
+601877,sell,100,21.39174022674095,"40    21.5
+Name: High_601877, dtype: float64","40    21.21
+Name: Low_601877, dtype: float64","40   2025-04-15
+Name: Date, dtype: datetime64[ns]"
+300628,sell,61,32.436437659892256,"40    32.68
+Name: High_300628, dtype: float64","40    32.13
+Name: Low_300628, dtype: float64","40   2025-04-15
+Name: Date, dtype: datetime64[ns]"
+002905,sell,49,7.406100674998015,"40    7.76
+Name: High_002905, dtype: float64","40    7.51
+Name: Low_002905, dtype: float64","40   2025-04-15
+Name: Date, dtype: datetime64[ns]"
+601628,sell,2,35.60662553801201,"40    35.36
+Name: High_601628, dtype: float64","40    34.92
+Name: Low_601628, dtype: float64","40   2025-04-15
+Name: Date, dtype: datetime64[ns]"
+002600,buy,100,7.28904447259847,"40    7.33
+Name: High_002600, dtype: float64","40    7.08
+Name: Low_002600, dtype: float64","40   2025-04-15
+Name: Date, dtype: datetime64[ns]"
+000338,buy,93,14.555391337275505,"40    14.74
+Name: High_000338, dtype: float64","40    14.5
+Name: Low_000338, dtype: float64","40   2025-04-15
+Name: Date, dtype: datetime64[ns]"
+601336,buy,53,61.28443645638193,"40    61.741605
+Name: High_601336, dtype: float64","40    60.721083
+Name: Low_601336, dtype: float64","40   2025-04-15
+Name: Date, dtype: datetime64[ns]"
+600795,buy,48,4.353099327206146,"40    4.4
+Name: High_600795, dtype: float64","40    4.32
+Name: Low_600795, dtype: float64","40   2025-04-15
+Name: Date, dtype: datetime64[ns]"
+002001,buy,47,20.581083356458695,"40    21.54
+Name: High_002001, dtype: float64","40    20.81
+Name: Low_002001, dtype: float64","40   2025-04-15
+Name: Date, dtype: datetime64[ns]"
+000776,buy,36,14.990277936821803,"40    14.86
+Name: High_000776, dtype: float64","40    14.73
+Name: Low_000776, dtype: float64","40   2025-04-15
+Name: Date, dtype: datetime64[ns]"
+300628,sell,13,32.51847816759255,"41    32.49
+Name: High_300628, dtype: float64","41    31.58
+Name: Low_300628, dtype: float64","41   2025-04-16
+Name: Date, dtype: datetime64[ns]"
+600795,sell,12,4.363825857471674,"41    4.44
+Name: High_600795, dtype: float64","41    4.35
+Name: Low_600795, dtype: float64","41   2025-04-16
+Name: Date, dtype: datetime64[ns]"
+601628,buy,100,35.69621749964543,"41    35.66
+Name: High_601628, dtype: float64","41    34.97
+Name: Low_601628, dtype: float64","41   2025-04-16
+Name: Date, dtype: datetime64[ns]"
+000338,buy,100,14.550462051173671,"41    14.68
+Name: High_000338, dtype: float64","41    14.43
+Name: Low_000338, dtype: float64","41   2025-04-16
+Name: Date, dtype: datetime64[ns]"
+601877,buy,100,21.216562056839464,"41    21.48
+Name: High_601877, dtype: float64","41    21.02
+Name: Low_601877, dtype: float64","41   2025-04-16
+Name: Date, dtype: datetime64[ns]"
+002905,buy,100,7.438438808619976,"41    7.69
+Name: High_002905, dtype: float64","41    7.3
+Name: Low_002905, dtype: float64","41   2025-04-16
+Name: Date, dtype: datetime64[ns]"
+002600,buy,66,7.166280322582461,"41    7.13
+Name: High_002600, dtype: float64","41    6.92
+Name: Low_002600, dtype: float64","41   2025-04-16
+Name: Date, dtype: datetime64[ns]"
+002001,buy,42,20.23788018831983,"41    21.37
+Name: High_002001, dtype: float64","41    20.92
+Name: Low_002001, dtype: float64","41   2025-04-16
+Name: Date, dtype: datetime64[ns]"
+000776,buy,24,14.945970658976584,"41    14.84
+Name: High_000776, dtype: float64","41    14.57
+Name: Low_000776, dtype: float64","41   2025-04-16
+Name: Date, dtype: datetime64[ns]"
+601336,buy,0,62.12988763603026,"41    61.550257
+Name: High_601336, dtype: float64","41    60.759352
+Name: Low_601336, dtype: float64","41   2025-04-16
+Name: Date, dtype: datetime64[ns]"
+002905,sell,55,7.362172791361809,"42    7.71
+Name: High_002905, dtype: float64","42    7.4
+Name: Low_002905, dtype: float64","42   2025-04-17
+Name: Date, dtype: datetime64[ns]"
+002600,sell,20,7.001478257137933,"42    7.08
+Name: High_002600, dtype: float64","42    6.92
+Name: Low_002600, dtype: float64","42   2025-04-17
+Name: Date, dtype: datetime64[ns]"
+601336,sell,9,63.475289935642344,"42    62.736615
+Name: High_601336, dtype: float64","42    61.039996
+Name: Low_601336, dtype: float64","42   2025-04-17
+Name: Date, dtype: datetime64[ns]"
+601628,buy,100,35.957249144129456,"42    35.9
+Name: High_601628, dtype: float64","42    35.2
+Name: Low_601628, dtype: float64","42   2025-04-17
+Name: Date, dtype: datetime64[ns]"
+000338,buy,100,14.524528299272061,"42    14.59
+Name: High_000338, dtype: float64","42    14.39
+Name: Low_000338, dtype: float64","42   2025-04-17
+Name: Date, dtype: datetime64[ns]"
+300628,buy,100,32.02846554060467,"42    32.35
+Name: High_300628, dtype: float64","42    31.8
+Name: Low_300628, dtype: float64","42   2025-04-17
+Name: Date, dtype: datetime64[ns]"
+600795,buy,100,4.423803320070729,"42    4.46
+Name: High_600795, dtype: float64","42    4.39
+Name: Low_600795, dtype: float64","42   2025-04-17
+Name: Date, dtype: datetime64[ns]"
+000776,buy,100,14.796288833320142,"42    14.77
+Name: High_000776, dtype: float64","42    14.61
+Name: Low_000776, dtype: float64","42   2025-04-17
+Name: Date, dtype: datetime64[ns]"
+601877,buy,23,21.291326393475757,"42    21.51
+Name: High_601877, dtype: float64","42    21.16
+Name: Low_601877, dtype: float64","42   2025-04-17
+Name: Date, dtype: datetime64[ns]"
+002001,buy,23,21.234674746915697,"42    21.2
+Name: High_002001, dtype: float64","42    20.7
+Name: Low_002001, dtype: float64","42   2025-04-17
+Name: Date, dtype: datetime64[ns]"
+600795,sell,100,4.43524352911627,"43    4.44
+Name: High_600795, dtype: float64","43    4.37
+Name: Low_600795, dtype: float64","43   2025-04-18
+Name: Date, dtype: datetime64[ns]"
+000338,sell,100,14.330523753762245,"43    14.65
+Name: High_000338, dtype: float64","43    14.32
+Name: Low_000338, dtype: float64","43   2025-04-18
+Name: Date, dtype: datetime64[ns]"
+300628,sell,92,31.99064733581617,"43    32.35
+Name: High_300628, dtype: float64","43    31.89
+Name: Low_300628, dtype: float64","43   2025-04-18
+Name: Date, dtype: datetime64[ns]"
+002600,sell,85,6.996442955023377,"43    7.14
+Name: High_002600, dtype: float64","43    6.96
+Name: Low_002600, dtype: float64","43   2025-04-18
+Name: Date, dtype: datetime64[ns]"
+000776,sell,71,14.753884146385825,"43    14.82
+Name: High_000776, dtype: float64","43    14.63
+Name: Low_000776, dtype: float64","43   2025-04-18
+Name: Date, dtype: datetime64[ns]"
+601336,sell,14,64.97186325340108,"43    63.234119
+Name: High_601336, dtype: float64","43    61.881927
+Name: Low_601336, dtype: float64","43   2025-04-18
+Name: Date, dtype: datetime64[ns]"
+601628,buy,100,36.10889716520906,"43    35.97
+Name: High_601628, dtype: float64","43    35.61
+Name: Low_601628, dtype: float64","43   2025-04-18
+Name: Date, dtype: datetime64[ns]"
+002001,buy,100,21.002580690849573,"43    20.9
+Name: High_002001, dtype: float64","43    20.71
+Name: Low_002001, dtype: float64","43   2025-04-18
+Name: Date, dtype: datetime64[ns]"
+601877,buy,68,21.255711246234714,"43    21.4
+Name: High_601877, dtype: float64","43    21.17
+Name: Low_601877, dtype: float64","43   2025-04-18
+Name: Date, dtype: datetime64[ns]"
+002905,buy,27,7.513199162827805,"43    7.65
+Name: High_002905, dtype: float64","43    7.42
+Name: Low_002905, dtype: float64","43   2025-04-18
+Name: Date, dtype: datetime64[ns]"
+000776,sell,100,14.846314481562002,"44    14.97
+Name: High_000776, dtype: float64","44    14.7
+Name: Low_000776, dtype: float64","44   2025-04-21
+Name: Date, dtype: datetime64[ns]"
+601877,sell,100,21.367040809965694,"44    21.55
+Name: High_601877, dtype: float64","44    21.24
+Name: Low_601877, dtype: float64","44   2025-04-21
+Name: Date, dtype: datetime64[ns]"
+002001,sell,100,20.811838786676528,"44    21.1
+Name: High_002001, dtype: float64","44    20.81
+Name: Low_002001, dtype: float64","44   2025-04-21
+Name: Date, dtype: datetime64[ns]"
+000338,sell,61,14.49620418259874,"44    14.76
+Name: High_000338, dtype: float64","44    14.53
+Name: Low_000338, dtype: float64","44   2025-04-21
+Name: Date, dtype: datetime64[ns]"
+601336,sell,44,64.75602466740972,"44    62.787641
+Name: High_601336, dtype: float64","44    62.188084
+Name: Low_601336, dtype: float64","44   2025-04-21
+Name: Date, dtype: datetime64[ns]"
+601628,sell,2,36.012673079343514,"44    35.96
+Name: High_601628, dtype: float64","44    35.6
+Name: Low_601628, dtype: float64","44   2025-04-21
+Name: Date, dtype: datetime64[ns]"
+002905,buy,100,7.416244641020895,"44    7.78
+Name: High_002905, dtype: float64","44    7.42
+Name: Low_002905, dtype: float64","44   2025-04-21
+Name: Date, dtype: datetime64[ns]"
+600795,buy,84,4.387030439730734,"44    4.44
+Name: High_600795, dtype: float64","44    4.36
+Name: Low_600795, dtype: float64","44   2025-04-21
+Name: Date, dtype: datetime64[ns]"
+002600,buy,51,7.138779870830477,"44    7.75
+Name: High_002600, dtype: float64","44    7.13
+Name: Low_002600, dtype: float64","44   2025-04-21
+Name: Date, dtype: datetime64[ns]"
+300628,buy,43,32.26459676206112,"44    32.65
+Name: High_300628, dtype: float64","44    31.2
+Name: Low_300628, dtype: float64","44   2025-04-21
+Name: Date, dtype: datetime64[ns]"
+000776,sell,100,14.926525839082897,"45    14.92
+Name: High_000776, dtype: float64","45    14.82
+Name: Low_000776, dtype: float64","45   2025-04-22
+Name: Date, dtype: datetime64[ns]"
+000338,sell,98,14.565369183346629,"45    14.85
+Name: High_000338, dtype: float64","45    14.53
+Name: Low_000338, dtype: float64","45   2025-04-22
+Name: Date, dtype: datetime64[ns]"
+002905,sell,41,7.6876213760487735,"45    7.75
+Name: High_002905, dtype: float64","45    7.61
+Name: Low_002905, dtype: float64","45   2025-04-22
+Name: Date, dtype: datetime64[ns]"
+601628,sell,27,35.9547401231993,"45    36.26
+Name: High_601628, dtype: float64","45    35.53
+Name: Low_601628, dtype: float64","45   2025-04-22
+Name: Date, dtype: datetime64[ns]"
+601336,sell,20,63.56582993386054,"45    62.953476
+Name: High_601336, dtype: float64","45    62.251866
+Name: Low_601336, dtype: float64","45   2025-04-22
+Name: Date, dtype: datetime64[ns]"
+300628,buy,100,32.443806326463815,"45    32.56
+Name: High_300628, dtype: float64","45    31.84
+Name: Low_300628, dtype: float64","45   2025-04-22
+Name: Date, dtype: datetime64[ns]"
+600795,buy,100,4.357544947303832,"45    4.42
+Name: High_600795, dtype: float64","45    4.35
+Name: Low_600795, dtype: float64","45   2025-04-22
+Name: Date, dtype: datetime64[ns]"
+601877,buy,20,21.537320124467367,"45    21.66
+Name: High_601877, dtype: float64","45    21.5
+Name: Low_601877, dtype: float64","45   2025-04-22
+Name: Date, dtype: datetime64[ns]"
+002600,buy,13,7.53206313643459,"45    7.56
+Name: High_002600, dtype: float64","45    7.38
+Name: Low_002600, dtype: float64","45   2025-04-22
+Name: Date, dtype: datetime64[ns]"
+002001,buy,7,20.889666634947062,"45    21.48
+Name: High_002001, dtype: float64","45    20.97
+Name: Low_002001, dtype: float64","45   2025-04-22
+Name: Date, dtype: datetime64[ns]"
+000776,sell,100,14.906471262038686,"46    14.95
+Name: High_000776, dtype: float64","46    14.75
+Name: Low_000776, dtype: float64","46   2025-04-23
+Name: Date, dtype: datetime64[ns]"
+002600,sell,100,7.392611862899211,"46    7.88
+Name: High_002600, dtype: float64","46    7.56
+Name: Low_002600, dtype: float64","46   2025-04-23
+Name: Date, dtype: datetime64[ns]"
+002905,sell,100,7.7135042495210655,"46    7.75
+Name: High_002905, dtype: float64","46    7.59
+Name: Low_002905, dtype: float64","46   2025-04-23
+Name: Date, dtype: datetime64[ns]"
+601628,sell,100,36.204344580285245,"46    36.16
+Name: High_601628, dtype: float64","46    35.62
+Name: Low_601628, dtype: float64","46   2025-04-23
+Name: Date, dtype: datetime64[ns]"
+600795,sell,45,4.348391906488687,"46    4.37
+Name: High_600795, dtype: float64","46    4.32
+Name: Low_600795, dtype: float64","46   2025-04-23
+Name: Date, dtype: datetime64[ns]"
+601877,sell,13,21.635181647809222,"46    21.82
+Name: High_601877, dtype: float64","46    21.59
+Name: Low_601877, dtype: float64","46   2025-04-23
+Name: Date, dtype: datetime64[ns]"
+000338,buy,100,14.402891241675242,"46    14.78
+Name: High_000338, dtype: float64","46    14.51
+Name: Low_000338, dtype: float64","46   2025-04-23
+Name: Date, dtype: datetime64[ns]"
+300628,buy,100,32.08222807523562,"46    32.54
+Name: High_300628, dtype: float64","46    31.47
+Name: Low_300628, dtype: float64","46   2025-04-23
+Name: Date, dtype: datetime64[ns]"
+002001,buy,100,21.129225541460325,"46    21.63
+Name: High_002001, dtype: float64","46    21.24
+Name: Low_002001, dtype: float64","46   2025-04-23
+Name: Date, dtype: datetime64[ns]"
+601336,buy,2,63.13584031858748,"46    63.706111
+Name: High_601336, dtype: float64","46    62.443214
+Name: Low_601336, dtype: float64","46   2025-04-23
+Name: Date, dtype: datetime64[ns]"
+000338,sell,100,14.464413636596873,"47    14.72
+Name: High_000338, dtype: float64","47    14.51
+Name: Low_000338, dtype: float64","47   2025-04-24
+Name: Date, dtype: datetime64[ns]"
+002905,sell,73,7.638808589411201,"47    7.64
+Name: High_002905, dtype: float64","47    7.41
+Name: Low_002905, dtype: float64","47   2025-04-24
+Name: Date, dtype: datetime64[ns]"
+601628,sell,71,36.1544523220323,"47    36.63
+Name: High_601628, dtype: float64","47    35.76
+Name: Low_601628, dtype: float64","47   2025-04-24
+Name: Date, dtype: datetime64[ns]"
+601877,sell,52,21.738595936261117,"47    22.03
+Name: High_601877, dtype: float64","47    21.58
+Name: Low_601877, dtype: float64","47   2025-04-24
+Name: Date, dtype: datetime64[ns]"
+002001,sell,43,21.523700846498834,"47    21.8
+Name: High_002001, dtype: float64","47    21.4
+Name: Low_002001, dtype: float64","47   2025-04-24
+Name: Date, dtype: datetime64[ns]"
+300628,sell,35,31.886820496339933,"47    31.88
+Name: High_300628, dtype: float64","47    31.08
+Name: Low_300628, dtype: float64","47   2025-04-24
+Name: Date, dtype: datetime64[ns]"
+601336,buy,100,63.62574775106365,"47    64.969007
+Name: High_601336, dtype: float64","47    62.889693
+Name: Low_601336, dtype: float64","47   2025-04-24
+Name: Date, dtype: datetime64[ns]"
+000776,buy,76,14.859935183092022,"47    14.9
+Name: High_000776, dtype: float64","47    14.75
+Name: Low_000776, dtype: float64","47   2025-04-24
+Name: Date, dtype: datetime64[ns]"
+600795,buy,68,4.319235483594239,"47    4.36
+Name: High_600795, dtype: float64","47    4.25
+Name: Low_600795, dtype: float64","47   2025-04-24
+Name: Date, dtype: datetime64[ns]"
+002600,buy,54,7.736938402567757,"47    7.8
+Name: High_002600, dtype: float64","47    7.59
+Name: Low_002600, dtype: float64","47   2025-04-24
+Name: Date, dtype: datetime64[ns]"
+000776,sell,100,14.906592958036343,"48    15.12
+Name: High_000776, dtype: float64","48    14.84
+Name: Low_000776, dtype: float64","48   2025-04-25
+Name: Date, dtype: datetime64[ns]"
+300628,sell,100,31.276594190785545,"48    31.46
+Name: High_300628, dtype: float64","48    31.01
+Name: Low_300628, dtype: float64","48   2025-04-25
+Name: Date, dtype: datetime64[ns]"
+000338,sell,48,14.504284872245043,"48    14.66
+Name: High_000338, dtype: float64","48    14.48
+Name: Low_000338, dtype: float64","48   2025-04-25
+Name: Date, dtype: datetime64[ns]"
+002001,sell,35,22.267232741564513,"48    21.75
+Name: High_002001, dtype: float64","48    21.48
+Name: Low_002001, dtype: float64","48   2025-04-25
+Name: Date, dtype: datetime64[ns]"
+600795,sell,9,4.319671004258562,"48    4.37
+Name: High_600795, dtype: float64","48    4.31
+Name: Low_600795, dtype: float64","48   2025-04-25
+Name: Date, dtype: datetime64[ns]"
+601336,buy,100,63.94323136860803,"48    64.267398
+Name: High_601336, dtype: float64","48    62.634562
+Name: Low_601336, dtype: float64","48   2025-04-25
+Name: Date, dtype: datetime64[ns]"
+601628,buy,100,36.49711200088262,"48    36.56
+Name: High_601628, dtype: float64","48    35.76
+Name: Low_601628, dtype: float64","48   2025-04-25
+Name: Date, dtype: datetime64[ns]"
+601877,buy,100,21.90375056136865,"48    22.03
+Name: High_601877, dtype: float64","48    21.79
+Name: Low_601877, dtype: float64","48   2025-04-25
+Name: Date, dtype: datetime64[ns]"
+002905,buy,100,7.563539126090473,"48    7.94
+Name: High_002905, dtype: float64","48    7.58
+Name: Low_002905, dtype: float64","48   2025-04-25
+Name: Date, dtype: datetime64[ns]"
+002600,buy,100,7.653461440514366,"48    7.82
+Name: High_002600, dtype: float64","48    7.63
+Name: Low_002600, dtype: float64","48   2025-04-25
+Name: Date, dtype: datetime64[ns]"
+002905,sell,100,7.791243771503214,"49    7.95
+Name: High_002905, dtype: float64","49    7.66
+Name: Low_002905, dtype: float64","49   2025-04-28
+Name: Date, dtype: datetime64[ns]"
+601877,sell,100,21.96574119439756,"49    22.02
+Name: High_601877, dtype: float64","49    21.73
+Name: Low_601877, dtype: float64","49   2025-04-28
+Name: Date, dtype: datetime64[ns]"
+300628,sell,100,31.309310245878297,"49    31.43
+Name: High_300628, dtype: float64","49    30.94
+Name: Low_300628, dtype: float64","49   2025-04-28
+Name: Date, dtype: datetime64[ns]"
+000338,sell,100,14.354548202930019,"49    14.61
+Name: High_000338, dtype: float64","49    14.42
+Name: Low_000338, dtype: float64","49   2025-04-28
+Name: Date, dtype: datetime64[ns]"
+600795,sell,85,4.359328514065128,"49    4.42
+Name: High_600795, dtype: float64","49    4.35
+Name: Low_600795, dtype: float64","49   2025-04-28
+Name: Date, dtype: datetime64[ns]"
+002001,sell,18,21.558857562371994,"49    21.75
+Name: High_002001, dtype: float64","49    21.51
+Name: Low_002001, dtype: float64","49   2025-04-28
+Name: Date, dtype: datetime64[ns]"
+000776,sell,16,15.017351576525252,"49    15.03
+Name: High_000776, dtype: float64","49    14.84
+Name: Low_000776, dtype: float64","49   2025-04-28
+Name: Date, dtype: datetime64[ns]"
+002600,sell,13,7.671059076786041,"49    7.65
+Name: High_002600, dtype: float64","49    7.54
+Name: Low_002600, dtype: float64","49   2025-04-28
+Name: Date, dtype: datetime64[ns]"
+601628,buy,71,36.056045021391476,"49    35.89
+Name: High_601628, dtype: float64","49    35.29
+Name: Low_601628, dtype: float64","49   2025-04-28
+Name: Date, dtype: datetime64[ns]"
+601336,buy,36,62.41252835613625,"49    62.49424
+Name: High_601336, dtype: float64","49    61.307883
+Name: Low_601336, dtype: float64","49   2025-04-28
+Name: Date, dtype: datetime64[ns]"
+000776,sell,80,14.947734657013788,"50    14.98
+Name: High_000776, dtype: float64","50    14.79
+Name: Low_000776, dtype: float64","50   2025-04-29
+Name: Date, dtype: datetime64[ns]"
+002600,sell,75,7.5888463414786385,"50    7.74
+Name: High_002600, dtype: float64","50    7.53
+Name: Low_002600, dtype: float64","50   2025-04-29
+Name: Date, dtype: datetime64[ns]"
+300628,sell,75,31.216987434388138,"50    31.28
+Name: High_300628, dtype: float64","50    30.93
+Name: Low_300628, dtype: float64","50   2025-04-29
+Name: Date, dtype: datetime64[ns]"
+601336,sell,2,61.368605224091425,"50    61.843657
+Name: High_601336, dtype: float64","50    60.631787
+Name: Low_601336, dtype: float64","50   2025-04-29
+Name: Date, dtype: datetime64[ns]"
+600795,buy,91,4.368705212585628,"50    4.39
+Name: High_600795, dtype: float64","50    4.28
+Name: Low_600795, dtype: float64","50   2025-04-29
+Name: Date, dtype: datetime64[ns]"
+601877,buy,75,21.774922320777552,"50    22.01
+Name: High_601877, dtype: float64","50    21.78
+Name: Low_601877, dtype: float64","50   2025-04-29
+Name: Date, dtype: datetime64[ns]"
+002905,buy,54,7.8601584089291645,"50    8.0
+Name: High_002905, dtype: float64","50    7.75
+Name: Low_002905, dtype: float64","50   2025-04-29
+Name: Date, dtype: datetime64[ns]"
+601628,buy,38,35.91259791995399,"50    35.8
+Name: High_601628, dtype: float64","50    35.49
+Name: Low_601628, dtype: float64","50   2025-04-29
+Name: Date, dtype: datetime64[ns]"
+002001,buy,32,21.575139924697577,"50    21.59
+Name: High_002001, dtype: float64","50    21.21
+Name: Low_002001, dtype: float64","50   2025-04-29
+Name: Date, dtype: datetime64[ns]"
+000338,buy,7,14.35610091742128,"50    14.67
+Name: High_000338, dtype: float64","50    14.44
+Name: Low_000338, dtype: float64","50   2025-04-29
+Name: Date, dtype: datetime64[ns]"
+002001,sell,100,21.54630564754596,"51    21.48
+Name: High_002001, dtype: float64","51    21.21
+Name: Low_002001, dtype: float64","51   2025-04-30
+Name: Date, dtype: datetime64[ns]"
+601628,sell,100,35.75419140538201,"51    36.37
+Name: High_601628, dtype: float64","51    35.57
+Name: Low_601628, dtype: float64","51   2025-04-30
+Name: Date, dtype: datetime64[ns]"
+000776,sell,57,14.866551601497923,"51    15.24
+Name: High_000776, dtype: float64","51    14.92
+Name: Low_000776, dtype: float64","51   2025-04-30
+Name: Date, dtype: datetime64[ns]"
+601877,sell,43,21.812239983819893,"51    21.9
+Name: High_601877, dtype: float64","51    21.59
+Name: Low_601877, dtype: float64","51   2025-04-30
+Name: Date, dtype: datetime64[ns]"
+600795,sell,19,4.289167478657327,"51    4.31
+Name: High_600795, dtype: float64","51    4.25
+Name: Low_600795, dtype: float64","51   2025-04-30
+Name: Date, dtype: datetime64[ns]"
+002600,sell,9,7.721867372305133,"51    8.01
+Name: High_002600, dtype: float64","51    7.71
+Name: Low_002600, dtype: float64","51   2025-04-30
+Name: Date, dtype: datetime64[ns]"
+002905,sell,6,7.9109459777153095,"51    8.36
+Name: High_002905, dtype: float64","51    8.05
+Name: Low_002905, dtype: float64","51   2025-04-30
+Name: Date, dtype: datetime64[ns]"
+601336,buy,100,60.71413431326811,"51    62.698345
+Name: High_601336, dtype: float64","51    61.346153
+Name: Low_601336, dtype: float64","51   2025-04-30
+Name: Date, dtype: datetime64[ns]"
+000338,buy,100,14.554314709038007,"51    14.71
+Name: High_000338, dtype: float64","51    14.17
+Name: Low_000338, dtype: float64","51   2025-04-30
+Name: Date, dtype: datetime64[ns]"
+300628,buy,91,31.124389997392427,"51    32.3
+Name: High_300628, dtype: float64","51    30.94
+Name: Low_300628, dtype: float64","51   2025-04-30
+Name: Date, dtype: datetime64[ns]"
+002905,sell,73,8.03128106303513,"52    8.26
+Name: High_002905, dtype: float64","52    7.96
+Name: Low_002905, dtype: float64","52   2025-05-06
+Name: Date, dtype: datetime64[ns]"
+000338,sell,20,14.498605674383725,"52    14.81
+Name: High_000338, dtype: float64","52    14.55
+Name: Low_000338, dtype: float64","52   2025-05-06
+Name: Date, dtype: datetime64[ns]"
+601877,sell,12,21.643760961985684,"52    21.87
+Name: High_601877, dtype: float64","52    21.57
+Name: Low_601877, dtype: float64","52   2025-05-06
+Name: Date, dtype: datetime64[ns]"
+601336,buy,100,61.532553312858106,"52    62.57078
+Name: High_601336, dtype: float64","52    61.563014
+Name: Low_601336, dtype: float64","52   2025-05-06
+Name: Date, dtype: datetime64[ns]"
+002001,buy,100,21.42810126220982,"52    21.52
+Name: High_002001, dtype: float64","52    21.08
+Name: Low_002001, dtype: float64","52   2025-05-06
+Name: Date, dtype: datetime64[ns]"
+600795,buy,89,4.250216505713761,"52    4.3
+Name: High_600795, dtype: float64","52    4.25
+Name: Low_600795, dtype: float64","52   2025-05-06
+Name: Date, dtype: datetime64[ns]"
+000776,buy,38,15.157524636425077,"52    15.29
+Name: High_000776, dtype: float64","52    15.15
+Name: Low_000776, dtype: float64","52   2025-05-06
+Name: Date, dtype: datetime64[ns]"
+002600,buy,34,7.955583256939426,"52    8.17
+Name: High_002600, dtype: float64","52    8.01
+Name: Low_002600, dtype: float64","52   2025-05-06
+Name: Date, dtype: datetime64[ns]"
+300628,buy,26,31.494715703269467,"52    31.98
+Name: High_300628, dtype: float64","52    31.53
+Name: Low_300628, dtype: float64","52   2025-05-06
+Name: Date, dtype: datetime64[ns]"
+601628,buy,20,35.849748344328255,"52    36.37
+Name: High_601628, dtype: float64","52    35.43
+Name: Low_601628, dtype: float64","52   2025-05-06
+Name: Date, dtype: datetime64[ns]"
+300628,sell,93,32.06210073516704,"53    33.08
+Name: High_300628, dtype: float64","53    32.31
+Name: Low_300628, dtype: float64","53   2025-05-07
+Name: Date, dtype: datetime64[ns]"
+601877,sell,47,21.649505953723565,"53    22.07
+Name: High_601877, dtype: float64","53    21.63
+Name: Low_601877, dtype: float64","53   2025-05-07
+Name: Date, dtype: datetime64[ns]"
+601628,sell,10,36.20811746028718,"53    37.3
+Name: High_601628, dtype: float64","53    36.52
+Name: Low_601628, dtype: float64","53   2025-05-07
+Name: Date, dtype: datetime64[ns]"
+000776,buy,100,15.213207038305699,"53    15.64
+Name: High_000776, dtype: float64","53    15.26
+Name: Low_000776, dtype: float64","53   2025-05-07
+Name: Date, dtype: datetime64[ns]"
+002600,buy,94,8.199658487141132,"53    8.43
+Name: High_002600, dtype: float64","53    8.04
+Name: Low_002600, dtype: float64","53   2025-05-07
+Name: Date, dtype: datetime64[ns]"
+601336,buy,91,61.874573831178715,"53    63.74438
+Name: High_601336, dtype: float64","53    62.379432
+Name: Low_601336, dtype: float64","53   2025-05-07
+Name: Date, dtype: datetime64[ns]"
+002001,buy,85,21.375756263729418,"53    21.58
+Name: High_002001, dtype: float64","53    21.29
+Name: Low_002001, dtype: float64","53   2025-05-07
+Name: Date, dtype: datetime64[ns]"
+000338,buy,48,14.746831962182187,"53    14.95
+Name: High_000338, dtype: float64","53    14.29
+Name: Low_000338, dtype: float64","53   2025-05-07
+Name: Date, dtype: datetime64[ns]"
+002905,buy,10,8.098492017015815,"53    8.25
+Name: High_002905, dtype: float64","53    8.01
+Name: Low_002905, dtype: float64","53   2025-05-07
+Name: Date, dtype: datetime64[ns]"
+600795,buy,5,4.289654892685867,"53    4.34
+Name: High_600795, dtype: float64","53    4.28
+Name: Low_600795, dtype: float64","53   2025-05-07
+Name: Date, dtype: datetime64[ns]"
+002600,sell,100,8.172830642592162,"54    8.31
+Name: High_002600, dtype: float64","54    8.08
+Name: Low_002600, dtype: float64","54   2025-05-08
+Name: Date, dtype: datetime64[ns]"
+601628,sell,100,36.81389525227249,"54    37.59
+Name: High_601628, dtype: float64","54    36.58
+Name: Low_601628, dtype: float64","54   2025-05-08
+Name: Date, dtype: datetime64[ns]"
+601336,sell,100,62.55365392155434,"54    64.866955
+Name: High_601336, dtype: float64","54    62.506997
+Name: Low_601336, dtype: float64","54   2025-05-08
+Name: Date, dtype: datetime64[ns]"
+002001,sell,72,20.96318721026182,"54    21.58
+Name: High_002001, dtype: float64","54    21.21
+Name: Low_002001, dtype: float64","54   2025-05-08
+Name: Date, dtype: datetime64[ns]"
+600795,sell,30,4.319542476361385,"54    4.41
+Name: High_600795, dtype: float64","54    4.29
+Name: Low_600795, dtype: float64","54   2025-05-08
+Name: Date, dtype: datetime64[ns]"
+601877,buy,100,21.887602706946197,"54    22.3
+Name: High_601877, dtype: float64","54    21.81
+Name: Low_601877, dtype: float64","54   2025-05-08
+Name: Date, dtype: datetime64[ns]"
+002905,buy,23,7.957816555732862,"54    8.19
+Name: High_002905, dtype: float64","54    8.02
+Name: Low_002905, dtype: float64","54   2025-05-08
+Name: Date, dtype: datetime64[ns]"
+000338,buy,15,14.204357484746723,"54    14.38
+Name: High_000338, dtype: float64","54    14.23
+Name: Low_000338, dtype: float64","54   2025-05-08
+Name: Date, dtype: datetime64[ns]"
+300628,buy,5,32.803999909677074,"54    33.19
+Name: High_300628, dtype: float64","54    32.4
+Name: Low_300628, dtype: float64","54   2025-05-08
+Name: Date, dtype: datetime64[ns]"
+000776,buy,0,15.314780134294416,"54    15.62
+Name: High_000776, dtype: float64","54    15.25
+Name: Low_000776, dtype: float64","54   2025-05-08
+Name: Date, dtype: datetime64[ns]"
+000776,sell,100,15.390029345569202,"55    15.46
+Name: High_000776, dtype: float64","55    15.26
+Name: Low_000776, dtype: float64","55   2025-05-09
+Name: Date, dtype: datetime64[ns]"
+002905,sell,100,8.08223179321736,"55    8.15
+Name: High_002905, dtype: float64","55    8.0
+Name: Low_002905, dtype: float64","55   2025-05-09
+Name: Date, dtype: datetime64[ns]"
+601336,sell,100,63.12683460123133,"55    63.833676
+Name: High_601336, dtype: float64","55    62.915206
+Name: Low_601336, dtype: float64","55   2025-05-09
+Name: Date, dtype: datetime64[ns]"
+601628,sell,87,37.013104806840424,"55    37.2
+Name: High_601628, dtype: float64","55    36.86
+Name: Low_601628, dtype: float64","55   2025-05-09
+Name: Date, dtype: datetime64[ns]"
+600795,sell,80,4.3948166509158915,"55    4.42
+Name: High_600795, dtype: float64","55    4.36
+Name: Low_600795, dtype: float64","55   2025-05-09
+Name: Date, dtype: datetime64[ns]"
+000338,sell,58,14.216804290469737,"55    14.42
+Name: High_000338, dtype: float64","55    14.23
+Name: Low_000338, dtype: float64","55   2025-05-09
+Name: Date, dtype: datetime64[ns]"
+002600,buy,94,8.315217585414647,"55    8.28
+Name: High_002600, dtype: float64","55    8.04
+Name: Low_002600, dtype: float64","55   2025-05-09
+Name: Date, dtype: datetime64[ns]"
+300628,buy,86,33.15640383261256,"55    33.19
+Name: High_300628, dtype: float64","55    32.5
+Name: Low_300628, dtype: float64","55   2025-05-09
+Name: Date, dtype: datetime64[ns]"
+002001,buy,82,21.508069497533143,"55    21.64
+Name: High_002001, dtype: float64","55    21.32
+Name: Low_002001, dtype: float64","55   2025-05-09
+Name: Date, dtype: datetime64[ns]"
+601877,buy,68,22.3111843892606,"55    22.35
+Name: High_601877, dtype: float64","55    22.07
+Name: Low_601877, dtype: float64","55   2025-05-09
+Name: Date, dtype: datetime64[ns]"
+002600,sell,100,8.132502398267388,"56    8.48
+Name: High_002600, dtype: float64","56    8.28
+Name: Low_002600, dtype: float64","56   2025-05-12
+Name: Date, dtype: datetime64[ns]"
+002001,sell,100,21.75910891599022,"56    21.48
+Name: High_002001, dtype: float64","56    21.16
+Name: Low_002001, dtype: float64","56   2025-05-12
+Name: Date, dtype: datetime64[ns]"
+300628,sell,100,32.718361433327665,"56    34.14
+Name: High_300628, dtype: float64","56    33.31
+Name: Low_300628, dtype: float64","56   2025-05-12
+Name: Date, dtype: datetime64[ns]"
+601877,sell,81,22.362806921135636,"56    22.47
+Name: High_601877, dtype: float64","56    22.14
+Name: Low_601877, dtype: float64","56   2025-05-12
+Name: Date, dtype: datetime64[ns]"
+600795,sell,80,4.370733313858509,"56    4.39
+Name: High_600795, dtype: float64","56    4.32
+Name: Low_600795, dtype: float64","56   2025-05-12
+Name: Date, dtype: datetime64[ns]"
+000776,sell,39,15.256260153808398,"56    15.56
+Name: High_000776, dtype: float64","56    15.26
+Name: Low_000776, dtype: float64","56   2025-05-12
+Name: Date, dtype: datetime64[ns]"
+601628,buy,100,36.7395846053958,"56    37.46
+Name: High_601628, dtype: float64","56    36.82
+Name: Low_601628, dtype: float64","56   2025-05-12
+Name: Date, dtype: datetime64[ns]"
+002905,buy,63,7.982970304349437,"56    8.12
+Name: High_002905, dtype: float64","56    8.02
+Name: Low_002905, dtype: float64","56   2025-05-12
+Name: Date, dtype: datetime64[ns]"
+601336,buy,46,62.802491706299946,"56    64.36945
+Name: High_601336, dtype: float64","56    63.348928
+Name: Low_601336, dtype: float64","56   2025-05-12
+Name: Date, dtype: datetime64[ns]"
+000338,buy,46,14.213315123831855,"56    14.88
+Name: High_000338, dtype: float64","56    14.35
+Name: Low_000338, dtype: float64","56   2025-05-12
+Name: Date, dtype: datetime64[ns]"
+000776,sell,100,15.479283184320666,"57    15.62
+Name: High_000776, dtype: float64","57    15.43
+Name: Low_000776, dtype: float64","57   2025-05-13
+Name: Date, dtype: datetime64[ns]"
+002001,sell,100,21.679686114219948,"57    21.89
+Name: High_002001, dtype: float64","57    21.37
+Name: Low_002001, dtype: float64","57   2025-05-13
+Name: Date, dtype: datetime64[ns]"
+300628,sell,95,33.58298614887754,"57    34.45
+Name: High_300628, dtype: float64","57    33.43
+Name: Low_300628, dtype: float64","57   2025-05-13
+Name: Date, dtype: datetime64[ns]"
+002905,sell,60,8.10337301807478,"57    8.18
+Name: High_002905, dtype: float64","57    8.05
+Name: Low_002905, dtype: float64","57   2025-05-13
+Name: Date, dtype: datetime64[ns]"
+601628,sell,58,37.03973470889032,"57    37.46
+Name: High_601628, dtype: float64","57    37.09
+Name: Low_601628, dtype: float64","57   2025-05-13
+Name: Date, dtype: datetime64[ns]"
+601877,sell,49,22.374941258281467,"57    22.58
+Name: High_601877, dtype: float64","57    22.26
+Name: Low_601877, dtype: float64","57   2025-05-13
+Name: Date, dtype: datetime64[ns]"
+002600,sell,40,8.477016341606506,"57    8.74
+Name: High_002600, dtype: float64","57    8.43
+Name: Low_002600, dtype: float64","57   2025-05-13
+Name: Date, dtype: datetime64[ns]"
+600795,sell,16,4.326914483071305,"57    4.36
+Name: High_600795, dtype: float64","57    4.33
+Name: Low_600795, dtype: float64","57   2025-05-13
+Name: Date, dtype: datetime64[ns]"
+000338,buy,100,14.46270803052932,"57    14.78
+Name: High_000338, dtype: float64","57    14.53
+Name: Low_000338, dtype: float64","57   2025-05-13
+Name: Date, dtype: datetime64[ns]"
+601336,buy,72,63.994994547405256,"57    64.675607
+Name: High_601336, dtype: float64","57    63.680598
+Name: Low_601336, dtype: float64","57   2025-05-13
+Name: Date, dtype: datetime64[ns]"
+000776,sell,100,15.538595276905689,"58    17.2
+Name: High_000776, dtype: float64","58    15.54
+Name: Low_000776, dtype: float64","58   2025-05-14
+Name: Date, dtype: datetime64[ns]"
+002600,sell,100,8.454387175678276,"58    8.5
+Name: High_002600, dtype: float64","58    8.32
+Name: Low_002600, dtype: float64","58   2025-05-14
+Name: Date, dtype: datetime64[ns]"
+601336,sell,100,63.853787367843026,"58    69.267958
+Name: High_601336, dtype: float64","58    63.604059
+Name: Low_601336, dtype: float64","58   2025-05-14
+Name: Date, dtype: datetime64[ns]"
+002001,sell,85,21.419388907342217,"58    22.1
+Name: High_002001, dtype: float64","58    21.62
+Name: Low_002001, dtype: float64","58   2025-05-14
+Name: Date, dtype: datetime64[ns]"
+300628,sell,16,33.543155180697795,"58    34.16
+Name: High_300628, dtype: float64","58    33.23
+Name: Low_300628, dtype: float64","58   2025-05-14
+Name: Date, dtype: datetime64[ns]"
+002905,sell,30,8.155021303743125,"58    8.13
+Name: High_002905, dtype: float64","58    7.98
+Name: Low_002905, dtype: float64","58   2025-05-14
+Name: Date, dtype: datetime64[ns]"
+601628,buy,91,37.09899381159804,"58    40.31
+Name: High_601628, dtype: float64","58    37.16
+Name: Low_601628, dtype: float64","58   2025-05-14
+Name: Date, dtype: datetime64[ns]"
+000338,buy,66,14.438944383859635,"58    14.63
+Name: High_000338, dtype: float64","58    14.46
+Name: Low_000338, dtype: float64","58   2025-05-14
+Name: Date, dtype: datetime64[ns]"
+601877,buy,25,22.478740943488667,"58    22.52
+Name: High_601877, dtype: float64","58    22.17
+Name: Low_601877, dtype: float64","58   2025-05-14
+Name: Date, dtype: datetime64[ns]"
+600795,buy,5,4.32458520906046,"58    4.35
+Name: High_600795, dtype: float64","58    4.29
+Name: Low_600795, dtype: float64","58   2025-05-14
+Name: Date, dtype: datetime64[ns]"
+002600,sell,73,8.422992400208605,"59    8.42
+Name: High_002600, dtype: float64","59    8.21
+Name: Low_002600, dtype: float64","59   2025-05-15
+Name: Date, dtype: datetime64[ns]"
+601336,sell,33,67.17306242333771,"59    68.132627
+Name: High_601336, dtype: float64","59    66.066069
+Name: Low_601336, dtype: float64","59   2025-05-15
+Name: Date, dtype: datetime64[ns]"
+002001,sell,31,21.75012097133049,"59    22.14
+Name: High_002001, dtype: float64","59    21.81
+Name: Low_002001, dtype: float64","59   2025-05-15
+Name: Date, dtype: datetime64[ns]"
+600795,sell,26,4.323234245190397,"59    4.41
+Name: High_600795, dtype: float64","59    4.34
+Name: Low_600795, dtype: float64","59   2025-05-15
+Name: Date, dtype: datetime64[ns]"
+000338,sell,11,14.493543943283148,"59    14.58
+Name: High_000338, dtype: float64","59    14.22
+Name: Low_000338, dtype: float64","59   2025-05-15
+Name: Date, dtype: datetime64[ns]"
+601877,buy,100,22.431843885399868,"59    22.4
+Name: High_601877, dtype: float64","59    22.17
+Name: Low_601877, dtype: float64","59   2025-05-15
+Name: Date, dtype: datetime64[ns]"
+000776,buy,100,16.447033900190142,"59    16.65
+Name: High_000776, dtype: float64","59    16.28
+Name: Low_000776, dtype: float64","59   2025-05-15
+Name: Date, dtype: datetime64[ns]"
+002905,buy,58,8.178738148659468,"59    8.18
+Name: High_002905, dtype: float64","59    8.01
+Name: Low_002905, dtype: float64","59   2025-05-15
+Name: Date, dtype: datetime64[ns]"
+300628,buy,19,33.541111205670745,"59    33.52
+Name: High_300628, dtype: float64","59    32.78
+Name: Low_300628, dtype: float64","59   2025-05-15
+Name: Date, dtype: datetime64[ns]"
+601628,buy,17,38.83593452677131,"59    39.23
+Name: High_601628, dtype: float64","59    38.49
+Name: Low_601628, dtype: float64","59   2025-05-15
+Name: Date, dtype: datetime64[ns]"
+002905,sell,88,8.199518087450414,"60    8.22
+Name: High_002905, dtype: float64","60    8.02
+Name: Low_002905, dtype: float64","60   2025-05-16
+Name: Date, dtype: datetime64[ns]"
+300628,sell,19,32.83791376999346,"60    33.08
+Name: High_300628, dtype: float64","60    32.71
+Name: Low_300628, dtype: float64","60   2025-05-16
+Name: Date, dtype: datetime64[ns]"
+000338,sell,61,14.1582350819977,"60    14.36
+Name: High_000338, dtype: float64","60    14.16
+Name: Low_000338, dtype: float64","60   2025-05-16
+Name: Date, dtype: datetime64[ns]"
+002600,sell,31,8.236893213363365,"60    8.35
+Name: High_002600, dtype: float64","60    8.19
+Name: Low_002600, dtype: float64","60   2025-05-16
+Name: Date, dtype: datetime64[ns]"
+601336,sell,18,65.59582082506871,"60    66.321199
+Name: High_601336, dtype: float64","60    64.943494
+Name: Low_601336, dtype: float64","60   2025-05-16
+Name: Date, dtype: datetime64[ns]"
+601628,sell,16,38.212030938463286,"60    38.66
+Name: High_601628, dtype: float64","60    37.63
+Name: Low_601628, dtype: float64","60   2025-05-16
+Name: Date, dtype: datetime64[ns]"
+600795,buy,100,4.352148824110627,"60    4.45
+Name: High_600795, dtype: float64","60    4.36
+Name: Low_600795, dtype: float64","60   2025-05-16
+Name: Date, dtype: datetime64[ns]"
+601877,buy,77,22.3706689941464,"60    22.31
+Name: High_601877, dtype: float64","60    22.1
+Name: Low_601877, dtype: float64","60   2025-05-16
+Name: Date, dtype: datetime64[ns]"
+000776,buy,58,16.31914432011079,"60    16.47
+Name: High_000776, dtype: float64","60    16.07
+Name: Low_000776, dtype: float64","60   2025-05-16
+Name: Date, dtype: datetime64[ns]"
+002001,buy,53,22.082890468435362,"60    22.29
+Name: High_002001, dtype: float64","60    21.97
+Name: Low_002001, dtype: float64","60   2025-05-16
+Name: Date, dtype: datetime64[ns]"
+600795,sell,100,4.371559817395172,"61    4.42
+Name: High_600795, dtype: float64","61    4.38
+Name: Low_600795, dtype: float64","61   2025-05-19
+Name: Date, dtype: datetime64[ns]"
+002905,sell,93,8.255808448884636,"61    8.56
+Name: High_002905, dtype: float64","61    8.16
+Name: Low_002905, dtype: float64","61   2025-05-19
+Name: Date, dtype: datetime64[ns]"
+601877,sell,90,22.408635703474282,"61    22.28
+Name: High_601877, dtype: float64","61    22.06
+Name: Low_601877, dtype: float64","61   2025-05-19
+Name: Date, dtype: datetime64[ns]"
+002600,buy,100,8.282040439116535,"61    8.35
+Name: High_002600, dtype: float64","61    8.1
+Name: Low_002600, dtype: float64","61   2025-05-19
+Name: Date, dtype: datetime64[ns]"
+000338,buy,60,14.120976804411038,"61    14.25
+Name: High_000338, dtype: float64","61    14.06
+Name: Low_000338, dtype: float64","61   2025-05-19
+Name: Date, dtype: datetime64[ns]"
+601628,buy,38,37.74064987415448,"61    37.97
+Name: High_601628, dtype: float64","61    37.52
+Name: Low_601628, dtype: float64","61   2025-05-19
+Name: Date, dtype: datetime64[ns]"
+002001,buy,19,21.931519732661545,"61    22.23
+Name: High_002001, dtype: float64","61    21.95
+Name: Low_002001, dtype: float64","61   2025-05-19
+Name: Date, dtype: datetime64[ns]"
+601336,buy,2,65.17778817768064,"61    65.785425
+Name: High_601336, dtype: float64","61    64.99452
+Name: Low_601336, dtype: float64","61   2025-05-19
+Name: Date, dtype: datetime64[ns]"
+000776,buy,0,16.521537640113383,"61    16.31
+Name: High_000776, dtype: float64","61    16.08
+Name: Low_000776, dtype: float64","61   2025-05-19
+Name: Date, dtype: datetime64[ns]"

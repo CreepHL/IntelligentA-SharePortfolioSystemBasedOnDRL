@@ -41,6 +41,7 @@ class StockEnvTrade(gym.Env):
         self.cost = 0
         self.asset_memory = [INITIAL_ACCOUNT_BALANCE]
         self.rewards_memory = []
+        self.trade_memory = []
         self.trades = 0
         self.np_random, seed = seeding.np_random(seed=None)
         self.model_name = model_name
@@ -85,39 +86,69 @@ class StockEnvTrade(gym.Env):
     def sell(self, index, action):
         if self.state[index + self.stock_dim + 1] > 0:
             # update balance
-            self.state[0] += \
-                self.state[index + 1] * min(abs(action), self.state[index + self.stock_dim + 1]) * \
-                (1 - TRANSACTION_FEE_PERCENT)
-            self.state[index + self.stock_dim + 1] -= min(abs(action), self.state[index + self.stock_dim + 1])
-            self.cost += self.state[index + 1] * min(abs(action),
-                                                     self.state[index + self.stock_dim + 1]) * TRANSACTION_FEE_PERCENT
+            price = self.state[index + 1]
+            quantity = int(min(abs(action), self.state[index + self.stock_dim + 1]))
+            self.state[0] += self.state[index + 1] * quantity * (1 - TRANSACTION_FEE_PERCENT)
+            self.state[index + self.stock_dim + 1] -= quantity
+            self.cost += self.state[index + 1] * quantity * TRANSACTION_FEE_PERCENT
             self.trades += 1
+            # 记录交易信息
+            tic = self.data[[col for col in self.data.columns if 'Tic' in col][index]].iloc[0]
+            high_col = f'High_{tic}'
+            low_col = f'Low_{tic}'
+            self.trade_memory.append({
+                'tic': tic,
+                'type': 'sell',
+                'quantity': quantity,
+                'price': price,
+                'high': self.data[high_col].values[0],
+                'low': self.data[low_col].values[0],
+                'day': self.data['Date'].values[0]
+            })
         else:
             pass
 
     def buy(self, index, action):
+        price = self.state[index + 1]
         # perform buy action based on the sign of the action
         available_amount = self.state[0] // self.state[index + 1]
         # print('available_amount:{}'.format(available_amount))
-
+        quantity = int(min(available_amount, action))
         # update balance
-        self.state[0] -= self.state[index + 1] * min(available_amount, action) * \
-                         (1 + TRANSACTION_FEE_PERCENT)
+        self.state[0] -= self.state[index + 1] * quantity * (1 + TRANSACTION_FEE_PERCENT)
 
-        self.state[index + self.stock_dim + 1] += min(available_amount, action)
+        self.state[index + self.stock_dim + 1] += quantity
 
-        self.cost += self.state[index + 1] * min(available_amount, action) * TRANSACTION_FEE_PERCENT
+        self.cost += self.state[index + 1] * quantity * TRANSACTION_FEE_PERCENT
         self.trades += 1
+        # 记录交易信息
+        tic = self.data[[col for col in self.data.columns if 'Tic' in col][index]].iloc[0]
+        high_col = f'High_{tic}'
+        low_col = f'Low_{tic}'
+        self.trade_memory.append({
+            'tic': tic,
+            'type': 'buy',
+            'quantity': quantity,
+            'price': price,
+            'high': self.data[high_col].values[0],
+            'low': self.data[low_col].values[0],
+            'day': self.data['Date'].values[0]
+        })
+
 
     def step(self, actions):
         self.terminal = self.day >= len(self.df.index.unique()) - 1
 
         if self.terminal:
             plt.plot(self.asset_memory, 'r')
-            plt.savefig('output/results/account_value_train.png')
+            plt.savefig('output/results2/account_value_train.png')
             plt.close()
+            # 保存交易记录到 CSV 文件
+            df_trade_memory = pd.DataFrame(self.trade_memory)
+            df_trade_memory.to_csv('output/results2/trade_memory_{}_{}.csv'.format(self.model_name, self.iteration),
+                                   index=False)
             df_total_value = pd.DataFrame(self.asset_memory)
-            df_total_value.to_csv('output/results/account_value_trade_{}_{}.csv'.format(self.model_name, self.iteration))
+            df_total_value.to_csv('output/results2/account_value_trade_{}_{}.csv'.format(self.model_name, self.iteration))
             end_total_asset = self.state[0] + \
                               sum(np.array(self.state[1:(self.stock_dim + 1)]) * np.array(
                                   self.state[(self.stock_dim + 1):(self.stock_dim * 2 + 1)]))
@@ -136,7 +167,7 @@ class StockEnvTrade(gym.Env):
                      df_total_value['daily_return'].std()
             print("Sharpe: ", sharpe)
             df_rewards = pd.DataFrame(self.rewards_memory)
-            df_rewards.to_csv('output/results/account_rewards_trade_{}_{}.csv'.format(self.model_name, self.iteration))
+            df_rewards.to_csv('output/results2/account_rewards_trade_{}_{}.csv'.format(self.model_name, self.iteration))
             # df_rewards.to_csv('results/account_rewards_train.csv')
             # print('total asset: {}'.format(self.state[0]+ sum(np.array(self.state[1:29])*np.array(self.state[29:]))))
             # with open('obs.pkl', 'wb') as f:
@@ -195,6 +226,7 @@ class StockEnvTrade(gym.Env):
             self.rewards_memory.append(self.reward)
             self.reward = self.reward * REWARD_SCALING
 
+
         return self.state, self.reward, self.terminal, {}
 
     def reset(self):
@@ -206,6 +238,7 @@ class StockEnvTrade(gym.Env):
             self.trades = 0
             self.terminal = False
             self.rewards_memory = []
+            self.trade_memory = []
             # initiate state
             self.state = self.get_state(self.hold)
             # iteration += 1
@@ -223,6 +256,7 @@ class StockEnvTrade(gym.Env):
             self.terminal = False
             # self.iteration=iteration
             self.rewards_memory = []
+            self.trade_memory = []
             features = []
             for feature in feature_columns:
                 for col in [col for col in self.data.columns if feature in col]:

@@ -155,7 +155,7 @@ def train_and_predict_lstm(ticker, data, X, y, save_dir, n_steps=60, num_epochs=
     X_train, y_train = prepare_data(X_scaled, n_steps)
     y_train = y_scaled[n_steps:]
 
-    train_per = 0.8
+    train_per = 0.7
     split_index = int(train_per * len(X_train))
     X_val = X_train[split_index-n_steps+1:]
     y_val = y_train[split_index-n_steps+1:]
@@ -317,7 +317,7 @@ def predict(ticker_name, stock_data, stock_features, save_dir, epochs=100, batch
     return metrics
 
 
-async def lstm_stock_predict(stock_code: str):
+def lstm_stock_predict(stock_code: str):
     current_date = datetime.now()
     yesterday = current_date - timedelta(days=1)
     end_date = yesterday.strftime('%Y-%m-%d')

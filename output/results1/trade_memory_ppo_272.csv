@@ -1,0 +1,2477 @@
+tic,type,quantity,price,day
+000338,sell,100,13.930526879662649,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+0 2025-02-17     000776  ...                   -2.911821           60.60021
+
+[1 rows x 191 columns]"
+600795,sell,61,3.8824156005866826,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+0 2025-02-17     000776  ...                   -2.911821           60.60021
+
+[1 rows x 191 columns]"
+002905,sell,55,8.22581615406554,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+0 2025-02-17     000776  ...                   -2.911821           60.60021
+
+[1 rows x 191 columns]"
+300442,sell,37,57.291460539540275,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+0 2025-02-17     000776  ...                   -2.911821           60.60021
+
+[1 rows x 191 columns]"
+002600,buy,100,9.719094089814462,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+0 2025-02-17     000776  ...                   -2.911821           60.60021
+
+[1 rows x 191 columns]"
+000776,buy,100,15.33864719800651,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+0 2025-02-17     000776  ...                   -2.911821           60.60021
+
+[1 rows x 191 columns]"
+002001,buy,96,21.396896002851427,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+0 2025-02-17     000776  ...                   -2.911821           60.60021
+
+[1 rows x 191 columns]"
+601336,buy,91,60.60020978382056,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+0 2025-02-17     000776  ...                   -2.911821           60.60021
+
+[1 rows x 191 columns]"
+601877,buy,41,21.38274005047919,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+0 2025-02-17     000776  ...                   -2.911821           60.60021
+
+[1 rows x 191 columns]"
+601628,buy,19,40.430533749088646,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+0 2025-02-17     000776  ...                   -2.911821           60.60021
+
+[1 rows x 191 columns]"
+600795,sell,100,4.038900748156011,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+1 2025-02-18     000776  ...                   -2.145211          61.840166
+
+[1 rows x 191 columns]"
+601628,sell,100,40.205324728861456,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+1 2025-02-18     000776  ...                   -2.145211          61.840166
+
+[1 rows x 191 columns]"
+601336,sell,100,61.84016552135444,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+1 2025-02-18     000776  ...                   -2.145211          61.840166
+
+[1 rows x 191 columns]"
+601877,sell,53,22.861177822249008,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+1 2025-02-18     000776  ...                   -2.145211          61.840166
+
+[1 rows x 191 columns]"
+000776,sell,29,15.393364944686182,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+1 2025-02-18     000776  ...                   -2.145211          61.840166
+
+[1 rows x 191 columns]"
+002600,sell,20,9.878683201689274,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+1 2025-02-18     000776  ...                   -2.145211          61.840166
+
+[1 rows x 191 columns]"
+000338,buy,100,13.926033314326778,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+1 2025-02-18     000776  ...                   -2.145211          61.840166
+
+[1 rows x 191 columns]"
+300442,buy,99,60.44113694750704,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+1 2025-02-18     000776  ...                   -2.145211          61.840166
+
+[1 rows x 191 columns]"
+002905,buy,60,7.817025931701064,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+1 2025-02-18     000776  ...                   -2.145211          61.840166
+
+[1 rows x 191 columns]"
+002001,buy,51,21.075071678208186,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+1 2025-02-18     000776  ...                   -2.145211          61.840166
+
+[1 rows x 191 columns]"
+600795,sell,100,3.9996629019454115,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+2 2025-02-19     000776  ...                   -1.325655          60.948299
+
+[1 rows x 191 columns]"
+002001,sell,100,20.822360295429824,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+2 2025-02-19     000776  ...                   -1.325655          60.948299
+
+[1 rows x 191 columns]"
+300442,sell,100,55.80118479827419,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+2 2025-02-19     000776  ...                   -1.325655          60.948299
+
+[1 rows x 191 columns]"
+601877,sell,97,22.692952974094077,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+2 2025-02-19     000776  ...                   -1.325655          60.948299
+
+[1 rows x 191 columns]"
+002600,sell,87,9.410247966125606,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+2 2025-02-19     000776  ...                   -1.325655          60.948299
+
+[1 rows x 191 columns]"
+601336,sell,84,60.94829932108419,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+2 2025-02-19     000776  ...                   -1.325655          60.948299
+
+[1 rows x 191 columns]"
+601628,sell,77,39.814257825314996,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+2 2025-02-19     000776  ...                   -1.325655          60.948299
+
+[1 rows x 191 columns]"
+000338,sell,76,13.80589946417138,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+2 2025-02-19     000776  ...                   -1.325655          60.948299
+
+[1 rows x 191 columns]"
+002905,buy,86,7.323401483148337,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+2 2025-02-19     000776  ...                   -1.325655          60.948299
+
+[1 rows x 191 columns]"
+000776,buy,77,14.942812174307182,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+2 2025-02-19     000776  ...                   -1.325655          60.948299
+
+[1 rows x 191 columns]"
+601877,sell,100,24.042636966705324,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+3 2025-02-20     000776  ...                   -1.017129           61.51767
+
+[1 rows x 191 columns]"
+000338,sell,74,13.98472502173856,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+3 2025-02-20     000776  ...                   -1.017129           61.51767
+
+[1 rows x 191 columns]"
+601336,sell,33,61.51767023069935,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+3 2025-02-20     000776  ...                   -1.017129           61.51767
+
+[1 rows x 191 columns]"
+601628,sell,1,39.840397150106725,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+3 2025-02-20     000776  ...                   -1.017129           61.51767
+
+[1 rows x 191 columns]"
+300442,buy,100,56.96144438479096,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+3 2025-02-20     000776  ...                   -1.017129           61.51767
+
+[1 rows x 191 columns]"
+002001,buy,51,20.925998416806106,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+3 2025-02-20     000776  ...                   -1.017129           61.51767
+
+[1 rows x 191 columns]"
+600795,buy,51,4.02066960696131,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+3 2025-02-20     000776  ...                   -1.017129           61.51767
+
+[1 rows x 191 columns]"
+002600,buy,48,9.91760740672471,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+3 2025-02-20     000776  ...                   -1.017129           61.51767
+
+[1 rows x 191 columns]"
+002905,buy,48,7.328258684724569,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+3 2025-02-20     000776  ...                   -1.017129           61.51767
+
+[1 rows x 191 columns]"
+000776,buy,30,15.015448703891598,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+3 2025-02-20     000776  ...                   -1.017129           61.51767
+
+[1 rows x 191 columns]"
+000776,sell,100,14.98104962259531,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+4 2025-02-21     000776  ...                    0.210446          61.360203
+
+[1 rows x 191 columns]"
+300442,sell,100,57.7654384669289,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+4 2025-02-21     000776  ...                    0.210446          61.360203
+
+[1 rows x 191 columns]"
+000338,sell,100,13.987580575221218,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+4 2025-02-21     000776  ...                    0.210446          61.360203
+
+[1 rows x 191 columns]"
+601336,sell,100,61.36020274488735,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+4 2025-02-21     000776  ...                    0.210446          61.360203
+
+[1 rows x 191 columns]"
+002001,sell,63,20.6966451227013,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+4 2025-02-21     000776  ...                    0.210446          61.360203
+
+[1 rows x 191 columns]"
+002905,buy,100,7.244044519476593,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+4 2025-02-21     000776  ...                    0.210446          61.360203
+
+[1 rows x 191 columns]"
+601628,buy,70,39.21540111709386,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+4 2025-02-21     000776  ...                    0.210446          61.360203
+
+[1 rows x 191 columns]"
+600795,buy,51,4.021905694585294,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+4 2025-02-21     000776  ...                    0.210446          61.360203
+
+[1 rows x 191 columns]"
+002600,buy,43,10.497933615446092,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+4 2025-02-21     000776  ...                    0.210446          61.360203
+
+[1 rows x 191 columns]"
+601877,buy,8,23.42730078066699,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+4 2025-02-21     000776  ...                    0.210446          61.360203
+
+[1 rows x 191 columns]"
+601877,sell,100,24.10651813931763,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+5 2025-02-24     000776  ...                    -0.89657          62.464906
+
+[1 rows x 191 columns]"
+300442,sell,100,68.04794508193417,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+5 2025-02-24     000776  ...                    -0.89657          62.464906
+
+[1 rows x 191 columns]"
+000338,sell,72,14.908054630961269,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+5 2025-02-24     000776  ...                    -0.89657          62.464906
+
+[1 rows x 191 columns]"
+002600,sell,22,10.543326567411423,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+5 2025-02-24     000776  ...                    -0.89657          62.464906
+
+[1 rows x 191 columns]"
+601336,sell,20,62.46490641372612,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+5 2025-02-24     000776  ...                    -0.89657          62.464906
+
+[1 rows x 191 columns]"
+601628,buy,100,39.91997378021478,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+5 2025-02-24     000776  ...                    -0.89657          62.464906
+
+[1 rows x 191 columns]"
+002001,buy,100,20.899056850820777,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+5 2025-02-24     000776  ...                    -0.89657          62.464906
+
+[1 rows x 191 columns]"
+600795,buy,69,3.972854964863509,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+5 2025-02-24     000776  ...                    -0.89657          62.464906
+
+[1 rows x 191 columns]"
+000776,buy,16,15.304202874880284,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+5 2025-02-24     000776  ...                    -0.89657          62.464906
+
+[1 rows x 191 columns]"
+002905,buy,6,7.246074501285329,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+5 2025-02-24     000776  ...                    -0.89657          62.464906
+
+[1 rows x 191 columns]"
+000776,sell,100,15.385792995253578,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+6 2025-02-25     000776  ...                   -2.936232          63.494735
+
+[1 rows x 191 columns]"
+000338,sell,70,14.621291005229576,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+6 2025-02-25     000776  ...                   -2.936232          63.494735
+
+[1 rows x 191 columns]"
+002001,sell,50,20.916456044185907,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+6 2025-02-25     000776  ...                   -2.936232          63.494735
+
+[1 rows x 191 columns]"
+601877,sell,32,25.805729932114485,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+6 2025-02-25     000776  ...                   -2.936232          63.494735
+
+[1 rows x 191 columns]"
+601336,buy,100,63.494735231093074,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+6 2025-02-25     000776  ...                   -2.936232          63.494735
+
+[1 rows x 191 columns]"
+300442,buy,100,69.43857289074921,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+6 2025-02-25     000776  ...                   -2.936232          63.494735
+
+[1 rows x 191 columns]"
+600795,buy,100,3.9629032428190114,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+6 2025-02-25     000776  ...                   -2.936232          63.494735
+
+[1 rows x 191 columns]"
+002905,buy,100,7.430026552290656,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+6 2025-02-25     000776  ...                   -2.936232          63.494735
+
+[1 rows x 191 columns]"
+002600,buy,67,10.347168402043172,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+6 2025-02-25     000776  ...                   -2.936232          63.494735
+
+[1 rows x 191 columns]"
+601628,buy,20,40.142123628035186,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+6 2025-02-25     000776  ...                   -2.936232          63.494735
+
+[1 rows x 191 columns]"
+601877,sell,86,25.79294577240944,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+7 2025-02-26     000776  ...                   -2.152886          61.785387
+
+[1 rows x 191 columns]"
+002001,sell,48,20.827295983433725,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+7 2025-02-26     000776  ...                   -2.152886          61.785387
+
+[1 rows x 191 columns]"
+601628,sell,38,39.198158550709486,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+7 2025-02-26     000776  ...                   -2.152886          61.785387
+
+[1 rows x 191 columns]"
+300442,buy,100,67.27375352170783,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+7 2025-02-26     000776  ...                   -2.152886          61.785387
+
+[1 rows x 191 columns]"
+600795,buy,100,3.8938842756301164,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+7 2025-02-26     000776  ...                   -2.152886          61.785387
+
+[1 rows x 191 columns]"
+000776,buy,84,15.070782406653743,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+7 2025-02-26     000776  ...                   -2.152886          61.785387
+
+[1 rows x 191 columns]"
+000338,buy,77,14.827520568063482,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+7 2025-02-26     000776  ...                   -2.152886          61.785387
+
+[1 rows x 191 columns]"
+002600,buy,60,10.343251053742133,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+7 2025-02-26     000776  ...                   -2.152886          61.785387
+
+[1 rows x 191 columns]"
+002905,buy,41,7.281377833831357,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+7 2025-02-26     000776  ...                   -2.152886          61.785387
+
+[1 rows x 191 columns]"
+601336,buy,6,61.785387282538906,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+7 2025-02-26     000776  ...                   -2.152886          61.785387
+
+[1 rows x 191 columns]"
+600795,sell,100,3.993670302308164,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+8 2025-02-27     000776  ...                   -1.989769          63.826306
+
+[1 rows x 191 columns]"
+002001,sell,100,20.541989096328614,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+8 2025-02-27     000776  ...                   -1.989769          63.826306
+
+[1 rows x 191 columns]"
+601336,sell,100,63.82630645349282,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+8 2025-02-27     000776  ...                   -1.989769          63.826306
+
+[1 rows x 191 columns]"
+601877,sell,20,25.010845514684913,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+8 2025-02-27     000776  ...                   -1.989769          63.826306
+
+[1 rows x 191 columns]"
+002905,sell,18,7.3129962079972035,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+8 2025-02-27     000776  ...                   -1.989769          63.826306
+
+[1 rows x 191 columns]"
+000776,buy,100,15.327152290499507,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+8 2025-02-27     000776  ...                   -1.989769          63.826306
+
+[1 rows x 191 columns]"
+000338,buy,62,15.022558838455007,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+8 2025-02-27     000776  ...                   -1.989769          63.826306
+
+[1 rows x 191 columns]"
+601628,buy,59,39.68238263312727,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+8 2025-02-27     000776  ...                   -1.989769          63.826306
+
+[1 rows x 191 columns]"
+300442,buy,57,68.47853660024703,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+8 2025-02-27     000776  ...                   -1.989769          63.826306
+
+[1 rows x 191 columns]"
+002600,buy,16,10.724190235782881,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+8 2025-02-27     000776  ...                   -1.989769          63.826306
+
+[1 rows x 191 columns]"
+002001,sell,27,20.646932124509476,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+9 2025-02-28     000776  ...                   -1.280424          63.721553
+
+[1 rows x 191 columns]"
+300442,sell,100,65.58196129918099,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+9 2025-02-28     000776  ...                   -1.280424          63.721553
+
+[1 rows x 191 columns]"
+002905,sell,90,7.284189982432872,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+9 2025-02-28     000776  ...                   -1.280424          63.721553
+
+[1 rows x 191 columns]"
+002600,sell,80,10.39410634160653,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+9 2025-02-28     000776  ...                   -1.280424          63.721553
+
+[1 rows x 191 columns]"
+600795,sell,50,4.014448294551112,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+9 2025-02-28     000776  ...                   -1.280424          63.721553
+
+[1 rows x 191 columns]"
+601628,sell,37,40.17445317585021,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+9 2025-02-28     000776  ...                   -1.280424          63.721553
+
+[1 rows x 191 columns]"
+000776,sell,37,15.269066579290666,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+9 2025-02-28     000776  ...                   -1.280424          63.721553
+
+[1 rows x 191 columns]"
+000338,buy,78,15.301920929821208,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+9 2025-02-28     000776  ...                   -1.280424          63.721553
+
+[1 rows x 191 columns]"
+601336,buy,75,63.721552881440985,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+9 2025-02-28     000776  ...                   -1.280424          63.721553
+
+[1 rows x 191 columns]"
+601877,buy,20,24.079160724803806,"        Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+9 2025-02-28     000776  ...                   -1.280424          63.721553
+
+[1 rows x 191 columns]"
+002600,sell,100,9.70389634490013,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+10 2025-03-03     000776  ...                   -0.517977          61.028394
+
+[1 rows x 191 columns]"
+600795,sell,100,4.0052640737732865,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+10 2025-03-03     000776  ...                   -0.517977          61.028394
+
+[1 rows x 191 columns]"
+601628,sell,100,38.587720525637266,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+10 2025-03-03     000776  ...                   -0.517977          61.028394
+
+[1 rows x 191 columns]"
+300442,sell,98,62.54720247125253,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+10 2025-03-03     000776  ...                   -0.517977          61.028394
+
+[1 rows x 191 columns]"
+000776,sell,67,14.885877855177968,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+10 2025-03-03     000776  ...                   -0.517977          61.028394
+
+[1 rows x 191 columns]"
+002001,buy,100,20.703007765266815,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+10 2025-03-03     000776  ...                   -0.517977          61.028394
+
+[1 rows x 191 columns]"
+601877,buy,100,23.700447028912603,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+10 2025-03-03     000776  ...                   -0.517977          61.028394
+
+[1 rows x 191 columns]"
+601336,buy,49,61.02839361902474,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+10 2025-03-03     000776  ...                   -0.517977          61.028394
+
+[1 rows x 191 columns]"
+000338,buy,34,15.011745881119278,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+10 2025-03-03     000776  ...                   -0.517977          61.028394
+
+[1 rows x 191 columns]"
+002905,buy,33,7.0831543746590615,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+10 2025-03-03     000776  ...                   -0.517977          61.028394
+
+[1 rows x 191 columns]"
+002905,sell,100,7.0444005155097695,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+11 2025-03-04     000776  ...                    1.745446          61.871791
+
+[1 rows x 191 columns]"
+601877,sell,95,23.254518302790817,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+11 2025-03-04     000776  ...                    1.745446          61.871791
+
+[1 rows x 191 columns]"
+000338,sell,23,15.156010266859084,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+11 2025-03-04     000776  ...                    1.745446          61.871791
+
+[1 rows x 191 columns]"
+600795,sell,6,3.9546124389069153,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+11 2025-03-04     000776  ...                    1.745446          61.871791
+
+[1 rows x 191 columns]"
+002600,sell,0,9.629660947825759,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+11 2025-03-04     000776  ...                    1.745446          61.871791
+
+[1 rows x 191 columns]"
+601628,buy,100,37.889838267434385,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+11 2025-03-04     000776  ...                    1.745446          61.871791
+
+[1 rows x 191 columns]"
+300442,buy,100,62.78680693795905,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+11 2025-03-04     000776  ...                    1.745446          61.871791
+
+[1 rows x 191 columns]"
+000776,buy,100,14.927436911587137,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+11 2025-03-04     000776  ...                    1.745446          61.871791
+
+[1 rows x 191 columns]"
+601336,buy,21,61.87179061875981,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+11 2025-03-04     000776  ...                    1.745446          61.871791
+
+[1 rows x 191 columns]"
+002001,buy,5,20.547317556450142,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+11 2025-03-04     000776  ...                    1.745446          61.871791
+
+[1 rows x 191 columns]"
+600795,sell,100,3.944894785695942,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+12 2025-03-05     000776  ...                    4.092328          63.152874
+
+[1 rows x 191 columns]"
+002001,sell,100,20.794762052223085,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+12 2025-03-05     000776  ...                    4.092328          63.152874
+
+[1 rows x 191 columns]"
+300442,sell,100,61.81765397507697,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+12 2025-03-05     000776  ...                    4.092328          63.152874
+
+[1 rows x 191 columns]"
+601336,sell,100,63.152874097027144,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+12 2025-03-05     000776  ...                    4.092328          63.152874
+
+[1 rows x 191 columns]"
+601628,sell,91,37.52104398859199,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+12 2025-03-05     000776  ...                    4.092328          63.152874
+
+[1 rows x 191 columns]"
+002600,sell,43,9.908562192795799,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+12 2025-03-05     000776  ...                    4.092328          63.152874
+
+[1 rows x 191 columns]"
+601877,sell,19,23.24258356830105,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+12 2025-03-05     000776  ...                    4.092328          63.152874
+
+[1 rows x 191 columns]"
+000338,buy,100,15.244852434669156,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+12 2025-03-05     000776  ...                    4.092328          63.152874
+
+[1 rows x 191 columns]"
+000776,buy,38,14.956462329449131,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+12 2025-03-05     000776  ...                    4.092328          63.152874
+
+[1 rows x 191 columns]"
+002905,buy,8,7.069433959438465,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+12 2025-03-05     000776  ...                    4.092328          63.152874
+
+[1 rows x 191 columns]"
+601336,sell,84,61.6450643535978,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+13 2025-03-06     000776  ...                    0.906913          61.645064
+
+[1 rows x 191 columns]"
+600795,sell,67,3.9513159922510384,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+13 2025-03-06     000776  ...                    0.906913          61.645064
+
+[1 rows x 191 columns]"
+000776,sell,52,14.911662897579372,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+13 2025-03-06     000776  ...                    0.906913          61.645064
+
+[1 rows x 191 columns]"
+000338,sell,52,15.378339746012498,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+13 2025-03-06     000776  ...                    0.906913          61.645064
+
+[1 rows x 191 columns]"
+002600,sell,40,9.922497891355306,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+13 2025-03-06     000776  ...                    0.906913          61.645064
+
+[1 rows x 191 columns]"
+002001,sell,0,21.025036810082383,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+13 2025-03-06     000776  ...                    0.906913          61.645064
+
+[1 rows x 191 columns]"
+300442,buy,100,66.32755364365876,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+13 2025-03-06     000776  ...                    0.906913          61.645064
+
+[1 rows x 191 columns]"
+002905,buy,100,7.202478168364614,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+13 2025-03-06     000776  ...                    0.906913          61.645064
+
+[1 rows x 191 columns]"
+601628,buy,72,37.700163790718946,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+13 2025-03-06     000776  ...                    0.906913          61.645064
+
+[1 rows x 191 columns]"
+601877,buy,11,22.774640999883413,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+13 2025-03-06     000776  ...                    0.906913          61.645064
+
+[1 rows x 191 columns]"
+601877,sell,100,23.395207491684705,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+14 2025-03-07     000776  ...                    -2.22671           61.02784
+
+[1 rows x 191 columns]"
+601628,sell,100,38.50001512244344,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+14 2025-03-07     000776  ...                    -2.22671           61.02784
+
+[1 rows x 191 columns]"
+002001,sell,5,21.20142808268778,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+14 2025-03-07     000776  ...                    -2.22671           61.02784
+
+[1 rows x 191 columns]"
+300442,buy,100,67.05357588648796,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+14 2025-03-07     000776  ...                    -2.22671           61.02784
+
+[1 rows x 191 columns]"
+000776,buy,100,15.163467209488154,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+14 2025-03-07     000776  ...                    -2.22671           61.02784
+
+[1 rows x 191 columns]"
+000338,buy,90,15.673824745322344,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+14 2025-03-07     000776  ...                    -2.22671           61.02784
+
+[1 rows x 191 columns]"
+601336,buy,57,61.02784001043103,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+14 2025-03-07     000776  ...                    -2.22671           61.02784
+
+[1 rows x 191 columns]"
+600795,buy,56,3.92694221034646,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+14 2025-03-07     000776  ...                    -2.22671           61.02784
+
+[1 rows x 191 columns]"
+002600,buy,53,10.090335171381012,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+14 2025-03-07     000776  ...                    -2.22671           61.02784
+
+[1 rows x 191 columns]"
+002905,buy,42,7.301011908603832,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+14 2025-03-07     000776  ...                    -2.22671           61.02784
+
+[1 rows x 191 columns]"
+002905,sell,100,7.339425968709402,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+15 2025-03-10     000776  ...                   -1.896426          60.470604
+
+[1 rows x 191 columns]"
+600795,sell,100,3.903574554696679,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+15 2025-03-10     000776  ...                   -1.896426          60.470604
+
+[1 rows x 191 columns]"
+002600,sell,62,10.045362066056988,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+15 2025-03-10     000776  ...                   -1.896426          60.470604
+
+[1 rows x 191 columns]"
+601336,sell,60,60.47060428623692,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+15 2025-03-10     000776  ...                   -1.896426          60.470604
+
+[1 rows x 191 columns]"
+300442,sell,53,65.94313554486259,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+15 2025-03-10     000776  ...                   -1.896426          60.470604
+
+[1 rows x 191 columns]"
+601628,sell,10,38.053243533037026,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+15 2025-03-10     000776  ...                   -1.896426          60.470604
+
+[1 rows x 191 columns]"
+000338,buy,100,15.86537627079175,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+15 2025-03-10     000776  ...                   -1.896426          60.470604
+
+[1 rows x 191 columns]"
+601877,buy,39,23.268872113968246,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+15 2025-03-10     000776  ...                   -1.896426          60.470604
+
+[1 rows x 191 columns]"
+002001,buy,31,21.110570823866873,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+15 2025-03-10     000776  ...                   -1.896426          60.470604
+
+[1 rows x 191 columns]"
+000776,buy,22,14.936818298874423,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+15 2025-03-10     000776  ...                   -1.896426          60.470604
+
+[1 rows x 191 columns]"
+600795,sell,100,3.8904431526502594,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+16 2025-03-11     000776  ...                   -1.537533          60.038684
+
+[1 rows x 191 columns]"
+601877,sell,100,23.328042163671928,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+16 2025-03-11     000776  ...                   -1.537533          60.038684
+
+[1 rows x 191 columns]"
+601336,sell,100,60.03868416030749,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+16 2025-03-11     000776  ...                   -1.537533          60.038684
+
+[1 rows x 191 columns]"
+000776,sell,63,14.810851764734835,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+16 2025-03-11     000776  ...                   -1.537533          60.038684
+
+[1 rows x 191 columns]"
+002905,sell,25,7.343692173715681,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+16 2025-03-11     000776  ...                   -1.537533          60.038684
+
+[1 rows x 191 columns]"
+601628,buy,100,37.1099763039872,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+16 2025-03-11     000776  ...                   -1.537533          60.038684
+
+[1 rows x 191 columns]"
+000338,buy,100,15.646571855203947,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+16 2025-03-11     000776  ...                   -1.537533          60.038684
+
+[1 rows x 191 columns]"
+300442,buy,100,66.04261816117912,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+16 2025-03-11     000776  ...                   -1.537533          60.038684
+
+[1 rows x 191 columns]"
+002600,buy,100,10.037056237431244,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+16 2025-03-11     000776  ...                   -1.537533          60.038684
+
+[1 rows x 191 columns]"
+002001,buy,79,21.542341352999212,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+16 2025-03-11     000776  ...                   -1.537533          60.038684
+
+[1 rows x 191 columns]"
+600795,sell,100,3.918285356229171,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+17 2025-03-12     000776  ...                    -0.69883          60.803441
+
+[1 rows x 191 columns]"
+000338,sell,100,15.796831269698158,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+17 2025-03-12     000776  ...                    -0.69883          60.803441
+
+[1 rows x 191 columns]"
+002600,sell,80,9.910806587859987,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+17 2025-03-12     000776  ...                    -0.69883          60.803441
+
+[1 rows x 191 columns]"
+002905,sell,33,7.422457446344197,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+17 2025-03-12     000776  ...                    -0.69883          60.803441
+
+[1 rows x 191 columns]"
+300442,buy,100,68.44128465320914,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+17 2025-03-12     000776  ...                    -0.69883          60.803441
+
+[1 rows x 191 columns]"
+601336,buy,95,60.80344079848661,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+17 2025-03-12     000776  ...                    -0.69883          60.803441
+
+[1 rows x 191 columns]"
+002001,buy,35,20.87133645772934,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+17 2025-03-12     000776  ...                    -0.69883          60.803441
+
+[1 rows x 191 columns]"
+601877,buy,29,23.455639716400768,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+17 2025-03-12     000776  ...                    -0.69883          60.803441
+
+[1 rows x 191 columns]"
+601628,buy,28,37.13842051983811,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+17 2025-03-12     000776  ...                    -0.69883          60.803441
+
+[1 rows x 191 columns]"
+000776,buy,8,14.799419650621711,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+17 2025-03-12     000776  ...                    -0.69883          60.803441
+
+[1 rows x 191 columns]"
+002001,sell,38,21.26680857430212,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+18 2025-03-13     000776  ...                   -1.240715          61.907839
+
+[1 rows x 191 columns]"
+002905,sell,24,8.133200486826246,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+18 2025-03-13     000776  ...                   -1.240715          61.907839
+
+[1 rows x 191 columns]"
+000776,sell,22,14.806971636228264,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+18 2025-03-13     000776  ...                   -1.240715          61.907839
+
+[1 rows x 191 columns]"
+002600,sell,10,10.025892498986796,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+18 2025-03-13     000776  ...                   -1.240715          61.907839
+
+[1 rows x 191 columns]"
+600795,buy,79,3.9669546417100356,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+18 2025-03-13     000776  ...                   -1.240715          61.907839
+
+[1 rows x 191 columns]"
+601877,buy,75,24.656024921648203,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+18 2025-03-13     000776  ...                   -1.240715          61.907839
+
+[1 rows x 191 columns]"
+601336,buy,72,61.90783862223865,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+18 2025-03-13     000776  ...                   -1.240715          61.907839
+
+[1 rows x 191 columns]"
+601628,buy,40,36.962696638307534,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+18 2025-03-13     000776  ...                   -1.240715          61.907839
+
+[1 rows x 191 columns]"
+300442,buy,25,66.94694161945954,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+18 2025-03-13     000776  ...                   -1.240715          61.907839
+
+[1 rows x 191 columns]"
+000338,buy,23,15.69524767242372,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+18 2025-03-13     000776  ...                   -1.240715          61.907839
+
+[1 rows x 191 columns]"
+002905,sell,100,8.904980965494177,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+19 2025-03-14     000776  ...                   -0.585674          61.925319
+
+[1 rows x 191 columns]"
+601628,sell,100,37.05541898589581,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+19 2025-03-14     000776  ...                   -0.585674          61.925319
+
+[1 rows x 191 columns]"
+300442,sell,51,64.75561748625711,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+19 2025-03-14     000776  ...                   -0.585674          61.925319
+
+[1 rows x 191 columns]"
+002001,sell,28,21.24585707567632,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+19 2025-03-14     000776  ...                   -0.585674          61.925319
+
+[1 rows x 191 columns]"
+601336,buy,100,61.925318956999604,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+19 2025-03-14     000776  ...                   -0.585674          61.925319
+
+[1 rows x 191 columns]"
+601877,buy,100,24.772801691361238,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+19 2025-03-14     000776  ...                   -0.585674          61.925319
+
+[1 rows x 191 columns]"
+000776,buy,69,14.757690179571508,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+19 2025-03-14     000776  ...                   -0.585674          61.925319
+
+[1 rows x 191 columns]"
+600795,buy,30,3.976874502375722,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+19 2025-03-14     000776  ...                   -0.585674          61.925319
+
+[1 rows x 191 columns]"
+000338,buy,29,15.372845324994996,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+19 2025-03-14     000776  ...                   -0.585674          61.925319
+
+[1 rows x 191 columns]"
+002600,buy,28,9.563534742593765,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+19 2025-03-14     000776  ...                   -0.585674          61.925319
+
+[1 rows x 191 columns]"
+000776,sell,100,15.230901499651372,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+20 2025-03-17     000776  ...                   -1.618665          67.406289
+
+[1 rows x 191 columns]"
+300442,sell,100,66.72158306431025,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+20 2025-03-17     000776  ...                   -1.618665          67.406289
+
+[1 rows x 191 columns]"
+601628,sell,78,39.079914567177184,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+20 2025-03-17     000776  ...                   -1.618665          67.406289
+
+[1 rows x 191 columns]"
+601336,buy,100,67.40628928047134,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+20 2025-03-17     000776  ...                   -1.618665          67.406289
+
+[1 rows x 191 columns]"
+600795,buy,100,4.00716293737758,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+20 2025-03-17     000776  ...                   -1.618665          67.406289
+
+[1 rows x 191 columns]"
+601877,buy,93,24.598945116088725,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+20 2025-03-17     000776  ...                   -1.618665          67.406289
+
+[1 rows x 191 columns]"
+002001,buy,71,20.717441379779483,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+20 2025-03-17     000776  ...                   -1.618665          67.406289
+
+[1 rows x 191 columns]"
+002600,buy,38,9.70520138493972,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+20 2025-03-17     000776  ...                   -1.618665          67.406289
+
+[1 rows x 191 columns]"
+000338,buy,32,15.456908050738276,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+20 2025-03-17     000776  ...                   -1.618665          67.406289
+
+[1 rows x 191 columns]"
+002905,buy,23,9.766424881713464,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+20 2025-03-17     000776  ...                   -1.618665          67.406289
+
+[1 rows x 191 columns]"
+601877,sell,31,24.335707578272558,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+21 2025-03-18     000776  ...                   -1.441542          68.043124
+
+[1 rows x 191 columns]"
+000338,sell,11,15.76955372376833,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+21 2025-03-18     000776  ...                   -1.441542          68.043124
+
+[1 rows x 191 columns]"
+601336,buy,100,68.0431238396395,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+21 2025-03-18     000776  ...                   -1.441542          68.043124
+
+[1 rows x 191 columns]"
+601628,buy,100,38.868239445239304,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+21 2025-03-18     000776  ...                   -1.441542          68.043124
+
+[1 rows x 191 columns]"
+002600,buy,100,9.727601652094163,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+21 2025-03-18     000776  ...                   -1.441542          68.043124
+
+[1 rows x 191 columns]"
+000776,buy,100,15.234849645397626,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+21 2025-03-18     000776  ...                   -1.441542          68.043124
+
+[1 rows x 191 columns]"
+300442,buy,62,65.56794692300261,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+21 2025-03-18     000776  ...                   -1.441542          68.043124
+
+[1 rows x 191 columns]"
+002905,buy,21,10.672402309142052,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+21 2025-03-18     000776  ...                   -1.441542          68.043124
+
+[1 rows x 191 columns]"
+600795,buy,11,4.0365113117266445,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+21 2025-03-18     000776  ...                   -1.441542          68.043124
+
+[1 rows x 191 columns]"
+002001,buy,7,20.995397749356925,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+21 2025-03-18     000776  ...                   -1.441542          68.043124
+
+[1 rows x 191 columns]"
+002001,sell,100,20.872994131203743,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+22 2025-03-19     000776  ...                   -1.021115          68.017723
+
+[1 rows x 191 columns]"
+601336,sell,64,68.01772259273862,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+22 2025-03-19     000776  ...                   -1.021115          68.017723
+
+[1 rows x 191 columns]"
+601628,sell,53,38.58405394645408,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+22 2025-03-19     000776  ...                   -1.021115          68.017723
+
+[1 rows x 191 columns]"
+300442,sell,48,66.39318059716373,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+22 2025-03-19     000776  ...                   -1.021115          68.017723
+
+[1 rows x 191 columns]"
+601877,sell,18,24.081242518499494,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+22 2025-03-19     000776  ...                   -1.021115          68.017723
+
+[1 rows x 191 columns]"
+000338,sell,12,15.758965333811938,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+22 2025-03-19     000776  ...                   -1.021115          68.017723
+
+[1 rows x 191 columns]"
+000776,sell,10,15.342266430566088,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+22 2025-03-19     000776  ...                   -1.021115          68.017723
+
+[1 rows x 191 columns]"
+600795,sell,10,4.047590471906588,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+22 2025-03-19     000776  ...                   -1.021115          68.017723
+
+[1 rows x 191 columns]"
+002600,buy,100,9.804390578159946,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+22 2025-03-19     000776  ...                   -1.021115          68.017723
+
+[1 rows x 191 columns]"
+002905,buy,61,9.499449582695961,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+22 2025-03-19     000776  ...                   -1.021115          68.017723
+
+[1 rows x 191 columns]"
+000338,sell,88,16.152346579905135,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+23 2025-03-20     000776  ...                   -0.705298          68.488081
+
+[1 rows x 191 columns]"
+600795,sell,88,4.137351619452239,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+23 2025-03-20     000776  ...                   -0.705298          68.488081
+
+[1 rows x 191 columns]"
+002905,sell,31,8.449095450267196,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+23 2025-03-20     000776  ...                   -0.705298          68.488081
+
+[1 rows x 191 columns]"
+002001,sell,24,21.25270029881154,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+23 2025-03-20     000776  ...                   -0.705298          68.488081
+
+[1 rows x 191 columns]"
+601336,sell,18,68.48808147678052,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+23 2025-03-20     000776  ...                   -0.705298          68.488081
+
+[1 rows x 191 columns]"
+000776,buy,100,15.427646905109286,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+23 2025-03-20     000776  ...                   -0.705298          68.488081
+
+[1 rows x 191 columns]"
+601877,buy,80,24.041677645575255,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+23 2025-03-20     000776  ...                   -0.705298          68.488081
+
+[1 rows x 191 columns]"
+002600,buy,70,9.689635821307311,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+23 2025-03-20     000776  ...                   -0.705298          68.488081
+
+[1 rows x 191 columns]"
+601628,buy,56,38.74499640829861,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+23 2025-03-20     000776  ...                   -0.705298          68.488081
+
+[1 rows x 191 columns]"
+300442,buy,26,64.72558700339869,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+23 2025-03-20     000776  ...                   -0.705298          68.488081
+
+[1 rows x 191 columns]"
+601628,sell,100,37.53275888499804,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+24 2025-03-21     000776  ...                   -0.455193          65.485974
+
+[1 rows x 191 columns]"
+002001,sell,33,21.020739199784582,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+24 2025-03-21     000776  ...                   -0.455193          65.485974
+
+[1 rows x 191 columns]"
+002600,sell,73,9.575863788641291,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+24 2025-03-21     000776  ...                   -0.455193          65.485974
+
+[1 rows x 191 columns]"
+000338,sell,60,15.92453851987375,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+24 2025-03-21     000776  ...                   -0.455193          65.485974
+
+[1 rows x 191 columns]"
+600795,sell,31,4.12849976751022,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+24 2025-03-21     000776  ...                   -0.455193          65.485974
+
+[1 rows x 191 columns]"
+300442,buy,100,62.62697147397324,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+24 2025-03-21     000776  ...                   -0.455193          65.485974
+
+[1 rows x 191 columns]"
+002905,buy,100,7.8474101491644985,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+24 2025-03-21     000776  ...                   -0.455193          65.485974
+
+[1 rows x 191 columns]"
+601877,buy,87,24.01568362886319,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+24 2025-03-21     000776  ...                   -0.455193          65.485974
+
+[1 rows x 191 columns]"
+601336,buy,69,65.48597426049507,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+24 2025-03-21     000776  ...                   -0.455193          65.485974
+
+[1 rows x 191 columns]"
+000776,buy,3,15.297363845212384,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+24 2025-03-21     000776  ...                   -0.455193          65.485974
+
+[1 rows x 191 columns]"
+000338,sell,100,15.614588945973665,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+25 2025-03-24     000776  ...                    0.376352          64.598901
+
+[1 rows x 191 columns]"
+300442,sell,80,61.123409095034006,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+25 2025-03-24     000776  ...                    0.376352          64.598901
+
+[1 rows x 191 columns]"
+600795,sell,77,4.109962485567666,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+25 2025-03-24     000776  ...                    0.376352          64.598901
+
+[1 rows x 191 columns]"
+002905,sell,52,7.695385725535452,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+25 2025-03-24     000776  ...                    0.376352          64.598901
+
+[1 rows x 191 columns]"
+002600,sell,13,9.09017856628794,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+25 2025-03-24     000776  ...                    0.376352          64.598901
+
+[1 rows x 191 columns]"
+000776,buy,100,15.094714514063671,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+25 2025-03-24     000776  ...                    0.376352          64.598901
+
+[1 rows x 191 columns]"
+601628,buy,65,37.147380237188194,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+25 2025-03-24     000776  ...                    0.376352          64.598901
+
+[1 rows x 191 columns]"
+601877,buy,36,23.577230192385613,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+25 2025-03-24     000776  ...                    0.376352          64.598901
+
+[1 rows x 191 columns]"
+601336,buy,14,64.5989013398968,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+25 2025-03-24     000776  ...                    0.376352          64.598901
+
+[1 rows x 191 columns]"
+000776,sell,100,15.212255356424722,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+26 2025-03-25     000776  ...                    1.673242          66.769444
+
+[1 rows x 191 columns]"
+300442,sell,74,60.673237667866054,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+26 2025-03-25     000776  ...                    1.673242          66.769444
+
+[1 rows x 191 columns]"
+601336,sell,64,66.76944445968816,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+26 2025-03-25     000776  ...                    1.673242          66.769444
+
+[1 rows x 191 columns]"
+002600,sell,61,9.139130736553925,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+26 2025-03-25     000776  ...                    1.673242          66.769444
+
+[1 rows x 191 columns]"
+601628,sell,48,37.44891906062141,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+26 2025-03-25     000776  ...                    1.673242          66.769444
+
+[1 rows x 191 columns]"
+000338,sell,34,15.62905638923403,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+26 2025-03-25     000776  ...                    1.673242          66.769444
+
+[1 rows x 191 columns]"
+002001,buy,100,20.935374395060354,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+26 2025-03-25     000776  ...                    1.673242          66.769444
+
+[1 rows x 191 columns]"
+601877,buy,100,23.601732188172175,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+26 2025-03-25     000776  ...                    1.673242          66.769444
+
+[1 rows x 191 columns]"
+600795,buy,4,4.140857984721661,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+26 2025-03-25     000776  ...                    1.673242          66.769444
+
+[1 rows x 191 columns]"
+002905,buy,1,7.602398084886373,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+26 2025-03-25     000776  ...                    1.673242          66.769444
+
+[1 rows x 191 columns]"
+002905,sell,100,7.549315211828798,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+27 2025-03-26     000776  ...                    3.759193          67.371609
+
+[1 rows x 191 columns]"
+000338,sell,100,15.358187980949879,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+27 2025-03-26     000776  ...                    3.759193          67.371609
+
+[1 rows x 191 columns]"
+601628,sell,100,37.55787161093205,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+27 2025-03-26     000776  ...                    3.759193          67.371609
+
+[1 rows x 191 columns]"
+002600,sell,86,8.996115409293562,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+27 2025-03-26     000776  ...                    3.759193          67.371609
+
+[1 rows x 191 columns]"
+002001,sell,39,20.773871101420376,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+27 2025-03-26     000776  ...                    3.759193          67.371609
+
+[1 rows x 191 columns]"
+300442,sell,33,56.33550407767296,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+27 2025-03-26     000776  ...                    3.759193          67.371609
+
+[1 rows x 191 columns]"
+601336,sell,22,67.37160923567048,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+27 2025-03-26     000776  ...                    3.759193          67.371609
+
+[1 rows x 191 columns]"
+000776,buy,100,15.306549746482197,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+27 2025-03-26     000776  ...                    3.759193          67.371609
+
+[1 rows x 191 columns]"
+600795,buy,96,4.201642166543752,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+27 2025-03-26     000776  ...                    3.759193          67.371609
+
+[1 rows x 191 columns]"
+601877,buy,10,23.550455548837782,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+27 2025-03-26     000776  ...                    3.759193          67.371609
+
+[1 rows x 191 columns]"
+601336,sell,88,67.29595497750702,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+28 2025-03-27     000776  ...                    4.010494          67.295955
+
+[1 rows x 191 columns]"
+601877,sell,84,23.511133181427137,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+28 2025-03-27     000776  ...                    4.010494          67.295955
+
+[1 rows x 191 columns]"
+002001,sell,61,21.481985282339156,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+28 2025-03-27     000776  ...                    4.010494          67.295955
+
+[1 rows x 191 columns]"
+000338,sell,52,15.213115850789473,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+28 2025-03-27     000776  ...                    4.010494          67.295955
+
+[1 rows x 191 columns]"
+601628,sell,44,37.553636271227155,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+28 2025-03-27     000776  ...                    4.010494          67.295955
+
+[1 rows x 191 columns]"
+000776,sell,9,15.300219776759622,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+28 2025-03-27     000776  ...                    4.010494          67.295955
+
+[1 rows x 191 columns]"
+002905,sell,2,7.607128476500511,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+28 2025-03-27     000776  ...                    4.010494          67.295955
+
+[1 rows x 191 columns]"
+600795,buy,77,4.133384063863196,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+28 2025-03-27     000776  ...                    4.010494          67.295955
+
+[1 rows x 191 columns]"
+300442,buy,75,57.47816889524459,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+28 2025-03-27     000776  ...                    4.010494          67.295955
+
+[1 rows x 191 columns]"
+002600,buy,5,9.134847961440682,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+28 2025-03-27     000776  ...                    4.010494          67.295955
+
+[1 rows x 191 columns]"
+600795,sell,100,4.1150985330576075,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+29 2025-03-28     000776  ...                   -0.817391           65.01996
+
+[1 rows x 191 columns]"
+000776,sell,69,15.658209654102102,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+29 2025-03-28     000776  ...                   -0.817391           65.01996
+
+[1 rows x 191 columns]"
+002600,sell,60,9.132347553763537,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+29 2025-03-28     000776  ...                   -0.817391           65.01996
+
+[1 rows x 191 columns]"
+300442,sell,58,56.47730121105909,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+29 2025-03-28     000776  ...                   -0.817391           65.01996
+
+[1 rows x 191 columns]"
+601336,sell,57,65.01996009485116,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+29 2025-03-28     000776  ...                   -0.817391           65.01996
+
+[1 rows x 191 columns]"
+601877,sell,2,23.286197512521756,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+29 2025-03-28     000776  ...                   -0.817391           65.01996
+
+[1 rows x 191 columns]"
+601628,buy,100,37.793726202640684,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+29 2025-03-28     000776  ...                   -0.817391           65.01996
+
+[1 rows x 191 columns]"
+000338,buy,100,15.127642671614886,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+29 2025-03-28     000776  ...                   -0.817391           65.01996
+
+[1 rows x 191 columns]"
+002001,buy,100,21.310957940509542,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+29 2025-03-28     000776  ...                   -0.817391           65.01996
+
+[1 rows x 191 columns]"
+002905,buy,100,7.485199177637696,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+29 2025-03-28     000776  ...                   -0.817391           65.01996
+
+[1 rows x 191 columns]"
+601628,sell,64,37.52807076088153,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+30 2025-03-31     000776  ...                   -4.055461           63.61933
+
+[1 rows x 191 columns]"
+601336,sell,26,63.61932995324349,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+30 2025-03-31     000776  ...                   -4.055461           63.61933
+
+[1 rows x 191 columns]"
+300442,buy,100,56.796472024545075,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+30 2025-03-31     000776  ...                   -4.055461           63.61933
+
+[1 rows x 191 columns]"
+601877,buy,100,23.13526621699799,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+30 2025-03-31     000776  ...                   -4.055461           63.61933
+
+[1 rows x 191 columns]"
+600795,buy,100,4.135806744091679,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+30 2025-03-31     000776  ...                   -4.055461           63.61933
+
+[1 rows x 191 columns]"
+002905,buy,100,7.537707347497344,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+30 2025-03-31     000776  ...                   -4.055461           63.61933
+
+[1 rows x 191 columns]"
+000776,buy,100,15.923658943315969,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+30 2025-03-31     000776  ...                   -4.055461           63.61933
+
+[1 rows x 191 columns]"
+002001,buy,67,21.68618351686746,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+30 2025-03-31     000776  ...                   -4.055461           63.61933
+
+[1 rows x 191 columns]"
+002600,buy,64,9.14943187404424,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+30 2025-03-31     000776  ...                   -4.055461           63.61933
+
+[1 rows x 191 columns]"
+000338,buy,14,15.558897206559777,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+30 2025-03-31     000776  ...                   -4.055461           63.61933
+
+[1 rows x 191 columns]"
+300442,sell,100,57.8464674522914,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+31 2025-04-01     000776  ...                   -4.664295          62.631868
+
+[1 rows x 191 columns]"
+000338,sell,100,15.643080523367972,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+31 2025-04-01     000776  ...                   -4.664295          62.631868
+
+[1 rows x 191 columns]"
+000776,sell,62,15.673443649602122,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+31 2025-04-01     000776  ...                   -4.664295          62.631868
+
+[1 rows x 191 columns]"
+002001,sell,13,22.101133007928727,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+31 2025-04-01     000776  ...                   -4.664295          62.631868
+
+[1 rows x 191 columns]"
+002600,sell,12,9.039088793569244,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+31 2025-04-01     000776  ...                   -4.664295          62.631868
+
+[1 rows x 191 columns]"
+600795,buy,72,4.215063255953138,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+31 2025-04-01     000776  ...                   -4.664295          62.631868
+
+[1 rows x 191 columns]"
+601877,buy,71,22.893468531081453,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+31 2025-04-01     000776  ...                   -4.664295          62.631868
+
+[1 rows x 191 columns]"
+601628,buy,46,37.340179760772735,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+31 2025-04-01     000776  ...                   -4.664295          62.631868
+
+[1 rows x 191 columns]"
+002905,buy,42,7.5583934327587485,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+31 2025-04-01     000776  ...                   -4.664295          62.631868
+
+[1 rows x 191 columns]"
+601336,buy,22,62.63186835173939,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+31 2025-04-01     000776  ...                   -4.664295          62.631868
+
+[1 rows x 191 columns]"
+000776,sell,100,15.805683267361019,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+32 2025-04-02     000776  ...                   -2.847742          63.912026
+
+[1 rows x 191 columns]"
+601877,sell,33,23.16266367654316,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+32 2025-04-02     000776  ...                   -2.847742          63.912026
+
+[1 rows x 191 columns]"
+601628,sell,20,36.9323282009922,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+32 2025-04-02     000776  ...                   -2.847742          63.912026
+
+[1 rows x 191 columns]"
+601336,buy,100,63.9120260811657,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+32 2025-04-02     000776  ...                   -2.847742          63.912026
+
+[1 rows x 191 columns]"
+002001,buy,100,21.74942257905379,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+32 2025-04-02     000776  ...                   -2.847742          63.912026
+
+[1 rows x 191 columns]"
+002600,buy,99,9.05915132118389,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+32 2025-04-02     000776  ...                   -2.847742          63.912026
+
+[1 rows x 191 columns]"
+600795,buy,88,4.386393024091958,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+32 2025-04-02     000776  ...                   -2.847742          63.912026
+
+[1 rows x 191 columns]"
+000338,buy,65,15.172441667113453,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+32 2025-04-02     000776  ...                   -2.847742          63.912026
+
+[1 rows x 191 columns]"
+300442,buy,25,56.68115374622866,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+32 2025-04-02     000776  ...                   -2.847742          63.912026
+
+[1 rows x 191 columns]"
+002905,buy,19,7.607838418222964,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+32 2025-04-02     000776  ...                   -2.847742          63.912026
+
+[1 rows x 191 columns]"
+000338,sell,66,15.167604266963899,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+33 2025-04-03     000776  ...                   -1.271771          65.628877
+
+[1 rows x 191 columns]"
+300442,sell,23,57.67590453289449,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+33 2025-04-03     000776  ...                   -1.271771          65.628877
+
+[1 rows x 191 columns]"
+601336,sell,13,65.62887743602876,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+33 2025-04-03     000776  ...                   -1.271771          65.628877
+
+[1 rows x 191 columns]"
+002905,buy,98,7.641031088693999,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+33 2025-04-03     000776  ...                   -1.271771          65.628877
+
+[1 rows x 191 columns]"
+000776,buy,66,15.666664023245685,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+33 2025-04-03     000776  ...                   -1.271771          65.628877
+
+[1 rows x 191 columns]"
+002600,buy,53,9.121998560456559,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+33 2025-04-03     000776  ...                   -1.271771          65.628877
+
+[1 rows x 191 columns]"
+600795,buy,50,4.328544584932388,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+33 2025-04-03     000776  ...                   -1.271771          65.628877
+
+[1 rows x 191 columns]"
+601628,buy,49,36.74255067792663,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+33 2025-04-03     000776  ...                   -1.271771          65.628877
+
+[1 rows x 191 columns]"
+601877,buy,46,23.114334272006527,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+33 2025-04-03     000776  ...                   -1.271771          65.628877
+
+[1 rows x 191 columns]"
+002001,buy,3,21.557058681501076,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+33 2025-04-03     000776  ...                   -1.271771          65.628877
+
+[1 rows x 191 columns]"
+002001,sell,100,20.90287473628297,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+34 2025-04-07     000776  ...                    0.495175           66.02144
+
+[1 rows x 191 columns]"
+600795,sell,77,4.355784629809205,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+34 2025-04-07     000776  ...                    0.495175           66.02144
+
+[1 rows x 191 columns]"
+000338,sell,63,14.827753279991448,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+34 2025-04-07     000776  ...                    0.495175           66.02144
+
+[1 rows x 191 columns]"
+300442,sell,39,56.549994494486604,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+34 2025-04-07     000776  ...                    0.495175           66.02144
+
+[1 rows x 191 columns]"
+002905,sell,36,7.822054198365659,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+34 2025-04-07     000776  ...                    0.495175           66.02144
+
+[1 rows x 191 columns]"
+601336,buy,100,66.02144009039591,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+34 2025-04-07     000776  ...                    0.495175           66.02144
+
+[1 rows x 191 columns]"
+601628,buy,100,36.666278165983385,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+34 2025-04-07     000776  ...                    0.495175           66.02144
+
+[1 rows x 191 columns]"
+000776,buy,100,15.697257586415798,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+34 2025-04-07     000776  ...                    0.495175           66.02144
+
+[1 rows x 191 columns]"
+002600,buy,17,8.429540312290191,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+34 2025-04-07     000776  ...                    0.495175           66.02144
+
+[1 rows x 191 columns]"
+601877,buy,17,22.8345288708061,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+34 2025-04-07     000776  ...                    0.495175           66.02144
+
+[1 rows x 191 columns]"
+002905,sell,83,7.110201300941408,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+35 2025-04-08     000776  ...                   -0.010437          60.370355
+
+[1 rows x 191 columns]"
+300442,sell,69,50.642154110614214,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+35 2025-04-08     000776  ...                   -0.010437          60.370355
+
+[1 rows x 191 columns]"
+601628,sell,38,34.18869445944903,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+35 2025-04-08     000776  ...                   -0.010437          60.370355
+
+[1 rows x 191 columns]"
+000338,sell,38,13.643897366710007,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+35 2025-04-08     000776  ...                   -0.010437          60.370355
+
+[1 rows x 191 columns]"
+600795,sell,37,4.130289762821048,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+35 2025-04-08     000776  ...                   -0.010437          60.370355
+
+[1 rows x 191 columns]"
+002600,sell,32,7.573255622754805,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+35 2025-04-08     000776  ...                   -0.010437          60.370355
+
+[1 rows x 191 columns]"
+000776,sell,25,14.121644806861877,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+35 2025-04-08     000776  ...                   -0.010437          60.370355
+
+[1 rows x 191 columns]"
+601336,buy,100,60.37035497202477,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+35 2025-04-08     000776  ...                   -0.010437          60.370355
+
+[1 rows x 191 columns]"
+002001,buy,14,21.112886609705164,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+35 2025-04-08     000776  ...                   -0.010437          60.370355
+
+[1 rows x 191 columns]"
+601877,buy,4,20.557059926300425,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+35 2025-04-08     000776  ...                   -0.010437          60.370355
+
+[1 rows x 191 columns]"
+000338,sell,44,13.876469604671001,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+36 2025-04-09     000776  ...                    0.198241          60.739202
+
+[1 rows x 191 columns]"
+600795,sell,30,4.237258488079533,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+36 2025-04-09     000776  ...                    0.198241          60.739202
+
+[1 rows x 191 columns]"
+601877,sell,4,20.675787361375985,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+36 2025-04-09     000776  ...                    0.198241          60.739202
+
+[1 rows x 191 columns]"
+601336,buy,100,60.739202076665975,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+36 2025-04-09     000776  ...                    0.198241          60.739202
+
+[1 rows x 191 columns]"
+300442,buy,100,50.44045108437538,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+36 2025-04-09     000776  ...                    0.198241          60.739202
+
+[1 rows x 191 columns]"
+002905,buy,94,7.166863378062844,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+36 2025-04-09     000776  ...                    0.198241          60.739202
+
+[1 rows x 191 columns]"
+000776,buy,94,14.696373035050929,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+36 2025-04-09     000776  ...                    0.198241          60.739202
+
+[1 rows x 191 columns]"
+601628,buy,91,35.16838534892304,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+36 2025-04-09     000776  ...                    0.198241          60.739202
+
+[1 rows x 191 columns]"
+002600,buy,12,6.797801866638474,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+36 2025-04-09     000776  ...                    0.198241          60.739202
+
+[1 rows x 191 columns]"
+002001,buy,7,18.83589020673535,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+36 2025-04-09     000776  ...                    0.198241          60.739202
+
+[1 rows x 191 columns]"
+002905,sell,100,7.226534528471529,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+37 2025-04-10     000776  ...                   -0.355196           60.35287
+
+[1 rows x 191 columns]"
+300442,sell,100,52.187753581143916,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+37 2025-04-10     000776  ...                   -0.355196           60.35287
+
+[1 rows x 191 columns]"
+000338,sell,100,14.02918902623467,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+37 2025-04-10     000776  ...                   -0.355196           60.35287
+
+[1 rows x 191 columns]"
+601628,sell,100,35.04951326473616,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+37 2025-04-10     000776  ...                   -0.355196           60.35287
+
+[1 rows x 191 columns]"
+601336,sell,100,60.35286950889607,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+37 2025-04-10     000776  ...                   -0.355196           60.35287
+
+[1 rows x 191 columns]"
+002600,sell,14,6.680721408920363,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+37 2025-04-10     000776  ...                   -0.355196           60.35287
+
+[1 rows x 191 columns]"
+600795,buy,65,4.22551330331713,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+37 2025-04-10     000776  ...                   -0.355196           60.35287
+
+[1 rows x 191 columns]"
+601877,buy,49,20.770539576290176,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+37 2025-04-10     000776  ...                   -0.355196           60.35287
+
+[1 rows x 191 columns]"
+000776,buy,37,14.761932370159775,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+37 2025-04-10     000776  ...                   -0.355196           60.35287
+
+[1 rows x 191 columns]"
+002001,buy,24,19.66282843146473,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+37 2025-04-10     000776  ...                   -0.355196           60.35287
+
+[1 rows x 191 columns]"
+002905,sell,86,7.519916596706025,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+38 2025-04-11     000776  ...                   -1.021651           60.88355
+
+[1 rows x 191 columns]"
+600795,sell,42,4.224931549169123,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+38 2025-04-11     000776  ...                   -1.021651           60.88355
+
+[1 rows x 191 columns]"
+000338,buy,100,14.39008222354576,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+38 2025-04-11     000776  ...                   -1.021651           60.88355
+
+[1 rows x 191 columns]"
+002001,buy,100,19.35278022523038,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+38 2025-04-11     000776  ...                   -1.021651           60.88355
+
+[1 rows x 191 columns]"
+601877,buy,87,21.147149494383484,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+38 2025-04-11     000776  ...                   -1.021651           60.88355
+
+[1 rows x 191 columns]"
+601628,buy,70,35.538674703240396,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+38 2025-04-11     000776  ...                   -1.021651           60.88355
+
+[1 rows x 191 columns]"
+601336,buy,60,60.8835495412298,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+38 2025-04-11     000776  ...                   -1.021651           60.88355
+
+[1 rows x 191 columns]"
+000776,buy,28,15.180753980437293,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+38 2025-04-11     000776  ...                   -1.021651           60.88355
+
+[1 rows x 191 columns]"
+002600,buy,27,6.999767869245261,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+38 2025-04-11     000776  ...                   -1.021651           60.88355
+
+[1 rows x 191 columns]"
+300442,buy,19,53.36615026060492,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+38 2025-04-11     000776  ...                   -1.021651           60.88355
+
+[1 rows x 191 columns]"
+002905,sell,100,7.345899212323129,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+39 2025-04-14     000776  ...                   -0.735558          60.401071
+
+[1 rows x 191 columns]"
+000338,sell,100,14.708589250128716,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+39 2025-04-14     000776  ...                   -0.735558          60.401071
+
+[1 rows x 191 columns]"
+601336,sell,100,60.401070937865946,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+39 2025-04-14     000776  ...                   -0.735558          60.401071
+
+[1 rows x 191 columns]"
+601877,sell,29,21.028335242259782,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+39 2025-04-14     000776  ...                   -0.735558          60.401071
+
+[1 rows x 191 columns]"
+002001,buy,100,19.996522056246175,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+39 2025-04-14     000776  ...                   -0.735558          60.401071
+
+[1 rows x 191 columns]"
+600795,buy,100,4.224872593469918,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+39 2025-04-14     000776  ...                   -0.735558          60.401071
+
+[1 rows x 191 columns]"
+002600,buy,100,7.207386944710742,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+39 2025-04-14     000776  ...                   -0.735558          60.401071
+
+[1 rows x 191 columns]"
+000776,buy,100,15.01236797813326,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+39 2025-04-14     000776  ...                   -0.735558          60.401071
+
+[1 rows x 191 columns]"
+601628,buy,72,35.454278184687716,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+39 2025-04-14     000776  ...                   -0.735558          60.401071
+
+[1 rows x 191 columns]"
+300442,buy,29,55.770058235600594,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+39 2025-04-14     000776  ...                   -0.735558          60.401071
+
+[1 rows x 191 columns]"
+002600,sell,100,7.28904447259847,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+40 2025-04-15     000776  ...                   -0.100603          61.284436
+
+[1 rows x 191 columns]"
+601628,sell,81,35.60662553801201,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+40 2025-04-15     000776  ...                   -0.100603          61.284436
+
+[1 rows x 191 columns]"
+600795,sell,63,4.353099327206146,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+40 2025-04-15     000776  ...                   -0.100603          61.284436
+
+[1 rows x 191 columns]"
+601336,sell,7,61.28443645638193,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+40 2025-04-15     000776  ...                   -0.100603          61.284436
+
+[1 rows x 191 columns]"
+000338,buy,75,14.555391337275505,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+40 2025-04-15     000776  ...                   -0.100603          61.284436
+
+[1 rows x 191 columns]"
+601877,buy,58,21.39174022674095,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+40 2025-04-15     000776  ...                   -0.100603          61.284436
+
+[1 rows x 191 columns]"
+002905,buy,35,7.406100674998015,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+40 2025-04-15     000776  ...                   -0.100603          61.284436
+
+[1 rows x 191 columns]"
+300442,buy,34,55.06723407063633,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+40 2025-04-15     000776  ...                   -0.100603          61.284436
+
+[1 rows x 191 columns]"
+000776,buy,33,14.990277936821803,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+40 2025-04-15     000776  ...                   -0.100603          61.284436
+
+[1 rows x 191 columns]"
+002001,buy,25,20.581083356458695,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+40 2025-04-15     000776  ...                   -0.100603          61.284436
+
+[1 rows x 191 columns]"
+601628,sell,100,35.69621749964543,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+41 2025-04-16     000776  ...                    1.130356          62.129888
+
+[1 rows x 191 columns]"
+600795,sell,66,4.363825857471674,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+41 2025-04-16     000776  ...                    1.130356          62.129888
+
+[1 rows x 191 columns]"
+000338,sell,62,14.550462051173671,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+41 2025-04-16     000776  ...                    1.130356          62.129888
+
+[1 rows x 191 columns]"
+002001,sell,46,20.23788018831983,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+41 2025-04-16     000776  ...                    1.130356          62.129888
+
+[1 rows x 191 columns]"
+601336,sell,9,62.12988763603026,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+41 2025-04-16     000776  ...                    1.130356          62.129888
+
+[1 rows x 191 columns]"
+002905,buy,100,7.438438808619976,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+41 2025-04-16     000776  ...                    1.130356          62.129888
+
+[1 rows x 191 columns]"
+000776,buy,86,14.945970658976584,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+41 2025-04-16     000776  ...                    1.130356          62.129888
+
+[1 rows x 191 columns]"
+601877,buy,79,21.216562056839464,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+41 2025-04-16     000776  ...                    1.130356          62.129888
+
+[1 rows x 191 columns]"
+300442,buy,40,55.64393368083984,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+41 2025-04-16     000776  ...                    1.130356          62.129888
+
+[1 rows x 191 columns]"
+002600,buy,7,7.166280322582461,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+41 2025-04-16     000776  ...                    1.130356          62.129888
+
+[1 rows x 191 columns]"
+601877,sell,100,21.291326393475757,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+42 2025-04-17     000776  ...                    3.234557           63.47529
+
+[1 rows x 191 columns]"
+601336,sell,82,63.475289935642344,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+42 2025-04-17     000776  ...                    3.234557           63.47529
+
+[1 rows x 191 columns]"
+000338,sell,32,14.524528299272061,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+42 2025-04-17     000776  ...                    3.234557           63.47529
+
+[1 rows x 191 columns]"
+000776,sell,27,14.796288833320142,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+42 2025-04-17     000776  ...                    3.234557           63.47529
+
+[1 rows x 191 columns]"
+002001,buy,100,21.234674746915697,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+42 2025-04-17     000776  ...                    3.234557           63.47529
+
+[1 rows x 191 columns]"
+600795,buy,100,4.423803320070729,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+42 2025-04-17     000776  ...                    3.234557           63.47529
+
+[1 rows x 191 columns]"
+002905,buy,95,7.362172791361809,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+42 2025-04-17     000776  ...                    3.234557           63.47529
+
+[1 rows x 191 columns]"
+002600,buy,73,7.001478257137933,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+42 2025-04-17     000776  ...                    3.234557           63.47529
+
+[1 rows x 191 columns]"
+300442,buy,11,53.6254284994863,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+42 2025-04-17     000776  ...                    3.234557           63.47529
+
+[1 rows x 191 columns]"
+601628,buy,8,35.957249144129456,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+42 2025-04-17     000776  ...                    3.234557           63.47529
+
+[1 rows x 191 columns]"
+002905,sell,100,7.513199162827805,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+43 2025-04-18     000776  ...                    4.454961          64.971863
+
+[1 rows x 191 columns]"
+002600,sell,47,6.996442955023377,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+43 2025-04-18     000776  ...                    4.454961          64.971863
+
+[1 rows x 191 columns]"
+000338,buy,100,14.330523753762245,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+43 2025-04-18     000776  ...                    4.454961          64.971863
+
+[1 rows x 191 columns]"
+601877,buy,100,21.255711246234714,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+43 2025-04-18     000776  ...                    4.454961          64.971863
+
+[1 rows x 191 columns]"
+601628,buy,88,36.10889716520906,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+43 2025-04-18     000776  ...                    4.454961          64.971863
+
+[1 rows x 191 columns]"
+002001,buy,86,21.002580690849573,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+43 2025-04-18     000776  ...                    4.454961          64.971863
+
+[1 rows x 191 columns]"
+300442,buy,78,52.62476579342037,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+43 2025-04-18     000776  ...                    4.454961          64.971863
+
+[1 rows x 191 columns]"
+600795,buy,49,4.43524352911627,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+43 2025-04-18     000776  ...                    4.454961          64.971863
+
+[1 rows x 191 columns]"
+000776,buy,5,14.753884146385825,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+43 2025-04-18     000776  ...                    4.454961          64.971863
+
+[1 rows x 191 columns]"
+601336,buy,0,64.97186325340108,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+43 2025-04-18     000776  ...                    4.454961          64.971863
+
+[1 rows x 191 columns]"
+600795,sell,100,4.387030439730734,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+44 2025-04-21     000776  ...                    3.598041          64.756025
+
+[1 rows x 191 columns]"
+601628,sell,64,36.012673079343514,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+44 2025-04-21     000776  ...                    3.598041          64.756025
+
+[1 rows x 191 columns]"
+300442,sell,61,52.807890620231625,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+44 2025-04-21     000776  ...                    3.598041          64.756025
+
+[1 rows x 191 columns]"
+601877,sell,18,21.367040809965694,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+44 2025-04-21     000776  ...                    3.598041          64.756025
+
+[1 rows x 191 columns]"
+000776,sell,17,14.846314481562002,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+44 2025-04-21     000776  ...                    3.598041          64.756025
+
+[1 rows x 191 columns]"
+002600,sell,15,7.138779870830477,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+44 2025-04-21     000776  ...                    3.598041          64.756025
+
+[1 rows x 191 columns]"
+002001,buy,100,20.811838786676528,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+44 2025-04-21     000776  ...                    3.598041          64.756025
+
+[1 rows x 191 columns]"
+000338,buy,35,14.49620418259874,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+44 2025-04-21     000776  ...                    3.598041          64.756025
+
+[1 rows x 191 columns]"
+601336,buy,24,64.75602466740972,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+44 2025-04-21     000776  ...                    3.598041          64.756025
+
+[1 rows x 191 columns]"
+002905,buy,16,7.416244641020895,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+44 2025-04-21     000776  ...                    3.598041          64.756025
+
+[1 rows x 191 columns]"
+002905,sell,100,7.6876213760487735,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+45 2025-04-22     000776  ...                    1.881072           63.56583
+
+[1 rows x 191 columns]"
+600795,sell,100,4.357544947303832,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+45 2025-04-22     000776  ...                    1.881072           63.56583
+
+[1 rows x 191 columns]"
+000338,sell,93,14.565369183346629,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+45 2025-04-22     000776  ...                    1.881072           63.56583
+
+[1 rows x 191 columns]"
+300442,sell,85,54.92297315746546,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+45 2025-04-22     000776  ...                    1.881072           63.56583
+
+[1 rows x 191 columns]"
+002600,sell,27,7.53206313643459,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+45 2025-04-22     000776  ...                    1.881072           63.56583
+
+[1 rows x 191 columns]"
+601336,sell,4,63.56582993386054,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+45 2025-04-22     000776  ...                    1.881072           63.56583
+
+[1 rows x 191 columns]"
+601877,buy,100,21.537320124467367,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+45 2025-04-22     000776  ...                    1.881072           63.56583
+
+[1 rows x 191 columns]"
+000776,buy,74,14.926525839082897,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+45 2025-04-22     000776  ...                    1.881072           63.56583
+
+[1 rows x 191 columns]"
+002001,buy,47,20.889666634947062,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+45 2025-04-22     000776  ...                    1.881072           63.56583
+
+[1 rows x 191 columns]"
+601628,buy,41,35.9547401231993,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+45 2025-04-22     000776  ...                    1.881072           63.56583
+
+[1 rows x 191 columns]"
+601877,sell,100,21.635181647809222,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+46 2025-04-23     000776  ...                     0.71827           63.13584
+
+[1 rows x 191 columns]"
+002905,sell,97,7.7135042495210655,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+46 2025-04-23     000776  ...                     0.71827           63.13584
+
+[1 rows x 191 columns]"
+000338,sell,74,14.402891241675242,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+46 2025-04-23     000776  ...                     0.71827           63.13584
+
+[1 rows x 191 columns]"
+600795,sell,74,4.348391906488687,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+46 2025-04-23     000776  ...                     0.71827           63.13584
+
+[1 rows x 191 columns]"
+002001,sell,57,21.129225541460325,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+46 2025-04-23     000776  ...                     0.71827           63.13584
+
+[1 rows x 191 columns]"
+002600,sell,35,7.392611862899211,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+46 2025-04-23     000776  ...                     0.71827           63.13584
+
+[1 rows x 191 columns]"
+601628,buy,100,36.204344580285245,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+46 2025-04-23     000776  ...                     0.71827           63.13584
+
+[1 rows x 191 columns]"
+300442,buy,100,53.34390034977346,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+46 2025-04-23     000776  ...                     0.71827           63.13584
+
+[1 rows x 191 columns]"
+000776,buy,68,14.906471262038686,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+46 2025-04-23     000776  ...                     0.71827           63.13584
+
+[1 rows x 191 columns]"
+601336,buy,27,63.13584031858748,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+46 2025-04-23     000776  ...                     0.71827           63.13584
+
+[1 rows x 191 columns]"
+002001,sell,100,21.523700846498834,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+47 2025-04-24     000776  ...                    0.822726          63.625748
+
+[1 rows x 191 columns]"
+601336,sell,100,63.62574775106365,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+47 2025-04-24     000776  ...                    0.822726          63.625748
+
+[1 rows x 191 columns]"
+002600,sell,77,7.736938402567757,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+47 2025-04-24     000776  ...                    0.822726          63.625748
+
+[1 rows x 191 columns]"
+600795,sell,28,4.319235483594239,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+47 2025-04-24     000776  ...                    0.822726          63.625748
+
+[1 rows x 191 columns]"
+000338,sell,11,14.464413636596873,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+47 2025-04-24     000776  ...                    0.822726          63.625748
+
+[1 rows x 191 columns]"
+300442,sell,8,54.80767500724644,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+47 2025-04-24     000776  ...                    0.822726          63.625748
+
+[1 rows x 191 columns]"
+000776,sell,7,14.859935183092022,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+47 2025-04-24     000776  ...                    0.822726          63.625748
+
+[1 rows x 191 columns]"
+601628,buy,100,36.1544523220323,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+47 2025-04-24     000776  ...                    0.822726          63.625748
+
+[1 rows x 191 columns]"
+601877,buy,100,21.738595936261117,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+47 2025-04-24     000776  ...                    0.822726          63.625748
+
+[1 rows x 191 columns]"
+002905,buy,100,7.638808589411201,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+47 2025-04-24     000776  ...                    0.822726          63.625748
+
+[1 rows x 191 columns]"
+000776,sell,100,14.906592958036343,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+48 2025-04-25     000776  ...                    0.311951          63.943231
+
+[1 rows x 191 columns]"
+002905,sell,100,7.563539126090473,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+48 2025-04-25     000776  ...                    0.311951          63.943231
+
+[1 rows x 191 columns]"
+601877,sell,100,21.90375056136865,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+48 2025-04-25     000776  ...                    0.311951          63.943231
+
+[1 rows x 191 columns]"
+002001,sell,100,22.267232741564513,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+48 2025-04-25     000776  ...                    0.311951          63.943231
+
+[1 rows x 191 columns]"
+601628,sell,81,36.49711200088262,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+48 2025-04-25     000776  ...                    0.311951          63.943231
+
+[1 rows x 191 columns]"
+002600,sell,33,7.653461440514366,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+48 2025-04-25     000776  ...                    0.311951          63.943231
+
+[1 rows x 191 columns]"
+300442,sell,30,46.87211245536804,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+48 2025-04-25     000776  ...                    0.311951          63.943231
+
+[1 rows x 191 columns]"
+600795,buy,71,4.319671004258562,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+48 2025-04-25     000776  ...                    0.311951          63.943231
+
+[1 rows x 191 columns]"
+601336,buy,63,63.94323136860803,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+48 2025-04-25     000776  ...                    0.311951          63.943231
+
+[1 rows x 191 columns]"
+000338,buy,50,14.504284872245043,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+48 2025-04-25     000776  ...                    0.311951          63.943231
+
+[1 rows x 191 columns]"
+002905,sell,100,7.791243771503214,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+49 2025-04-28     000776  ...                   -1.059768          62.412528
+
+[1 rows x 191 columns]"
+600795,sell,100,4.359328514065128,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+49 2025-04-28     000776  ...                   -1.059768          62.412528
+
+[1 rows x 191 columns]"
+300442,sell,77,46.08210137246177,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+49 2025-04-28     000776  ...                   -1.059768          62.412528
+
+[1 rows x 191 columns]"
+601336,sell,60,62.41252835613625,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+49 2025-04-28     000776  ...                   -1.059768          62.412528
+
+[1 rows x 191 columns]"
+000776,sell,58,15.017351576525252,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+49 2025-04-28     000776  ...                   -1.059768          62.412528
+
+[1 rows x 191 columns]"
+601877,sell,42,21.96574119439756,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+49 2025-04-28     000776  ...                   -1.059768          62.412528
+
+[1 rows x 191 columns]"
+002001,sell,11,21.558857562371994,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+49 2025-04-28     000776  ...                   -1.059768          62.412528
+
+[1 rows x 191 columns]"
+601628,buy,100,36.056045021391476,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+49 2025-04-28     000776  ...                   -1.059768          62.412528
+
+[1 rows x 191 columns]"
+000338,buy,54,14.354548202930019,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+49 2025-04-28     000776  ...                   -1.059768          62.412528
+
+[1 rows x 191 columns]"
+002600,buy,2,7.671059076786041,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+49 2025-04-28     000776  ...                   -1.059768          62.412528
+
+[1 rows x 191 columns]"
+600795,sell,100,4.368705212585628,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+50 2025-04-29     000776  ...                   -0.398342          61.368605
+
+[1 rows x 191 columns]"
+601877,sell,100,21.774922320777552,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+50 2025-04-29     000776  ...                   -0.398342          61.368605
+
+[1 rows x 191 columns]"
+300442,sell,71,46.66460552170873,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+50 2025-04-29     000776  ...                   -0.398342          61.368605
+
+[1 rows x 191 columns]"
+601628,sell,39,35.91259791995399,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+50 2025-04-29     000776  ...                   -0.398342          61.368605
+
+[1 rows x 191 columns]"
+000776,sell,30,14.947734657013788,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+50 2025-04-29     000776  ...                   -0.398342          61.368605
+
+[1 rows x 191 columns]"
+002001,sell,9,21.575139924697577,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+50 2025-04-29     000776  ...                   -0.398342          61.368605
+
+[1 rows x 191 columns]"
+002905,buy,81,7.8601584089291645,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+50 2025-04-29     000776  ...                   -0.398342          61.368605
+
+[1 rows x 191 columns]"
+000338,buy,27,14.35610091742128,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+50 2025-04-29     000776  ...                   -0.398342          61.368605
+
+[1 rows x 191 columns]"
+002600,buy,20,7.5888463414786385,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+50 2025-04-29     000776  ...                   -0.398342          61.368605
+
+[1 rows x 191 columns]"
+601336,buy,7,61.368605224091425,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+50 2025-04-29     000776  ...                   -0.398342          61.368605
+
+[1 rows x 191 columns]"
+000776,sell,100,14.866551601497923,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+51 2025-04-30     000776  ...                    0.072651          60.714134
+
+[1 rows x 191 columns]"
+601877,sell,100,21.812239983819893,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+51 2025-04-30     000776  ...                    0.072651          60.714134
+
+[1 rows x 191 columns]"
+002001,sell,85,21.54630564754596,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+51 2025-04-30     000776  ...                    0.072651          60.714134
+
+[1 rows x 191 columns]"
+002905,sell,42,7.9109459777153095,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+51 2025-04-30     000776  ...                    0.072651          60.714134
+
+[1 rows x 191 columns]"
+601628,sell,37,35.75419140538201,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+51 2025-04-30     000776  ...                    0.072651          60.714134
+
+[1 rows x 191 columns]"
+300442,sell,7,46.729812413994225,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+51 2025-04-30     000776  ...                    0.072651          60.714134
+
+[1 rows x 191 columns]"
+601336,buy,100,60.71413431326811,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+51 2025-04-30     000776  ...                    0.072651          60.714134
+
+[1 rows x 191 columns]"
+600795,buy,72,4.289167478657327,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+51 2025-04-30     000776  ...                    0.072651          60.714134
+
+[1 rows x 191 columns]"
+002600,buy,33,7.721867372305133,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+51 2025-04-30     000776  ...                    0.072651          60.714134
+
+[1 rows x 191 columns]"
+000338,buy,27,14.554314709038007,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+51 2025-04-30     000776  ...                    0.072651          60.714134
+
+[1 rows x 191 columns]"
+002905,sell,100,8.03128106303513,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+52 2025-05-06     000776  ...                    0.262153          61.532553
+
+[1 rows x 191 columns]"
+601877,sell,100,21.643760961985684,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+52 2025-05-06     000776  ...                    0.262153          61.532553
+
+[1 rows x 191 columns]"
+000338,sell,100,14.498605674383725,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+52 2025-05-06     000776  ...                    0.262153          61.532553
+
+[1 rows x 191 columns]"
+601628,sell,63,35.849748344328255,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+52 2025-05-06     000776  ...                    0.262153          61.532553
+
+[1 rows x 191 columns]"
+002001,sell,62,21.42810126220982,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+52 2025-05-06     000776  ...                    0.262153          61.532553
+
+[1 rows x 191 columns]"
+300442,sell,38,49.0287807456404,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+52 2025-05-06     000776  ...                    0.262153          61.532553
+
+[1 rows x 191 columns]"
+600795,buy,100,4.250216505713761,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+52 2025-05-06     000776  ...                    0.262153          61.532553
+
+[1 rows x 191 columns]"
+000776,buy,100,15.157524636425077,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+52 2025-05-06     000776  ...                    0.262153          61.532553
+
+[1 rows x 191 columns]"
+002600,buy,87,7.955583256939426,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+52 2025-05-06     000776  ...                    0.262153          61.532553
+
+[1 rows x 191 columns]"
+601336,buy,3,61.532553312858106,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+52 2025-05-06     000776  ...                    0.262153          61.532553
+
+[1 rows x 191 columns]"
+300442,sell,55,50.9749676627107,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+53 2025-05-07     000776  ...                   -0.197046          61.874574
+
+[1 rows x 191 columns]"
+601336,sell,28,61.874573831178715,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+53 2025-05-07     000776  ...                   -0.197046          61.874574
+
+[1 rows x 191 columns]"
+002600,sell,17,8.199658487141132,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+53 2025-05-07     000776  ...                   -0.197046          61.874574
+
+[1 rows x 191 columns]"
+002001,sell,15,21.375756263729418,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+53 2025-05-07     000776  ...                   -0.197046          61.874574
+
+[1 rows x 191 columns]"
+002905,buy,100,8.098492017015815,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+53 2025-05-07     000776  ...                   -0.197046          61.874574
+
+[1 rows x 191 columns]"
+000776,buy,100,15.213207038305699,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+53 2025-05-07     000776  ...                   -0.197046          61.874574
+
+[1 rows x 191 columns]"
+000338,buy,73,14.746831962182187,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+53 2025-05-07     000776  ...                   -0.197046          61.874574
+
+[1 rows x 191 columns]"
+601628,buy,35,36.20811746028718,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+53 2025-05-07     000776  ...                   -0.197046          61.874574
+
+[1 rows x 191 columns]"
+601877,buy,32,21.649505953723565,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+53 2025-05-07     000776  ...                   -0.197046          61.874574
+
+[1 rows x 191 columns]"
+600795,buy,6,4.289654892685867,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+53 2025-05-07     000776  ...                   -0.197046          61.874574
+
+[1 rows x 191 columns]"
+601628,sell,100,36.81389525227249,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+54 2025-05-08     000776  ...                   -0.594821          62.553654
+
+[1 rows x 191 columns]"
+601336,sell,61,62.55365392155434,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+54 2025-05-08     000776  ...                   -0.594821          62.553654
+
+[1 rows x 191 columns]"
+000776,sell,27,15.314780134294416,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+54 2025-05-08     000776  ...                   -0.594821          62.553654
+
+[1 rows x 191 columns]"
+002001,buy,100,20.96318721026182,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+54 2025-05-08     000776  ...                   -0.594821          62.553654
+
+[1 rows x 191 columns]"
+002600,buy,100,8.172830642592162,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+54 2025-05-08     000776  ...                   -0.594821          62.553654
+
+[1 rows x 191 columns]"
+002905,buy,98,7.957816555732862,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+54 2025-05-08     000776  ...                   -0.594821          62.553654
+
+[1 rows x 191 columns]"
+000338,buy,85,14.204357484746723,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+54 2025-05-08     000776  ...                   -0.594821          62.553654
+
+[1 rows x 191 columns]"
+300442,buy,65,48.63621945988387,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+54 2025-05-08     000776  ...                   -0.594821          62.553654
+
+[1 rows x 191 columns]"
+600795,buy,55,4.319542476361385,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+54 2025-05-08     000776  ...                   -0.594821          62.553654
+
+[1 rows x 191 columns]"
+601877,buy,38,21.887602706946197,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+54 2025-05-08     000776  ...                   -0.594821          62.553654
+
+[1 rows x 191 columns]"
+000776,sell,100,15.390029345569202,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+55 2025-05-09     000776  ...                   -1.107318          63.126835
+
+[1 rows x 191 columns]"
+300442,sell,100,48.619484692253174,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+55 2025-05-09     000776  ...                   -1.107318          63.126835
+
+[1 rows x 191 columns]"
+000338,sell,100,14.216804290469737,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+55 2025-05-09     000776  ...                   -1.107318          63.126835
+
+[1 rows x 191 columns]"
+601628,sell,56,37.013104806840424,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+55 2025-05-09     000776  ...                   -1.107318          63.126835
+
+[1 rows x 191 columns]"
+601336,sell,15,63.12683460123133,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+55 2025-05-09     000776  ...                   -1.107318          63.126835
+
+[1 rows x 191 columns]"
+002905,buy,100,8.08223179321736,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+55 2025-05-09     000776  ...                   -1.107318          63.126835
+
+[1 rows x 191 columns]"
+002600,buy,100,8.315217585414647,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+55 2025-05-09     000776  ...                   -1.107318          63.126835
+
+[1 rows x 191 columns]"
+601877,buy,75,22.3111843892606,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+55 2025-05-09     000776  ...                   -1.107318          63.126835
+
+[1 rows x 191 columns]"
+600795,buy,46,4.3948166509158915,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+55 2025-05-09     000776  ...                   -1.107318          63.126835
+
+[1 rows x 191 columns]"
+002001,buy,16,21.508069497533143,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+55 2025-05-09     000776  ...                   -1.107318          63.126835
+
+[1 rows x 191 columns]"
+300442,sell,100,47.069455123320225,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+56 2025-05-12     000776  ...                   -0.562226          62.802492
+
+[1 rows x 191 columns]"
+600795,sell,89,4.370733313858509,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+56 2025-05-12     000776  ...                   -0.562226          62.802492
+
+[1 rows x 191 columns]"
+601628,sell,54,36.7395846053958,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+56 2025-05-12     000776  ...                   -0.562226          62.802492
+
+[1 rows x 191 columns]"
+002905,sell,36,7.982970304349437,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+56 2025-05-12     000776  ...                   -0.562226          62.802492
+
+[1 rows x 191 columns]"
+601877,sell,21,22.362806921135636,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+56 2025-05-12     000776  ...                   -0.562226          62.802492
+
+[1 rows x 191 columns]"
+000776,sell,5,15.256260153808398,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+56 2025-05-12     000776  ...                   -0.562226          62.802492
+
+[1 rows x 191 columns]"
+601336,buy,100,62.802491706299946,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+56 2025-05-12     000776  ...                   -0.562226          62.802492
+
+[1 rows x 191 columns]"
+002600,buy,72,8.132502398267388,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+56 2025-05-12     000776  ...                   -0.562226          62.802492
+
+[1 rows x 191 columns]"
+000338,buy,52,14.213315123831855,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+56 2025-05-12     000776  ...                   -0.562226          62.802492
+
+[1 rows x 191 columns]"
+002001,buy,50,21.75910891599022,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+56 2025-05-12     000776  ...                   -0.562226          62.802492
+
+[1 rows x 191 columns]"
+300442,sell,100,47.46923237286508,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+57 2025-05-13     000776  ...                   -0.483119          63.994995
+
+[1 rows x 191 columns]"
+000338,sell,64,14.46270803052932,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+57 2025-05-13     000776  ...                   -0.483119          63.994995
+
+[1 rows x 191 columns]"
+600795,sell,31,4.326914483071305,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+57 2025-05-13     000776  ...                   -0.483119          63.994995
+
+[1 rows x 191 columns]"
+601628,sell,6,37.03973470889032,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+57 2025-05-13     000776  ...                   -0.483119          63.994995
+
+[1 rows x 191 columns]"
+002600,buy,100,8.477016341606506,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+57 2025-05-13     000776  ...                   -0.483119          63.994995
+
+[1 rows x 191 columns]"
+000776,buy,100,15.479283184320666,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+57 2025-05-13     000776  ...                   -0.483119          63.994995
+
+[1 rows x 191 columns]"
+002001,buy,66,21.679686114219948,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+57 2025-05-13     000776  ...                   -0.483119          63.994995
+
+[1 rows x 191 columns]"
+002905,buy,22,8.10337301807478,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+57 2025-05-13     000776  ...                   -0.483119          63.994995
+
+[1 rows x 191 columns]"
+601877,buy,18,22.374941258281467,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+57 2025-05-13     000776  ...                   -0.483119          63.994995
+
+[1 rows x 191 columns]"
+601336,buy,8,63.994994547405256,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+57 2025-05-13     000776  ...                   -0.483119          63.994995
+
+[1 rows x 191 columns]"
+601628,sell,100,37.09899381159804,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+58 2025-05-14     000776  ...                   -0.207804          63.853787
+
+[1 rows x 191 columns]"
+000338,sell,82,14.438944383859635,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+58 2025-05-14     000776  ...                   -0.207804          63.853787
+
+[1 rows x 191 columns]"
+002001,sell,79,21.419388907342217,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+58 2025-05-14     000776  ...                   -0.207804          63.853787
+
+[1 rows x 191 columns]"
+600795,sell,77,4.32458520906046,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+58 2025-05-14     000776  ...                   -0.207804          63.853787
+
+[1 rows x 191 columns]"
+002905,sell,12,8.155021303743125,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+58 2025-05-14     000776  ...                   -0.207804          63.853787
+
+[1 rows x 191 columns]"
+000776,sell,9,15.538595276905689,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+58 2025-05-14     000776  ...                   -0.207804          63.853787
+
+[1 rows x 191 columns]"
+601336,buy,100,63.853787367843026,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+58 2025-05-14     000776  ...                   -0.207804          63.853787
+
+[1 rows x 191 columns]"
+300442,buy,100,46.87164038605988,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+58 2025-05-14     000776  ...                   -0.207804          63.853787
+
+[1 rows x 191 columns]"
+002600,buy,30,8.454387175678276,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+58 2025-05-14     000776  ...                   -0.207804          63.853787
+
+[1 rows x 191 columns]"
+601877,buy,15,22.478740943488667,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+58 2025-05-14     000776  ...                   -0.207804          63.853787
+
+[1 rows x 191 columns]"
+601628,sell,100,38.83593452677131,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+59 2025-05-15     000776  ...                   -1.426833          67.173062
+
+[1 rows x 191 columns]"
+300442,sell,48,46.504074019985275,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+59 2025-05-15     000776  ...                   -1.426833          67.173062
+
+[1 rows x 191 columns]"
+000338,sell,20,14.493543943283148,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+59 2025-05-15     000776  ...                   -1.426833          67.173062
+
+[1 rows x 191 columns]"
+002905,sell,6,8.178738148659468,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+59 2025-05-15     000776  ...                   -1.426833          67.173062
+
+[1 rows x 191 columns]"
+002600,buy,100,8.422992400208605,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+59 2025-05-15     000776  ...                   -1.426833          67.173062
+
+[1 rows x 191 columns]"
+002001,buy,95,21.75012097133049,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+59 2025-05-15     000776  ...                   -1.426833          67.173062
+
+[1 rows x 191 columns]"
+600795,buy,73,4.323234245190397,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+59 2025-05-15     000776  ...                   -1.426833          67.173062
+
+[1 rows x 191 columns]"
+601336,buy,67,67.17306242333771,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+59 2025-05-15     000776  ...                   -1.426833          67.173062
+
+[1 rows x 191 columns]"
+000776,buy,9,16.447033900190142,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+59 2025-05-15     000776  ...                   -1.426833          67.173062
+
+[1 rows x 191 columns]"
+601877,buy,5,22.431843885399868,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+59 2025-05-15     000776  ...                   -1.426833          67.173062
+
+[1 rows x 191 columns]"
+002600,sell,100,8.236893213363365,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+60 2025-05-16     000776  ...                   -0.826679          65.595821
+
+[1 rows x 191 columns]"
+000338,sell,100,14.1582350819977,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+60 2025-05-16     000776  ...                   -0.826679          65.595821
+
+[1 rows x 191 columns]"
+002905,sell,89,8.199518087450414,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+60 2025-05-16     000776  ...                   -0.826679          65.595821
+
+[1 rows x 191 columns]"
+601628,sell,72,38.212030938463286,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+60 2025-05-16     000776  ...                   -0.826679          65.595821
+
+[1 rows x 191 columns]"
+300442,sell,36,43.747768602674476,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+60 2025-05-16     000776  ...                   -0.826679          65.595821
+
+[1 rows x 191 columns]"
+600795,sell,3,4.352148824110627,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+60 2025-05-16     000776  ...                   -0.826679          65.595821
+
+[1 rows x 191 columns]"
+601877,buy,100,22.3706689941464,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+60 2025-05-16     000776  ...                   -0.826679          65.595821
+
+[1 rows x 191 columns]"
+601336,buy,75,65.59582082506871,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+60 2025-05-16     000776  ...                   -0.826679          65.595821
+
+[1 rows x 191 columns]"
+002001,buy,40,22.082890468435362,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+60 2025-05-16     000776  ...                   -0.826679          65.595821
+
+[1 rows x 191 columns]"
+000776,buy,20,16.31914432011079,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+60 2025-05-16     000776  ...                   -0.826679          65.595821
+
+[1 rows x 191 columns]"
+601877,sell,100,22.408635703474282,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+61 2025-05-19     000776  ...                   -0.460421          65.177788
+
+[1 rows x 191 columns]"
+002600,sell,74,8.282040439116535,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+61 2025-05-19     000776  ...                   -0.460421          65.177788
+
+[1 rows x 191 columns]"
+000776,sell,64,16.521537640113383,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+61 2025-05-19     000776  ...                   -0.460421          65.177788
+
+[1 rows x 191 columns]"
+300442,sell,30,44.00828670327785,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+61 2025-05-19     000776  ...                   -0.460421          65.177788
+
+[1 rows x 191 columns]"
+600795,sell,26,4.371559817395172,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+61 2025-05-19     000776  ...                   -0.460421          65.177788
+
+[1 rows x 191 columns]"
+002001,buy,100,21.931519732661545,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+61 2025-05-19     000776  ...                   -0.460421          65.177788
+
+[1 rows x 191 columns]"
+601336,buy,68,65.17778817768064,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+61 2025-05-19     000776  ...                   -0.460421          65.177788
+
+[1 rows x 191 columns]"
+601628,buy,52,37.74064987415448,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+61 2025-05-19     000776  ...                   -0.460421          65.177788
+
+[1 rows x 191 columns]"
+002905,buy,40,8.255808448884636,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+61 2025-05-19     000776  ...                   -0.460421          65.177788
+
+[1 rows x 191 columns]"
+000338,buy,29,14.120976804411038,"         Date Tic_000776  ...  predict_percentages_601336  prediction_601336
+61 2025-05-19     000776  ...                   -0.460421          65.177788
+
+[1 rows x 191 columns]"

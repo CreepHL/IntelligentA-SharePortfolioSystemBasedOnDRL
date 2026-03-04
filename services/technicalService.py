@@ -2,6 +2,7 @@ from datetime import datetime, timedelta
 import pandas as pd
 import akshare as ak
 from tools.logConfig import log_config
+import baostock as bs
 
 logger = log_config('api')
 
@@ -100,28 +101,58 @@ def get_history_data(ticker, start_date, end_date):
     # data = yf.download(ticker, start=start_date, end=end_date, proxy="http://127.0.0.1:7890")  # 有代理
     start_date = datetime.strptime(start_date, "%Y-%m-%d")
     end_date = datetime.strptime(end_date, "%Y-%m-%d")
-    df = ak.stock_zh_a_hist(
-        symbol=ticker,
-        period="daily",
-        start_date=start_date.strftime("%Y%m%d"),
-        end_date=end_date.strftime("%Y%m%d"),
-        adjust='qfq'
-    )
+    start_str = start_date.strftime("%Y-%m-%d")
+    end_str = end_date.strftime("%Y-%m-%d")
+    lg = bs.login()
+    rs = bs.query_history_k_data_plus(ticker, "date,open,high,low,close,volume,pctChg,turn, amount", start_str, end_str, adjustflag="1" )
+    # df = ak.stock_zh_a_hist(
+    #     symbol=ticker,
+    #     period="daily",
+    #     start_date=start_date.strftime("%Y%m%d"),
+    #     end_date=end_date.strftime("%Y%m%d"),
+    #     adjust='qfq'
+    # )
+    #
+    # # 重命名列以匹配技术分析代理的需求
+    # df = df.rename(columns={
+    #     "日期": "Date",
+    #     "开盘": "Open",
+    #     "最高": "High",
+    #     "最低": "Low",
+    #     "收盘": "Close",
+    #     "成交量": "Volume",
+    #     "成交额": "Amount",
+    #     "振幅": "Amplitude",
+    #     "涨跌幅": "pct_change",
+    #     "涨跌额": "change_amount",
+    #     "换手率": "turnover"
+    # })
 
-    # 重命名列以匹配技术分析代理的需求
+    data_list = []
+    while (rs.error_code == '0') & rs.next():
+        data_list.append(rs.get_row_data())
+    df = pd.DataFrame(data_list, columns=rs.fields)
     df = df.rename(columns={
-        "日期": "Date",
-        "开盘": "Open",
-        "最高": "High",
-        "最低": "Low",
-        "收盘": "Close",
-        "成交量": "Volume",
-        "成交额": "Amount",
-        "振幅": "Amplitude",
-        "涨跌幅": "pct_change",
-        "涨跌额": "change_amount",
-        "换手率": "turnover"
+        "date": "Date",
+        "open": "Open",
+        "high": "High",
+        "low": "Low",
+        "close": "Close",
+        "volume": "Volume",
+        "amount": "Amount",
+        "pctChg": "pct_change",
+        "turn": "turnover"
     })
+    df['Close'] = pd.to_numeric(df['Close'], errors='coerce')
+    df['High'] = pd.to_numeric(df['High'], errors='coerce')
+    df['Low'] = pd.to_numeric(df['Low'], errors='coerce')
+    df['Open'] = pd.to_numeric(df['Low'], errors='coerce')
+    df['Volume'] = pd.to_numeric(df['Volume'], errors='coerce')
+    df['turnover'] = pd.to_numeric(df['turnover'], errors='coerce')
+    df['Amount'] = pd.to_numeric(df['Amount'], errors='coerce')
+    df['pct_change'] = pd.to_numeric(df['pct_change'], errors='coerce')
+    df['change_amount'] = df['Close'] - df['Close'].shift(1)
+    df['Amplitude'] = (df['High'] - df['Low']) / df['Close'] * 100
     # 确保日期列为datetime类型
     df["Date"] = pd.to_datetime(df["Date"])
     # 计算技术指标

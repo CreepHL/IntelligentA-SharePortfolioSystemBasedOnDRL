@@ -6,7 +6,7 @@ import torch
 import torch.nn as nn
 from typing import Dict, Any
 
-from stable_baselines3 import PPO
+from stable_baselines3 import PPO, SAC
 from stable_baselines3.common.vec_env import DummyVecEnv
 
 from models.drl_env_trade import StockEnvTrade
@@ -39,6 +39,17 @@ def train_ppo(env_train, model_name, timesteps=5000):
     print('Training time (PPO): ', (end - start) / 60, ' minutes')
     return model
 
+
+def train_sac(env_train, model_name, timesteps=5000):
+    start = time.time()
+    model = SAC('MlpPolicy', env_train, batch_size=256)
+
+    model.learn(total_timesteps=timesteps)
+    end = time.time()
+
+    model.save(f"./models/{model_name}")
+    print('Training time (SAC): ', (end - start) / 60, ' minutes')
+    return model
 
 def DRL_prediction(df,
                    model,
@@ -85,14 +96,15 @@ def run_drl_portfolio(stock_df, unique_trade_date, rebalance, validation, hold):
         else:
             # previous state
             initial = False
-        train = data_split(stock_df, start=pd.to_datetime('2009-01-01'), end=unique_trade_date[i - rebalance - validation])
+        train = data_split(stock_df, start=pd.to_datetime('2024-02-01'), end=unique_trade_date[i - rebalance - validation])
         train = train.fillna(0)
         env_train = DummyVecEnv([lambda: StockEnvTrain(train, hold=hold)])
         # validation = data_split(stock_df, start=unique_trade_date[i - rebalance - validation], end=unique_trade_date[i - rebalance])
         # env_val = DummyVecEnv([lambda: StockEnvValidation(validation, i - rebalance)])
         # obs_val = env_val.reset()
-        model_ppo = train_ppo(env_train, model_name="PPO_100k_dow_{}".format(i), timesteps=1000)
-        last_state_ensemble = DRL_prediction(df=stock_df, model=model_ppo, name="ppo",
+        # model_ppo = train_ppo(env_train, model_name="PPO_100k_dow_{}".format(i), timesteps=1000)
+        model_sac = train_sac(env_train, model_name="SAC_100k_dow_{}".format(i), timesteps=1000)
+        last_state_ensemble = DRL_prediction(df=stock_df, model=model_sac, name="sac",
                                              last_state=last_state_ensemble, iter_num=i,
                                              unique_trade_date=unique_trade_date,
                                              rebalance_window=rebalance,

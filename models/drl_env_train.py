@@ -109,9 +109,9 @@ class StockEnvTrain(gym.Env):
         self.terminal = self.day >= len(self.df.index.unique()) - 1
 
         if self.terminal:
-            plt.plot(self.asset_memory, 'r')
-            plt.savefig('output/results/account_value_train.png')
-            plt.close()
+            # plt.plot(self.asset_memory, 'r')
+            # plt.savefig('output/results/account_value_train.png')
+            # plt.close()
             end_total_asset = self.state[0] + \
                               sum(np.array(self.state[1:(self.stock_dim + 1)]) * np.array(
                                   self.state[(self.stock_dim + 1):(self.stock_dim * 2 + 1)]))
